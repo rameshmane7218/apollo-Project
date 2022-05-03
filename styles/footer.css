@@ -1,0 +1,18 @@
+#footerPart{
+    border: 1px solid red;
+    width: 100%;
+    height: 450px;
+    margin-top: 50px;
+}
+
+.footerLinks-PanelDetails{
+    display: flex;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.footerLinks-PanelDetails li{
+    /* border: 1px solid teal; */
+    margin-right: 20px;
+}
