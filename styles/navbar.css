@@ -40,8 +40,9 @@ body::backdrop {
     padding-top: 88px;
     padding-bottom: 0;
     width: 1064px;
-    height: 1000px;
+    /* height: 500px; */
     border: 1px solid teal;
+    background-color: white;
     margin: auto;
 
 
@@ -49,8 +50,8 @@ body::backdrop {
 
 .headerPart {
     width: 100%;
-    border: 1px solid blue;
-    height: 700px;
+    /* border: 1px solid blue; */
+    /* height: 300px; */
     max-width: 1064px;
     margin: auto;
 }
@@ -62,7 +63,7 @@ body::backdrop {
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
     align-items: center;
     background-color: #fff;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
 }
 
@@ -253,3 +254,4 @@ body::backdrop {
         'opsz' 48
 }
 /* cart icon end */
+

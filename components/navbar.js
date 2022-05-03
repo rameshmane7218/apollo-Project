@@ -1,23 +1,23 @@
-localStorage.setItem("login","false");
-// localStorage.setItem("login","true");
+// localStorage.setItem("login","false");
+localStorage.setItem("login","true");
 let loginStatus = localStorage.getItem("login");
 // console.log(loginStatus);
 let navigation;
 if(loginStatus == "true"){
     navigation = ` 
-    <a href="#" title="Appointments">
+    <a href="#" title="Appointments" class="appointments">
         Appointments
     </a>
-    <a href="#" title="Health Records">
+    <a href="#" title="Health Records" class="health">
         Health Records
     </a>
-    <a href="#" title="Medicines">
+    <a href="#" title="Medicines" class="medicines">
         Medicines
     </a>
-    <a href="#" title="Lab Tests">
+    <a href="#" title="Lab Tests" class="labTest">
         Lab Tests
     </a>
-    <a href="#" title="Covid-19">
+    <a href="#" title="Covid-19" class="covid-19">
         Covid-19
     </a>
     <div id="cartId">
@@ -27,19 +27,19 @@ if(loginStatus == "true"){
     </div>`
 }else{
     navigation = ` 
-    <a href="#" title="Doctors">
+    <a href="#" title="Doctors" class="doctor">
         <span class="tabName">Doctors</span>
         <span class="subTabName">Consult<br> Online</span>
     </a>
-    <a href="#" title="Pharmacy">
+    <a href="#" title="Pharmacy" class="pharmacy">
         <span class="tabName">Pharmacy</span>
         <span class="subTabName">Medicines &<br> other products</span>
     </a>
-    <a href="#" title="Tests">
+    <a href="#" title="Tests" class="tests">
         <span class="tabName">Lab Tests</span>
         <span class="subTabName">Health<br> check-ups</span>
     </a>
-    <a href="#" title="Covid-19">
+    <a href="#" title="Covid-19" class="covid-19">
         <span class="tabName">Covid-19</span>
         <span class="subTabName">Latest<br> updates</span>
     </a>
@@ -94,5 +94,7 @@ let navbar = () => {
         </header>
     </div>`;
 };
+
+
 
 export {navbar};
