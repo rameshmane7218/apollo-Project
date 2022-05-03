@@ -1,0 +1,44 @@
+/* Manage Profile logo  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+.manageProfile{
+    height: 0px;
+    
+}
+.manageProfileMascotCircle{
+    height: 72px;
+    width: 72px;
+    cursor: pointer;
+}
+
+@media (min-width: 1134px){
+    .manageProfileMascotCircle{
+        right: 0;
+        bottom: 0;
+        position: fixed;
+    }
+}
+ 
+
+@media (min-width: 768px){
+    .manageProfileMascotCircle{
+        margin-left: auto;
+        margin-right: 15px;
+        margin-bottom: 12px;
+    }
+}
+@media (max-width: 899.5px){
+    .manageProfileMascotCircle{
+        display: block;
+        margin: auto;
+    }
+}
+@media (max-width: 1133px){
+    .manageProfile{
+        height: 75px;
+        padding: 20px 0;
+      
+    }
+}
+/* Manage Profile logo  ^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+
