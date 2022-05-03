@@ -1,3 +1,102 @@
+
+.secPageData{
+    padding: 20px;
+    position: relative;
+    background-color: #fff;
+    word-wrap: break-word;
+}
+
+
+@media (max-width:767.95px) {
+    .secPageData {
+        padding: 20px 20px 40px;
+        border-top: 1px dashed #02475B;
+        border-bottom: 1px dashed #02475B;
+    }
+}
+
+.secPageDataWrap .expandBtn {
+    color: #FC9916;
+    right: 20px;
+    border: none;
+    bottom: 12px;
+    display: none;
+    outline: none;
+    font-size: 13px;
+    background: transparent;
+    font-weight: 700;
+    line-height: 17px;
+    text-transform: uppercase;
+}
+
+.secPageDataWrap h1,
+.secPageDataWrap h2,
+.secPageDataWrap h3,
+.secPageDataWrap h4,
+.secPageDataWrap h5,
+.secPageDataWrap h6 {
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.secPageDataWrap p,
+.secPageDataWrap h1,
+.secPageDataWrap h2,
+.secPageDataWrap h3,
+.secPageDataWrap h4,
+.secPageDataWrap h5,
+.secPageDataWrap h6 {
+    line-height: 1.5;
+}
+
+.secPageDataWrap a {
+    font-weight: bold;
+}
+
+@media (max-width:767.95px) {
+    .secPageDataWrap .expandBtn {
+        display: inline-block;
+    }
+}
+
+@media (max-width:767.95px) {
+    .secPageDataWrap .secContent {
+        overflow: hidden;
+        max-height: 509px;
+    }
+}
+
+@media (max-width:767.95px) {
+    .secPageDataWrap .secContent.open {
+        max-height: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Manage Profile logo  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
 .manageProfile{

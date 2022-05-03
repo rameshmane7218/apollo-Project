@@ -39,7 +39,7 @@ body::backdrop {
 #mainContainer {
     padding-top: 88px;
     padding-bottom: 0;
-    width: 1064px;
+    max-width: 1064px;
     /* height: 500px; */
     /* border: 1px solid teal; */
     /* background-color: white; */
