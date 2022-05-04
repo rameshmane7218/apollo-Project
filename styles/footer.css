@@ -35,22 +35,79 @@
 .footerLinks>ul{
     padding-left: 20px;
     margin: 0;
-    list-style-type: none;
-   
+    list-style-type: none; 
 }
+
 
 .footerLinks-PanelRoot{
     padding: 0 8px;
 }
-
 .footerLinks-PanelHeader{
+    color: #02475b;
+    margin: 0 !important;
+    padding: 0;
+    font-size: 14px;
+    min-height: 30px !important;
+    text-align: left;
+    align-items: flex-start;
+    font-weight: 600;
+    /* border: 1px solid red; */
+    
+}
+
+.footerLinks-collapse{
     color: var(--footer-pael-header-color);
     margin-left: -20px;
     min-height: 20px;
     font-weight: 600;
+    /* border: 1px solid red; */
 }
+
+@media (max-width:767.95px) {
+   
+    .footerLinks-PanelRoot{
+        border-bottom: 1px solid rgba(35, 43, 46, 0.86);
+    }
+    .footerLinks {
+       
+        padding-bottom: 70px;
+    }
+    .footerLinks>ul{
+        padding-left: 0;
+    }
+    .footerLinks-PanelHeader {
+        /* border-bottom: 1px solid rgba(35, 43, 46, 0.86); */
+        padding-bottom: 10px;
+    }
+    .footerLinks-collapse {
+        color: #fff !important;
+        margin-top: 7px;
+        margin-left: 0;
+        padding-left: 6px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+    .footerLinks-logoMd1{
+        padding-top: 6px;
+        padding-bottom: 10px;
+    }
+    .footerLinks-logo img{
+        padding-top: 12px;
+        padding-bottom: 9px;
+    }
+}
+
 .footerLinks-expandedIcon{
     opacity: 0;
+}
+@media (max-width:767.95px) {
+    .footerLinks-expandedIcon{
+        opacity: 1;
+        padding-right: 5px;
+    }
+}
+.footerLinks-defaultOpen{
+    display: block;
 }
 
 .footerLinks-PanelDetails {
@@ -63,11 +120,27 @@
     padding: 10px 0 10px 5px;
 }
 
+
+@media (max-width:768px) {
+    .footerLinks-PanelDetails {
+        display: flex;
+        flex-direction: column;
+        color: var(--footer-pael-header-color);
+        padding-left: 30px;
+    }
+    .footerLinks-PanelDetails li {   
+        list-style-type: none !important;
+    }
+    .footerLinks-defaultOpen{
+        display: none;
+    }
+  
+}
+
 .footerLinks-PanelDetails li {
     /* border: 1px solid teal; */
     margin-right: 30px;
     list-style-type: disc;
     line-height: 27px;
-    font-weight: 400;
-    
+    font-weight: 400;  
 }
