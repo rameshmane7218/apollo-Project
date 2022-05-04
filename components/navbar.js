@@ -1,5 +1,5 @@
-localStorage.setItem("login","false");
-// localStorage.setItem("login","true");
+// localStorage.setItem("login","false");
+localStorage.setItem("login","true");
 let loginStatus = localStorage.getItem("login");
 // console.log(loginStatus);
 let navigation;
