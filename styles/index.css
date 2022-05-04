@@ -1,3 +1,222 @@
+/* Hello There page  */
+
+.heroBanner{
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    border: 1px solid red;
+   
+}
+#mainContainer {
+    padding-top: 90px;
+}
+
+@media (min-width:768px) {
+    .heroBanner {
+        display: flex;
+    }
+    .heroPic {
+        top: 90px;
+        right: 0;
+        width: calc(100% - 430px);
+        bottom: 0;
+        position: absolute;
+        text-align: right; 
+    }
+    .heroPic img{
+        display: inline-block;
+        min-width: 570px;
+        min-height: 385px;
+    }
+}
+@media (max-width:768px) {
+    .heroPic {
+        display: none;
+    }
+    
+}
+.helloThere{
+    width: 430px;
+    padding: 40px;
+}
+
+@media (max-width:767.95px) {
+    .helloThere {
+        padding: 30px 20px 20px;
+        background-color: #fff;
+    }
+}
+
+@media (min-width:900px) {
+    .helloThere {
+        min-height: 400px;
+    }
+}
+.helloTitle {
+    display: flex;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+
+
+
+
+.helloThere p {
+    color: #0087ba;
+    font-size: 17px;
+    margin-top: 16px;
+    font-weight: 500;
+    line-height: 1.47;
+    margin-bottom: 20px;
+}
+
+.helloThere .helloTitle {
+    display: flex;
+}
+
+@media (max-width:767.95px) {
+    .helloTitle {
+        font-size: 36px;
+    }
+}
+
+.helloThereDiv {
+    width: auto;
+    max-width: 370px;
+    margin-top: -10px;
+    /* margin-left: 10px; */
+    padding-top: 0;
+    /* height: 500px; */
+    border: 1px solid blue;
+    
+}
+
+@media (max-width:767.95px) {
+    .helloThereDiv {
+        max-width: calc(100% - 55px);
+    }
+}
+
+
+.helloThereDiv{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    padding-top: 5px;
+    margin-right: -8px;
+    position: relative;
+}
+
+
+.boolAppointment {
+    width: 50%;
+    padding: 0 8px 8px;
+    position: relative;
+    min-height: 68px;
+    /* height: 20px; */
+   
+}
+
+.boolAppointment:first-child {
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.boolAppointment:nth-child(2) {
+    width: 100%;
+}
+
+.boolAppointment-1 {
+    /* height: 100%; */
+    margin-left: 0px;
+    padding: 10px;
+    box-shadow: 0px 5px 20px rgba(128, 128, 128, 0.3);
+    border-radius: 10px;
+    background-color: #fff;
+    
+}
+
+.boolAppointment-1 a {
+    display: flex;
+    align-items: center;
+    line-height: 18px;
+}
+
+.boolAppointment-2 {
+    /* width: 100%; */
+    background: linear-gradient(105.88deg, #2C4C70 0.63%, #5EACB0 102.46%);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+}
+.boolAppointment-3 {
+   
+    box-shadow: 0px 5px 20px rgb(128 128 128 / 30%) !important;
+    position: absolute;
+    left: 0;
+}
+.boolAppointment-4 {
+    position: absolute;
+    right: 0;
+}
+
+.boolAppointment-1 h1 {
+    color: #fff !important;
+}
+.MuiPaper-root {
+    color: #02475b;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: #fff;
+}
+.MuiPaper-elevation1 {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-elevation1 {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+.boolAppointment-logo{
+    width: 40px;
+    height: 40px;
+    overflow: inherit;
+    margin-right: 10px;
+}
+.boolAppointment-logo img{
+    width: 40px;
+    height: 40px;
+    overflow: inherit;
+    margin-right: 10px;
+}
+.boolAppointment-text h1{
+    font-size: 14px !important;
+    font-weight: 500;
+    margin: 0;
+}
+.arrowHead{
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+}
+.boolAppointment-textContenth3 {
+    color: #02475b;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.167;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .secPageData{
     padding: 20px;
