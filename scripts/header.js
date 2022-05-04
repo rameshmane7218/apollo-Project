@@ -1,12 +1,12 @@
 // let childrens = document.getElementById("navigation").innerHTML;
 // console.log(childrens);
 
-console.log("hiii");
+// console.log("hiii");
 
 // mobile Navigation part 
 
-// localStorage.setItem("login","false");
-localStorage.setItem("login","true");
+localStorage.setItem("login","false");
+// localStorage.setItem("login","true");
 let loginStatus = localStorage.getItem("login");
 // console.log(loginStatus);
 
@@ -80,3 +80,83 @@ if(loginStatus == "true"){
         </span>
     </a>`;
 };
+
+
+//Footer part content collapse 
+let footerCollapse = document.getElementsByClassName("footerLinks-PanelHeader");
+// console.log(footerCollapse);
+
+var i;
+
+for(i=0; i<footerCollapse.length; i++){
+    footerCollapse[i].addEventListener("click",function(i){
+        var footerContent = this.nextElementSibling;
+        // console.log(footerContent);
+       
+        if(footerContent.style.display == "block"){
+            footerContent.style.display = "none";
+        }else{
+            footerContent.style.display = "block"
+        }
+        
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// navbar hovering effect 
+let navtabs = document.getElementsByClassName("mobNavigationBtn");
+let navlable = document.getElementsByClassName("mobNavigationLable");
+
+// console.log(navtabs);
+// navtabs[0].style.color = "white";
+// navlable[0].style.color = "white";
+// navtabs[0].style.backgroundColor = "#02475b";
+// localStorage.setItem("navtab",0);
+
+for(let i=0; i<navtabs.length; i++){
+    navtabs[i].addEventListener("click", function(){
+        localStorage.setItem("navtab",i);
+        // navtabs[i].style.color = "white";
+        // navlable[i].style.color = "white";
+        // navtabs[i].style.backgroundColor = "teal";
+        let navtabIndex = localStorage.getItem("navtab");
+        // console.log(navtabIndex);
+        for(let j=0; j<navtabs.length; j++){
+            if(navtabIndex == j){
+                navtabs[j].style.color = "white";
+                navlable[j].style.color = "white";
+                navtabs[j].style.backgroundColor = "#02475b";
+            }else{
+                navtabs[j].style.color = "#02475b";
+                navlable[j].style.color = "#67919d";
+                navtabs[j].style.backgroundColor = "white";
+            }
+        }
+
+    });
+    
+}
+
+// let navtabIndex = localStorage.getItem("navtab");
+// console.log(navtabIndex);

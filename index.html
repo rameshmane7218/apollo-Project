@@ -130,8 +130,8 @@
 
 
             <div class="secPageData">
-                <div class="secPageDataWrap">
-                    <div class="secContent">
+                <div class="secPageDataWrap" id="secPageDataWrap">
+                    <div class="secContent" id="secContent">
                         <h1><strong>Apollo 24|7 - Your Most Trusted Healthcare Brand</strong></h1>
 
                         <p>Apollo 24|7 is the largest multi-channel digital healthcare platform in India,
@@ -345,10 +345,13 @@
                             </li>
                             <div class="footerLinks-PanelRoot">
                                 <div class="footerLinks-PanelHeader">
-                                    <span class="footerLinks-expandedIcon">+</span>
-                                    About Apollo 247
+                                    <div class="footerLinks-collapse">
+                                        <span class="footerLinks-expandedIcon">+</span>
+                                        About Apollo 247
+                                    </div>
+                                    
                                 </div>
-                                <div class="footerLinks-PanelDetails">
+                                <div class="footerLinks-PanelDetails footerLinks-defaultOpen">
                                     <a href="">
                                         <li>About Us</li>
                                     </a>
@@ -402,10 +405,13 @@
                             </div>
                             <div class="footerLinks-PanelRoot">
                                 <div class="footerLinks-PanelHeader">
-                                    <span class="footerLinks-expandedIcon">+</span>
-                                    Services
+                                    <div class="footerLinks-collapse">
+                                        <span class="footerLinks-expandedIcon">+</span>
+                                        Services
+                                    </div>
+                                   
                                 </div>
-                                <div class="footerLinks-PanelDetails">
+                                <div class="footerLinks-PanelDetails footerLinks-defaultOpen">
                                     <a href="">
                                         <li>Online Doctor Consultation</li>
                                     </a>
@@ -444,10 +450,13 @@
                             </div>
                             <div class="footerLinks-PanelRoot">
                                 <div class="footerLinks-PanelHeader">
-                                    <span class="footerLinks-expandedIcon">+</span>
-                                    Top Specialties
+                                   <div class="footerLinks-collapse">
+                                        <span class="footerLinks-expandedIcon">+</span>
+                                        Top Specialties
+                                   </div>
+                                   
                                 </div>
-                                <div class="footerLinks-PanelDetails">
+                                <div class="footerLinks-PanelDetails footerLinks-defaultOpen">
                                     <a href="#">
                                         <li>Covid Consultation</li>
                                     </a>
@@ -486,10 +495,13 @@
                             </div>
                             <div class="footerLinks-PanelRoot">
                                 <div class="footerLinks-PanelHeader">
-                                    <span class="footerLinks-expandedIcon">+</span>
-                                    Book Lab Tests at Home
+                                    <div class="footerLinks-collapse">
+                                        <span class="footerLinks-expandedIcon">+</span>
+                                        Book Lab Tests at Home
+                                    </div>
+                                    
                                 </div>
-                                <div class="footerLinks-PanelDetails">
+                                <div class="footerLinks-PanelDetails footerLinks-defaultOpen">
                                     <a href="#">
                                         <li>RT PCR Test At Home</li>
                                     </a>
@@ -528,10 +540,13 @@
                             </div>
                             <div class="footerLinks-PanelRoot">
                                 <div class="footerLinks-PanelHeader">
-                                    <span class="footerLinks-expandedIcon">+</span>
-                                    Product Categories
+                                    <div class="footerLinks-collapse">
+                                        <span class="footerLinks-expandedIcon">+</span>
+                                        Product Categories
+                                    </div>
+                                   
                                 </div>
-                                <div class="footerLinks-PanelDetails">
+                                <div class="footerLinks-PanelDetails footerLinks-defaultOpen">
                                     <a href="#">
                                         <li>View All Brands</li>
                                     </a>
@@ -573,10 +588,13 @@
                             </div>
                             <div class="footerLinks-PanelRoot">
                                 <div class="footerLinks-PanelHeader">
-                                    <span class="footerLinks-expandedIcon">+</span>
-                                    Top Hospitals
+                                    <div class="footerLinks-collapse">
+                                        <span class="footerLinks-expandedIcon">+</span>
+                                        Top Hospitals
+                                    </div>
+                                    
                                 </div>
-                                <div class="footerLinks-PanelDetails">
+                                <div class="footerLinks-PanelDetails footerLinks-defaultOpen">
                                     <a href="#">
                                         <li>Apollo Hospital Jubilee</li>
                                     </a>
@@ -599,6 +617,13 @@
                                 </div>
 
                             </div>
+                            <li class="footerLinks-logoMd1">
+                                <a href="index.html" title="Home" class="footerLinks-logo">
+                                    <img src="https://newassets.apollo247.com/images/ic_logo.png"
+                                        title="Online Doctor Consultation & Medicines"
+                                        alt="Online Doctor Consultation Medicines">
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -644,17 +669,17 @@
 </body>
 
 </html>
-<script src="./scripts/index.js" ></script>
+<script src="./scripts/index.js" type="module" ></script>
 <script src="./scripts/header.js"></script>
 <script>
     // Page Content expand buttom for mobile device 
 
-let expandData = () => {
-    let ans = document.getElementById("secPageDataWrap");
-    console.log(ans);
+// let expandData = () => {
+//     console.log("hii");
+//     document.getElementById("secContent").style.maxHeight = "none";
     
-}
-document.getElementById("expandBtn").addEventListener("click", expandData);
+// }
+// document.getElementById("expandBtn").addEventListener("click", expandData);
 // document.getElementsByClassName("secPageDataWrap").style.color = "red";
 
 </script>

@@ -55,6 +55,9 @@
 .secPageDataWrap a {
     font-weight: bold;
 }
+.expandBtn {
+    cursor: pointer;
+}
 
 @media (max-width:767.95px) {
     .secPageDataWrap .expandBtn {
@@ -69,11 +72,7 @@
     }
 }
 
-@media (max-width:767.95px) {
-    .secPageDataWrap .secContent.open {
-        max-height: none;
-    }
-}
+
 
 
 
