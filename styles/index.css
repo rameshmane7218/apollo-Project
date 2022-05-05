@@ -4,7 +4,7 @@
     overflow: hidden;
     background-color: #fff;
     position: relative;
-    border: 1px solid red;
+    /* border: 1px solid red; */
    
 }
 #mainContainer {
@@ -16,7 +16,7 @@
         display: flex;
     }
     .heroPic {
-        top: 90px;
+        top: 95px;
         right: 0;
         width: calc(100% - 430px);
         bottom: 0;
@@ -27,6 +27,7 @@
         display: inline-block;
         min-width: 570px;
         min-height: 385px;
+        
     }
 }
 @media (max-width:768px) {
@@ -42,14 +43,20 @@
 
 @media (max-width:767.95px) {
     .helloThere {
-        padding: 30px 20px 20px;
+        padding: 30px;
         background-color: #fff;
+        
     }
 }
 
-@media (min-width:900px) {
+@media (min-width:768px) {
     .helloThere {
         min-height: 400px;
+    }
+}
+@media (max-width:767.95px) {
+    .helloThere {
+        width: 100%
     }
 }
 .helloTitle {
@@ -71,6 +78,9 @@
     font-weight: 500;
     line-height: 1.47;
     margin-bottom: 20px;
+    word-wrap: break-word;
+    margin-right: 20px;
+   
 }
 
 .helloThere .helloTitle {
@@ -85,22 +95,14 @@
 
 .helloThereDiv {
     width: auto;
-    max-width: 370px;
+    max-width: 400px;
     margin-top: -10px;
     /* margin-left: 10px; */
     padding-top: 0;
     /* height: 500px; */
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     
 }
-
-@media (max-width:767.95px) {
-    .helloThereDiv {
-        max-width: calc(100% - 55px);
-    }
-}
-
-
 .helloThereDiv{
     display: flex;
     flex-wrap: wrap;
@@ -109,6 +111,15 @@
     margin-right: -8px;
     position: relative;
 }
+@media (max-width:767.95px) {
+    .helloThereDiv {
+        max-width: calc(100% - 55px);
+        margin-right: 0px;
+    }
+}
+
+
+
 
 
 .boolAppointment {
@@ -149,16 +160,6 @@
     /* width: 100%; */
     background: linear-gradient(105.88deg, #2C4C70 0.63%, #5EACB0 102.46%);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
-}
-.boolAppointment-3 {
-   
-    box-shadow: 0px 5px 20px rgb(128 128 128 / 30%) !important;
-    position: absolute;
-    left: 0;
-}
-.boolAppointment-4 {
-    position: absolute;
-    right: 0;
 }
 
 .boolAppointment-1 h1 {
@@ -205,6 +206,441 @@
     font-weight: 600;
     line-height: 1.167;
 }
+
+
+.bookAppo{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    gap: 3%;
+    padding: 0 10px;
+    /* border: 1px solid red; */
+    
+}
+.bookAppo1{
+
+    width: 50%;
+    box-shadow: 0px 5px 20px rgb(128 128 128 / 30%);
+    padding: 10px;
+  
+    /* border: 1px solid blue; */
+    border-radius: 10px;
+   
+
+   
+}
+.bookAppo11{
+    /* height: 20px !important; */
+}
+.bookAppo11 a{
+   display: flex;
+   align-items: center;
+   margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.middleDiv{
+    padding: 5px 40px 40px ;
+    background-color: #f7f8f5;
+}
+@media (max-width:767.95px) {
+    .middleDiv{
+        background-color: #dcdfce;
+    }
+}
+
+.sliderCarosul{
+    /* padding: 5px 40px 40px 40px; */
+    /* border: 1px solid red; */
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    
+}
+.slideDiv{
+    /* width: 100%; */
+    padding: 20px;
+    display: flex;
+    overflow-x: scroll;
+    /* overflow: hidden; */
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+}
+.slideDivPic{
+    /* height: 100px; */
+    width: 100%;
+    
+}
+.slideDivPic img{
+    height: 100%;
+    width: 945px;
+    
+    /* width: calc(100% - 955px); */
+    
+    border-radius: 10px;
+    cursor: pointer;
+    /* border: 1px solid blue; */
+    box-shadow: 0px 5px 20px rgb(128 128 128 / 30%);
+}
+@media (max-width:899.5px){
+    .slideDivPic img{
+        width: 845px;
+    }
+}
+@media (max-width:767.5px){
+    .slideDivPic img{
+        width: 745px;
+    }
+}
+.leftSlideArrow{
+    position: absolute;
+    left: 0;
+    top: 45%;
+   
+}
+.rightSlideArrow{
+    position: absolute;
+    right: 0;
+    top: 45%;
+}
+.SlideArrow11{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 5px 20px rgb(128 128 128 / 30%);
+}
+.SlideArrow11 i{
+    font-size: 20px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.covidQueries{
+    /* border: 1px solid teal; */
+    min-height: 150px;
+}
+.covidQueries1{
+    padding-top: 20px;
+}
+.covidQueries11{
+    box-shadow: 0 5px 20px 0 rgb(128 128 128 / 30%);
+    border-radius: 10px;
+    background-color: #fff;
+    /* border: 1px solid red; */
+    height: inherit;
+}
+.covidQueries111{
+    padding: 24px;
+}
+.covidQueries111-Text{
+    color: #07AE8B;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 12px;
+}
+.covidQueries111-content{
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between;
+    gap: 2%;
+}
+
+@media (max-width: 767.95px){
+    .covidQueries111-content{
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+}
+.covidQueries111-contentDiv{
+    color: #FC9916;
+    width: 200px;
+    cursor: pointer;
+    display: flex;
+    padding: 9px 16px;
+    font-size: 14px;
+    box-shadow: 0px 2px 8px rgb(128 128 128 / 30%);
+    align-items: center;
+    font-weight: 500;
+    line-height: 14px;
+    border-radius: 10px;
+}
+.minBx1{
+    display: flex;
+    align-items: center;
+}
+.minBx1-text{
+    margin-left: 10px;
+}
+@media (max-width: 899.95px){
+    .covidQueries111-contentDiv{
+        width: 130px;
+        /* height: 35px; */
+        margin-bottom: 15px;
+    }
+    .minBx1{
+        font-size: 11px;  
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.healthArticle{
+    padding-top: 20px;
+}
+.healthArticleContent{
+    box-shadow: 0 5px 20px 0 rgb(128 128 128 / 30%);
+    min-height: 320px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.healthArticleResource{
+    background-image: url(https://newassets.apollo247.com/images/ecosystem-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 22px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+    /* border: 1px solid blue; */
+    display: flex;
+
+}
+.healthArticleResourceMedi{
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+.healthArticleResourcebody{
+    color: #fff;
+}
+.healthArticleResourceText{
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+@media (max-width:767.95px){
+    .healthArticleResourceText{
+        font-size: 24px;
+    }
+}
+.healthArticleResourceText + p{
+    margin: 0;
+}
+.healthArticleBlog{
+    padding: 20px;
+}
+
+.healthArticleBlogTop{
+    padding: 16px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.2);
+}
+.healthArticleBlogTop h3{
+    color: #07AE8B;
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.healthArticleBlogBottom{
+    padding: 16px 0;
+   
+}
+.healthArticleBlogTopDiv{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.healthArticleBlogTopDiv p{
+    color: rgba(1,71,91,0.6);
+    width: 70%;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+    opacity: 0.6;
+}
+
+
+.BlogTopDivRead{
+    
+    color: #FC9916;
+    margin: 0 0 0 20px;
+    display: flex;
+    padding: 9px 13px 9px 13px;
+    font-size: 13px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    align-items: center;
+    font-weight: 700;
+    border-radius: 10px;
+    text-transform: none;
+}
+.BlogTopDivReadText{
+    margin: 0 10px 0 10px;
+}
+
+@media (max-width:899.95px){
+    .healthArticleBlogTopDiv{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .BlogTopDivRead{
+        margin: 20px 0 0 0;
+    }
+}
+.healthArticleBlogBottomHead{
+    color: #01475b;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+}
+.healthArticleBlogBottomDiv{
+    display: flex;
+}
+.healthArticleBlogBottomTools{
+    flex: 1 1 100%;
+    color: #00485d;
+    border: 1px solid #00485d;
+    cursor: pointer;
+    display: flex;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.healthArticleBlogBottomTools a{
+    display: flex;
+    align-items: center;
+}
+.healthArticleBlogBottomTools a>.BottomTools2{
+    padding-right: 12px;
+}
+
+@media (max-width: 899.95px){
+    .healthArticleBlogBottomDiv{
+        width: auto;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .healthArticleBlogBottomTools{
+        width: 96%;
+        flex: 1;
+        margin-bottom: 15px;
+        /* padding: 5px !important; */
+    }
+}
+@media (max-width: 899.95px){
+  
+    .healthArticleBlogBottomTools{
+        padding: 5px !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.apolloProHealth{
+    min-height: 90px;
+}
+.apolloProHealth1{
+    padding-top: 20px;
+}
+.apolloProHealth-img{
+    width: 100%;
+}
+.apolloProHealth-img img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

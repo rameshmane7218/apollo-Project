@@ -51,3 +51,94 @@ localStorage.setItem("navtab",0);
 
 // let navtabIndex = localStorage.getItem("navtab");
 // console.log(navtabIndex);
+
+
+
+
+
+//carousal
+
+let carousalPic = [
+    {
+        index:"1",
+        img:"https://newassets.apollo247.com/images/banners/First3.jpg",
+    },
+    {
+        index:"2",
+        img:"https://newassets.apollo247.com/images/banners/Super_30.jpg",
+    },
+    {
+        index:"3",
+        img:"https://newassets.apollo247.com/images/banners/Sebamed05.jpg",
+    },
+    {
+        index:"4",
+        img:"https://newassets.apollo247.com/images/banners/Whey-Proteins_May5th.jpg",
+    },
+    {
+        index:"5",
+        img:"https://newassets.apollo247.com/images/banners/Web_Circle.jpg",
+    },
+    {
+        index:"6",
+        img:"https://newassets.apollo247.com/images/banners/CircleMembership.jpg",
+    },
+    {
+        index:"7",
+        img:"https://newassets.apollo247.com/images/banners/internationalConsult.png",
+    },
+    {
+        index:"8",
+        img:"https://newassets.apollo247.com/images/banners/ApolloHomeCare.jpg",
+    },
+    {
+        index:"9",
+        img:"https://newassets.apollo247.com/images/banners/vaccination.jpg",
+    },
+    {
+        index:"10",
+        img:"https://newassets.apollo247.com/images/banners/HealthQueries.png",
+    },
+    {
+        index:"11",
+        img:"https://newassets.apollo247.com/images/banners/post-covid.jpg",
+    },
+    {
+        index:"12",
+        img:"https://newassets.apollo247.com/images/banners/pharma_2Feb.png",
+    },
+    {
+        index:"13",
+        img:"https://newassets.apollo247.com/images/banners/pharma_2Feb.png",
+    },
+    {
+        index:"14",
+        img:"https://newassets.apollo247.com/images/banners/consult_2Feb.png",
+    },
+    {
+        index:"15",
+        img:"https://newassets.apollo247.com/images/circle/banners/consult.png",
+    },
+]
+
+
+let sliderPics = document.getElementById("slideDiv");
+carousalPic.forEach(({index,img})=>{
+    let picDiv = document.createElement("div");
+    picDiv.setAttribute("class","slideDivPic");
+    
+    // picDiv.i = index;
+
+    let pic = document.createElement("img");
+    pic.src = img;
+    // pic.height = "100%"
+    // pic.width = "100%"
+    // pic.style.height = "100%";
+    // pic.style.width = "100%";
+
+    picDiv.append(pic);
+
+    sliderPics.append(picDiv);
+})
+
+console.log(window.innerWidth);
