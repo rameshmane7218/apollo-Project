@@ -559,7 +559,7 @@
     width: 100%;
 }
 
-.cardPayBtnBox{
+#cardPayBtnBox{
     border: none;
     border-radius: 5px;
     background: #fc9916;
@@ -576,7 +576,7 @@
     
 }
 
-#cardPayBtnBoxOff{
+.cardPayBtnBoxOff{
     
     cursor: not-allowed;
     opacity: 0.5;
