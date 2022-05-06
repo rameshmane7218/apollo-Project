@@ -208,7 +208,7 @@
 
             <div id="proddiv">
 
-                <p style="font-size: 14px; ">Sebamed Up to 50 Percent Off | 75 Products</p>
+                <p style="font-size: 14px; " id="totalResult">Sebamed Up to 50 Percent Off | 75 Products</p>
                 <hr>
                 <select id="sort" onchange="sortit()">
                     <option value="">SORT BY : Relevalnce</option>
@@ -251,7 +251,11 @@
             console.log("query:", query);
             let res = await fetch(`http://localhost:4000/${query}`);
             data = await res.json();
+            console.log(data.length);
             console.log(data);
+            document.getElementById("totalResult").innerText = `${data.length} search results for '${query}';
+`;
+            
             display(data);
         } catch (err) {
             console.log(err);
