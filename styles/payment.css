@@ -28,6 +28,12 @@
 
 
 
+
+
+
+
+
+
 .paymentContainer{ 
     background: #fff;
     padding: 20px;
@@ -154,9 +160,10 @@
 }
 
 .PaymentOpenClose{
-    height: 50px;
+    /* height: inherit; */
+    box-sizing: border-box;
     background: #fafeff;
-    display: none;
+    /* display: none; */
     
 }
 
@@ -263,4 +270,278 @@
 .offerCompany img{
     height: 30px;
     margin-right: 5px;
+}
+
+
+
+/* Pay on Delivery */
+.payOnDelivery{
+    display: flex;
+    font-weight: 500;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.payOnDeliveryLeft{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.payOnText p{
+    margin: 0;
+}
+.payOnDelivery>a ,.walletList a{
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    color: #fc9916;
+    cursor: pointer;
+    margin: 5px;
+    padding-right: 5px;
+    word-break: break-word;
+    text-transform: uppercase;
+    
+}
+
+/* Net Banking  */
+.netBankingDiv{
+    padding: 10px 20px;
+}
+.netBankingList{
+    list-style-type: none;
+    display: flex;
+    font-weight: 500;
+    justify-content: space-evenly;
+    padding: 0;
+}
+.netBankingList img{
+    height: 26px;
+    width: 26px;
+}
+
+
+/* wallet  */
+.walletList{
+    list-style-type: none; 
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+.walletList img{
+    max-height: 36px;
+    max-width: 36px;
+    object-fit: contain;
+}
+.walletList a{
+    font-weight: 600;
+}
+.walletList li{
+    padding: 10px;
+    border-bottom: 0.5px solid #d4d4d4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.walletList>li>div{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+/* UPT payment  */
+.upiPayment{
+    padding: 10px 20px;
+}
+.upiPayment11{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+.upiPayment11>label{
+   padding: 5px;
+   font-size: 12px;
+}
+
+.upiInput form{
+    padding-left: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    /* flex-direction: row; */
+}
+#upiInputBox{
+    background: #fff;
+    border: 2px solid #00b38e;
+    border-radius: 4px;
+    flex: 1;
+   
+    height: 25px;
+    padding: 5px;
+    margin-right: 10px;
+    outline: none;
+    font-size: 14px;
+    line-height: 18px;
+    color: #02475b;
+    min-width: 20px;
+}
+
+.upiVerifyBtn{
+    border: none;
+    border-radius: 5px;
+    background: #fc9916;
+    color: #fff;
+    transition: all .5s ease; 
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    word-wrap: break-word;
+    min-width: 20px;
+    
+}
+#upiVerifyBtn{
+    position: relative;
+}
+.upiNotValid{
+    margin: 0;
+    font-size: 12px;
+    color: #cf8f6a;
+    position: absolute;
+    left: 10px;
+    bottom: -14px;
+}
+
+
+.upiVerifyBtnOff{
+    cursor: not-allowed;
+    opacity: .5;
+    pointer-events: none;  
+}
+
+
+
+
+
+
+
+.upiPayment11 ul{
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    list-style-type: none;
+    padding: 0;
+    overflow: auto;
+    padding: 5px 10px;
+    
+}
+.upiPayment11 ul::-webkit-scrollbar{
+    display: none;
+}
+.upiPayment11>ul>li{
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px;
+    
+}
+
+
+
+/* Card payment  */
+
+.cardPay{
+    box-sizing: border-box;
+}
+.cardPay1{
+    padding: 5px 20px;
+    /* position: relative; */
+    /* height: 100px; */
+}
+#CardNumberBox, #cardHolderFullNameBox{
+    width: 100%;
+    flex: 1;
+    border: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    height: 30px !important;
+    border-bottom: 2px solid #00b38e !important;
+} 
+
+.cardHolderFullName{
+    margin-top: 10px;
+}
+.dateCcvBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+.dataCcv{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+#validTillMonthBox, #validTillYearBox{
+    width: 20%;
+    flex: 1;
+    border: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    height: 30px !important;
+    border-bottom: 2px solid #00b38e !important;
+} 
+#userCcvBox{
+    width: 50%;
+    flex: 1;
+    border: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    height: 30px !important;
+    border-bottom: 2px solid #00b38e !important;
+} 
+.userCCV{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.validTill{
+    margin-right: 30px;
+    width: 200px;
+    padding: 0;
+}
+
+.cardPayBtnBox{
+    border: none;
+    border-radius: 5px;
+    background: #fc9916;
+    color: #fff;
+    transition: all .5s ease; 
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    word-wrap: break-word;
+    min-width: 20px;
+    padding: 10px;
+    
+}
+
+#cardPayBtnBoxOff{
+    
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;  
 }
