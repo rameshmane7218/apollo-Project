@@ -96,4 +96,5 @@ var hotsellerdata = [
         localStorage.setItem("cart",JSON.stringify(cartdata))
         alert("item added to cart")
       }
+
     }

@@ -194,7 +194,10 @@
         <p style="font-size: 14px; ">Sebamed Up to 50 Percent Off | 75 Products</p>
          <hr>
         <select  id="sort" onchange="sortit()">
-         <option  value="htl">SORT BY : High to low</option>
+          <option value="">SORT BY : Relevalnce</option>
+           <option value="ase">SORT BY : Names Ascending</option>
+            <option value="des">SORT BY : Names descending</option>
+          <option  value="htl">SORT BY : High to low</option>
        <option value="lth">SORT BY : Low to high</option>
       </select>
      <div id="appendprod"></div>
@@ -209,7 +212,7 @@
 {
     image_url:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
-    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    Product_name: "xebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
     MRP: "(Rs 2599)",
     Rs: 1170,
     off: "20% OFF",
@@ -217,7 +220,7 @@
   {
     image_url:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0017.jpg",
-    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    Product_name: "zebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
     MRP:"(Rs 2599)",
     Rs: 1171,
     off: "20% OFF",
@@ -233,7 +236,7 @@
   {
     image_url:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0100.jpg",
-    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    Product_name: "aebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
     MRP:"(Rs 2599)",
     Rs: 1200,
     off: "20% OFF",
@@ -328,6 +331,29 @@ function sortit() {
          display(productsdata)
         
       }
+      if (selected == "ase") {
+            let asc =productsdata.sort(function (a, b) {
+                if (a.Product_name > b.Product_name) return 1;
+                if (a.Product_name < b.Product_name) return -1;
+                return 0;
+            });
+            document.querySelector("#appendprod").innerHTML = null;
+            display(asc);
+
+        }
+
+        //sort by names descending
+        if (selected == "des") {
+            let des = productsdata.sort(function (a, b) {
+                if (a.Product_name < b.Product_name) return 1;
+                if (a.Product_name > b.Product_name) return -1;
+                return 0;
+            });
+            document.querySelector("#appendprod").innerHTML = null;
+            display(des);
+        }
+
+
     }
 
 
@@ -373,7 +399,7 @@ function display(productsdata)
           addtocart(el)
       })
 
-      container.append(image,ptag,hrtag,MRP,Rs,btn)
+      container.append(image,ptag,MRP,Rs,btn)
 
     
 

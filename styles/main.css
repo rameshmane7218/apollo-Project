@@ -77,9 +77,10 @@
 #yourorder>img{
     height: 44px;
     width: 60px;
+    /* border: 1px solid red; */
 }
-#placeyourorder
-{
+
+#placeyourorder{
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -178,9 +179,12 @@
     border-radius: 10px;
   
     width: 250px;
-   
-      
-}
+  }
+  #product p{            
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+  }
 #product:hover
 {
     -webkit-transform: scale(1.08);
