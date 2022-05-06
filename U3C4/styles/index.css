@@ -1,0 +1,49 @@
+
+#sidebar{
+    width: 13%;
+    height: 80vh;
+    background-color: aliceblue;
+    padding: 1%;
+   
+}
+#sidebar h3{
+    background-color: teal;
+    width: 85%;
+    padding: 5px;
+    cursor: pointer;
+}
+#sidebar h3:hover{
+    width: 90%;
+    color: greenyellow;
+}
+
+#block-2{
+    display: flex;
+    justify-content: space-between;
+    
+}
+#results{
+    
+    width: 82%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+   
+}
+
+.news{
+    cursor: pointer;
+    height: 200px;
+    border: 1px solid teal;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.news img{
+    width: 250px;
+    display: flex;
+    justify-content: flex-start;
+}
+.dataDiv{
+    width: 70%;
+    border: 1px solid transparent;
+}
