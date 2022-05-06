@@ -130,15 +130,74 @@ function verify() {
 
 
 //Card payment
+let validCardNum = ["1234 1234 1234 1234","1234 5678 1234 5678","1357 2468 1357 2468"];
+localStorage.setItem("validCardNum",JSON.stringify(validCardNum));
+localStorage.setItem("validCard","false");
+localStorage.setItem("cardMonth","false");
+localStorage.setItem("cardYear","false");
 
 let inputFild = document.getElementById("CardNumberBox");
 inputFild.onkeydown = function(){
     
     if(inputFild.value.length > 0 && ((inputFild.value.length == 4)||(inputFild.value.length == 9)||(inputFild.value.length == 14))){
-        console.log("huiu")
+        // console.log("huiu")
         inputFild.value += " ";
-    }else{
-        console.log("not");
-        
     }
-}
+
+    let validCard = JSON.parse(localStorage.getItem("validCardNum"));
+    if(inputFild.value.length > 18){
+        
+        if(!validCard.includes(inputFild.value)){
+            localStorage.setItem("validCard","false");
+            console.log("card Num not valid");
+            document.getElementById("invalidCardNum").classList.add("invalidCardNum");
+            
+        }else{
+            console.log("valid card");
+            localStorage.setItem("validCard","true");
+            document.getElementById("invalidCardNum").classList.remove("invalidCardNum");
+        }
+    }
+};
+
+
+let userMonth = document.getElementById("validTillMonthBox");
+userMonth.onkeydown = function(){
+    
+    if(userMonth.value.length > 1 && ((userMonth.value[0] < 2)||(userMonth.value[1] < 10))){
+        console.log("valid Card month/year");
+        document.getElementById("validTillYearBox").classList.remove("validTillYearBox");
+        // console.log('classlist:', classlist)
+        localStorage.setItem("cardMonth","true");
+        document.getElementById("invalidMonthYear").classList.remove("invalidMonthYear");
+
+        
+    }else{
+        document.getElementById("validTillYearBox").classList.add("validTillYearBox");
+        // console.log('ads:', ads)
+        console.log("Invalid Card month/year");
+        localStorage.setItem("cardMonth","false");
+        document.getElementById("invalidMonthYear").classList.add("invalidMonthYear");
+    }
+};
+
+let userYear = document.getElementById("validTillYearBox");
+userYear.onkeydown = function(){
+    
+    if(userYear.value.length > 1 && ((userYear.value > 21))){
+        console.log("valid Card month/year");
+        localStorage.setItem("cardYear","true");
+        document.getElementById("invalidMonthYear").classList.remove("invalidMonthYear");
+
+        
+    }else{
+        console.log("Invalid Card month/year");
+        localStorage.setItem("cardYear","false")
+        document.getElementById("invalidMonthYear").classList.add("invalidMonthYear");
+
+    }
+};
+
+
+
+

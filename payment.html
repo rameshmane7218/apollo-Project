@@ -116,25 +116,27 @@
                                                     <form id="cardData">
                                                         <div class="cardNumber">
                                                             <label for="cardNumber">Card Number</label>
-                                                            <input type="tel" id="CardNumberBox" placeholder="Card Numebr" autocomplete="off" maxlength="19">
+                                                            <input type="tel" id="CardNumberBox" placeholder="Card Numebr" autocomplete="off" maxlength="19" required>
+                                                            <div id="invalidCardNum"  style="display:none;">Invalid card number</div>
                                                         </div>
                                                         <div class="cardHolderFullName">
                                                             <label for="full Name">Full Name</label>
-                                                            <input type="text" id="cardHolderFullNameBox" placeholder="Name on card" autocomplete="off" maxlength="64">
+                                                            <input type="text" id="cardHolderFullNameBox" placeholder="Name on card" autocomplete="off" maxlength="64" required>
                                                         </div>
                                                         <div class="dateCcvBtn">
                                                             <div class="dataCcv">
                                                                 <div class="validTill">
                                                                     <label for="card Validity">Valid Through</label>
                                                                     <div>
-                                                                        <input type="tel" id="validTillMonthBox" placeholder="MM" autocomplete="off" maxlength="2">
+                                                                        <input type="tel" id="validTillMonthBox" placeholder="MM" autocomplete="off" maxlength="2" required>
                                                                         <label for="slash">/</label>
-                                                                        <input type="tel" id="validTillYearBox" placeholder="YY" autocomplete="off" maxlength="2">
+                                                                        <input type="tel" id="validTillYearBox" class="validTillYearBox" placeholder="YY" autocomplete="off" maxlength="2" required>
                                                                     </div>
+                                                                    <div style="display: none;" id="invalidMonthYear">Invalid card month/year</div>
                                                                 </div>
                                                                 <div class="userCCV">
                                                                     <label for="CCV">CCV</label>
-                                                                    <input type="password" id="userCcvBox" placeholder="***" autocomplete="off" maxlength="4">
+                                                                    <input type="password" id="userCcvBox" placeholder="***" autocomplete="off" maxlength="4" required>
                                                                 </div>
                                                             </div>
                                                             <div class="cardPayBtn">
@@ -142,7 +144,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="saveThiCard">
-                                                            <input type="checkbox">
+                                                            <input type="checkbox" checked="on">
                                                             <label for="To Save Card">Save this card for faster checkout</label>
                                                         </div>
                                                     </form>
