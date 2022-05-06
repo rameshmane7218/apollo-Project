@@ -1,0 +1,74 @@
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+}
+body {
+    color: #02475b;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    background-color: #dcdfce;
+}
+#mainContainer {
+    max-width: 1064px;
+    height: 500px; 
+     /* border: 1px solid teal; */
+    background-color: white;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+  
+.faqContainer {
+    /* border: 1px solid  */
+     box-sizing: border-box;
+     padding: 20px 30px;
+     border-radius: 5px;
+     box-shadow: 0 5px 20px 0 hsl(0deg 0% 50% / 30%);
+     font-size: 14px;
+     line-height: 23px;
+ }
+
+
+.faqContainer>h2 {
+    margin-top: 0px;
+    color: #02475b;
+}
+.faqMain {
+     border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgba(2, 71, 91, 0.2);
+}
+.faqTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px 12px 0;
+    /* color: red; */
+}
+.faqTitle>h2 {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    font-weight: 500;
+    color:  #02475b;
+}
+.faqContent{
+    padding: 0 0 20px;
+    display: none;
+}
+.faqContent p {
+    font-weight: 400;
+    margin: 0;
+    font-size: 12px;
+    line-height: 20px;
+    color: #02475b;
+  
+}

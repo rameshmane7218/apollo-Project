@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b0071033d8.js" crossorigin="anonymous"></script>
+    <style>
+        #main{
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid green; */
+           padding: 20px;
+           box-sizing: border-box;
+            width: 80%;
+            margin: auto;
+            gap:5%;
+            overflow: scroll;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #proddiv{
+             /* border: 1px solid red;  */
+           margin-left: 20px 0px 0px 20px;
+            padding: 10px;
+            box-sizing: border-box;
+        
+            
+        
+        }
+        #appendprod{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 2%;
+            /* border: 1px solid; */
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            height: auto;
+          
+        
+        }
+        #prod{
+            /* border: 1px solid; */
+            /* padding: 10px; */
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding-top: 10px;
+           
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          
+        }
+        #btn
+        {
+            /* border: 1px solid; */
+            width: 100%;
+            border-radius: 10px;
+            background-color: #fc9916 ;
+            padding: 10px;
+            box-sizing: border-box;
+            color:white;
+            font-weight: bold;
+            border:none
+           
+        }
+        #btn:hover{
+          cursor: pointer;
+        }
+        #sidebar{
+            /* border: 1px solid; */
+            width: 250px;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 5px ;
+            margin-top: 30px;
+            
+        }
+        #filterby{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        #category,#brand{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5%;
+            margin-left: 7%;
+            
+        }
+        #sort{
+          margin-left: 75%;
+          padding: 10px;
+          border-radius: 5px;
+        }
+       
+        #inputdiv{
+            display: flex;
+     justify-content: space-between;
+    /* border: 1px solid; */
+    height: 80px;
+    margin-bottom: 20px;
+    /* border: 1px solid; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 80%;
+    margin: auto;
+}
+#input{
+      height: 80%;
+      width: 60%;
+      margin-top: 1%;
+      margin-left: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #f7f8f5;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      /* border: 1px solid; */
+      width: 600px;
+     
+}
+      
+#uploaddiv{
+    display: flex;
+    /* border: 1px solid; */
+    width: 200px;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+#upload
+{
+    margin-top: 10px;
+   
+}
+#upload>button
+{
+    background-color: #fc9916;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+
+}
+    </style>
+</head>
+<body>
+   <div id="box">
+       
+    <div id="inputdiv">
+     <div>
+        <input type="text" name="" id="input" placeholder="Search,meds,brands and more">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+        <div id="uploaddiv">
+            <div id="upload">
+                <button >UPLOAD</button>
+            </div>
+         <div>
+            <p>Special Offer</p>
+        </div>
+    
+    </div>
+
+
+  
+   
+    </div>
+<div id="main">
+   
+    <div id="sidebar">
+        <div id="filterby">
+            <div>Filter By</div>
+            <div>Clear All</div>
+        </div>
+        <hr>
+        <div id="category">
+            <div>CATEGORY</div>
+            <div>+</div>
+        </div>
+        <hr>
+        <div id="brand">
+            <div>BRAND</div>
+            <div>+</div>
+        </div>
+        <hr>
+    </div>
+    
+    <div id="proddiv">
+
+        <p style="font-size: 14px; ">Sebamed Up to 50 Percent Off | 75 Products</p>
+         <hr>
+        <select  id="sort" onchange="sortit()">
+          <option value="">SORT BY : Relevalnce</option>
+           <option value="ase">SORT BY : Names Ascending</option>
+            <option value="des">SORT BY : Names descending</option>
+          <option  value="htl">SORT BY : High to low</option>
+       <option value="lth">SORT BY : Low to high</option>
+      </select>
+     <div id="appendprod"></div>
+    </div>
+   </div>
+</div>
+</body>
+</html>
+<script>
+    var productsdata = [
+
+{
+    image_url:
+    "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
+    Product_name: "xebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    MRP: "(Rs 2599)",
+    Rs: 1170,
+    off: "20% OFF",
+  },
+  {
+    image_url:
+    "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0017.jpg",
+    Product_name: "zebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    MRP:"(Rs 2599)",
+    Rs: 1171,
+    off: "20% OFF",
+  },
+  {
+    image_url:
+    "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0115.jpg",
+    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    MRP:"(Rs 2599)",
+    Rs: 1100,
+    off: "20% OFF",
+  },
+  {
+    image_url:
+    "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0100.jpg",
+    Product_name: "aebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    MRP:"(Rs 2599)",
+    Rs: 1200,
+    off: "20% OFF",
+  },
+  {
+    image_url:
+    "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
+    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    MRP:"(Rs. 2599)",
+    Rs: 1110,
+    off: "20% OFF",
+  },
+  {
+    image_url:
+    "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
+    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    MRP: "(Rs 2599)",
+    Rs: 1070,
+    off: "20% OFF",
+  },
+  {
+    image_url:
+    "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0017.jpg",
+    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    MRP:"(Rs 2599)",
+    Rs: 1270,
+    off: "20% OFF",
+  },
+  {
+    image_url:
+    "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0115.jpg",
+    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    MRP:"(Rs 2599)",
+    Rs: 1370,
+    off: "20% OFF",
+  },
+  {
+    image_url:
+    "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0100.jpg",
+    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    MRP:"(Rs 2599)",
+    Rs: 1970,
+    off: "20% OFF",
+  },
+  {
+    image_url:
+    "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
+    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    MRP:"(Rs. 2599)",
+    Rs: 1140,
+    off: "20% OFF",
+  },
+  {
+    image_url:
+    "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0100.jpg",
+    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    MRP:"(Rs 2599)",
+    Rs: 1160,
+    off: "20% OFF",
+  },
+  {
+    image_url:
+    "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
+    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+    MRP:"(Rs. 2599)",
+    Rs: 1180,
+    off: "20% OFF",
+  },
+
+]
+
+window.addEventListener("load",function(){
+    display(productsdata)
+})
+function sortit() {
+      var selected = document.querySelector("#sort").value;
+     // console.log(selected);
+      
+       if (selected == "htl") {
+        productsdata.sort(function (a, b) {
+          return b.Rs - a.Rs;
+        });
+        document.querySelector("#appendprod").innerHTML = null;
+         display(productsdata);
+       
+      }
+      if (selected == "lth") {
+        productsdata.sort(function (a, b) {
+          return a.Rs - b.Rs;
+        });
+        document.querySelector("#appendprod").innerHTML=null;
+         display(productsdata)
+        
+      }
+      if (selected == "ase") {
+            let asc =productsdata.sort(function (a, b) {
+                if (a.Product_name > b.Product_name) return 1;
+                if (a.Product_name < b.Product_name) return -1;
+                return 0;
+            });
+            document.querySelector("#appendprod").innerHTML = null;
+            display(asc);
+
+        }
+
+        //sort by names descending
+        if (selected == "des") {
+            let des = productsdata.sort(function (a, b) {
+                if (a.Product_name < b.Product_name) return 1;
+                if (a.Product_name > b.Product_name) return -1;
+                return 0;
+            });
+            document.querySelector("#appendprod").innerHTML = null;
+            display(des);
+        }
+
+
+    }
+
+
+function display(productsdata)
+{
+
+  var cartdata = JSON.parse(localStorage.getItem("cart"))||[]
+  productsdata.map(function(el){
+
+      let container = document.createElement("div");
+
+      container.setAttribute("id","prod")
+      
+      let image = document.createElement("img")
+      image.src = el.image_url;
+      image.style.height= "100px";
+      image.style.width = "100px"
+
+      let ptag = document.createElement("p")
+      ptag.innerText = el.Product_name;
+      ptag.style.fontSize = "14px"
+
+      let hrtag = document.createElement("hr")
+
+
+      let MRP = document.createElement("s")
+      MRP.innerText = "MRP "+ el.MRP;
+      MRP.style.fontWeight = "bold"
+
+      let Rs = document.createElement("h4")
+      Rs.innerText = "Rs. " +el.Rs;
+
+    //   let btndiv = document.createElement("div")
+    //   btndiv.setAttribute("id","btndiv")
+
+      let btn = document.createElement("button")
+      btn.innerText = "ADD TO CART"
+    //   btndiv.append(btn)
+      btn.setAttribute("id","btn")
+      btn.style.width = "100%"
+
+      btn.addEventListener("click",function(){
+          addtocart(el)
+      })
+
+      container.append(image,ptag,MRP,Rs,btn)
+
+    
+
+      document.getElementById("appendprod").append(container)
+
+   
+
+  
+  })
+  function addtocart(el)
+  {
+    cartdata.push(el)
+    localStorage.setItem("cart",JSON.stringify(cartdata))
+    alert("item added to cart")
+  }
+}
+</script>

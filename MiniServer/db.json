@@ -1,0 +1,74 @@
+{
+    "tablet":[
+        {
+            "name":"i-Pill Emergency Contraceptive Pill, 1 Tablet",
+            "imgUrl":"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/i/p/ipi0001.jpg",
+            "price":90.02,
+            "strickPrice":110
+        },
+        {
+            "name":"i-Pill Emergency Contraceptive Pill, 1 Tablet",
+            "imgUrl":"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/i/p/ipi0001.jpg",
+            "price":90.02,
+            "strickPrice":110
+        }
+    ],
+    "colgate":[
+        {
+            "name":"i-Pill Emergency Contraceptive Pill, 1 Tablet",
+            "imgUrl":"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/i/p/ipi0001.jpg",
+            "price":90.02,
+            "strickPrice":110
+        },
+        {
+            "name":"i-Pill Emergency Contraceptive Pill, 1 Tablet",
+            "imgUrl":"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/i/p/ipi0001.jpg",
+            "price":90.02,
+            "strickPrice":110
+        }
+    ],
+    "fitmeal":[
+        {
+          "woocommerce-LoopProduct-link href": "https://www.fitmeals.co.in/product/almond-date-chocolate/",
+          "imgUrl": "https://www.fitmeals.co.in/wp-content/uploads/2021/06/25-360x360.jpg",
+          "name": "Almond Date Chocolate",
+          "content": "Delicious Dates stuffed with a Almonds and covered in dark chocolate. With the finest golden almonds at the ...",
+          "price": "1,200.00"
+        },
+        {
+          "woocommerce-LoopProduct-link href": "https://www.fitmeals.co.in/product/coco-rush/",
+          "imgUrl": "https://www.fitmeals.co.in/wp-content/uploads/2021/06/23-360x360.jpg",
+          "name": "Coco Rush",
+          "content": "Coco Rush is made with dates, nuts, premium grade cacao and wholesome ingredients. A delicious, healthy ...",
+          "price": 550
+        },
+        {
+          "woocommerce-LoopProduct-link href": "https://www.fitmeals.co.in/product/energy-bars/",
+          "imgUrl": "https://www.fitmeals.co.in/wp-content/uploads/2021/06/veganhomemadeenergybarsh-360x360.jpg",
+          "name": "Energy Bars",
+          "content": "Each bar brings a great texture with the energy and nutrients you need.  We keep things sweet by using only ...",
+          "price": 750
+        },
+        {
+          "woocommerce-LoopProduct-link href": "https://www.fitmeals.co.in/product/flax-seed-balls/",
+          "imgUrl": "https://www.fitmeals.co.in/wp-content/uploads/2021/06/24-360x361.jpg",
+          "name": "Flax Seed Balls",
+          "content": "A crunchy, chocolaty dessert for hunger pangs, Flax Seeds will provide you instant energy. About This Product ...",
+          "price": 550
+        },
+        {
+          "woocommerce-LoopProduct-link href": "https://www.fitmeals.co.in/product/nutty-buddy/",
+          "imgUrl": "https://www.fitmeals.co.in/wp-content/uploads/2021/06/snack-nuttyBuddy-300x300-1.jpg",
+          "name": "Nutty Buddy",
+          "content": "Nutty Buddy – These Nutrient-packed nutty treats make for the perfect guilt-free snack … and ...",
+          "price": 650
+        },
+        {
+          "woocommerce-LoopProduct-link href": "https://www.fitmeals.co.in/product/peanut-butter-truffles/",
+          "imgUrl": "https://www.fitmeals.co.in/wp-content/uploads/2021/06/peanut-butter-balls-2-360x360.jpg",
+          "name": "Peanut Butter Truffles",
+          "content": "Creamy peanut butter completely coated in dark chocolate — The ultimate snack for those who love all things ...",
+          "price": "1,050.00"
+        }
+      ]
+}

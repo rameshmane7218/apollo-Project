@@ -1,0 +1,340 @@
+{
+    "Specialities":[
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/bdf0cf0d-754e-4254-aaf7-fdc7aedd7c35.jpg",
+          "specialist": "Allergist and Clinical Immunologist",
+          "specialistIn": "Manage allergies and treat immunity",
+          "symptoms": "Recurring infections, Immunity deficiency"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/7236eab5-ea3c-4691-8362-c1fec2198596.jpg",
+          "specialist": "Apollo Family Health Plan",
+          "specialistIn": "Book Packages with your favorite doctors",
+          "symptoms": "Cold, Cough, Fever, Headache, Skin rashes, St"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_bariatrics.png",
+          "specialist": "Bariatrics",
+          "specialistIn": "For obesity-related disorders",
+          "symptoms": "Overweight, BMI over 30"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/72d4eda4-c0cd-4ff4-881a-5e7ae148681a.jpg",
+          "specialist": "Cardiology",
+          "specialistIn": "For heart and blood pressure problems",
+          "symptoms": "Chest pain, Heart Failure, Cholesterol"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/e5a03790-7cef-4f9c-909c-e45b658a5a6d.jpg",
+          "specialist": "Cold, Cough and Fever",
+          "specialistIn": "For common health concerns",
+          "symptoms": "Fever, Eye Infection, Stomach Ache, Headache"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/62b70a73-837b-4b65-9b35-9b5ce04da79a.jpg",
+          "specialist": "Colorectal Surgery",
+          "specialistIn": "For disorders of rectum, anus, and colon",
+          "symptoms": "Inflammatory bowel disease, Fistula, Intestinal blockage"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/34ae6abd-5a9d-40d1-98be-454ac94925c7.jpg",
+          "specialist": "Counseling",
+          "specialistIn": "Emotional or mental health difficulties",
+          "symptoms": "Depression, Anxiety, Mental Stress, Trauma"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/83163700-97e1-47cd-a715-5941fd708a03.png",
+          "specialist": "Covid Recover Clinic",
+          "specialistIn": "Treatment of Post-Covid Mid/long term illness",
+          "symptoms": "Post-Covid breathlessness, Chest pain"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_Critical_Care.png",
+          "specialist": "Critical Care",
+          "specialistIn": "For life-threatening conditions",
+          "symptoms": "ICU related, High-risk patients, Hypertension"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/dc6baffd-4104-4a38-a8b2-0f262d7270aa.jpg",
+          "specialist": "De-addiction Management",
+          "specialistIn": "Specialists to help quit smoking, alcohol",
+          "symptoms": "Quit - Smoking, Drugs, Tobacco, Alcohol"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_Dentist.png",
+          "specialist": "Dentist",
+          "specialistIn": "Specialists for dental issues and treatments",
+          "symptoms": "Toothache, Mouth Ulcer, Crooked Teeth"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_diabetology.png",
+          "specialist": "Diabetology",
+          "specialistIn": "Managing all kinds of diabetes",
+          "symptoms": "Type 1 & Type 2 diabetes, Obesity, Anemia"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_dietician.png",
+          "specialist": "Dietetics",
+          "specialistIn": "Managing nutrition and diet regulation",
+          "symptoms": "Loss of appetite, Pregnancy Diet, Weight loss"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_ent.png",
+          "specialist": "ENT",
+          "specialistIn": "ENT specialists for Ear, Nose and Throat",
+          "symptoms": "Earache, Bad breath, Swollen neck, Vertigo"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/9958ce34-1490-42da-a76d-f5304b873104.jpg",
+          "specialist": "Endocrine Surgery",
+          "specialistIn": "For surgeries of endocrine glands",
+          "symptoms": "Thyroid cancer, Adrenal gland tumours, Conn syndrome"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_diabetology.png",
+          "specialist": "Endocrinology",
+          "specialistIn": "For diabetes and hormonal problems",
+          "symptoms": "Thyroid, PCOS/PCOD, Growth issues"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_familyPhysician.png",
+          "specialist": "Family Physician",
+          "specialistIn": "For maintaining a healthy lifestyle",
+          "symptoms": "Routine check-ups, Health-risk assessments"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_gastroenterology.png",
+          "specialist": "Gastroenterology/GI medicine",
+          "specialistIn": "Managing digestive health",
+          "symptoms": "Vomiting, Acidity, Stomach ulcers, Swallowing"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/4466dab4-c2b4-4961-b34e-c87673b1e9cd.jpg",
+          "specialist": "General & Laparoscopic Surgeon",
+          "specialistIn": "For general and minimally invasive surgeries",
+          "symptoms": "Cysts, Tumors, Appendicitis, Keyhole Surgery"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_General_Physician_Kavach.png",
+          "specialist": "General Physician Kavach",
+          "specialistIn": "",
+          "symptoms": ""
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_general_surgeon.png",
+          "specialist": "General Surgery",
+          "specialistIn": "For all kinds of surgeries",
+          "symptoms": "Hernia, Abdominal Surgery"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_haematology.png",
+          "specialist": "Haematology",
+          "specialistIn": "For diseases related to blood",
+          "symptoms": "Blood diseases"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/daf875ee-2364-4edd-9eb9-7189e09fc25a.jpg",
+          "specialist": "Hepatology",
+          "specialistIn": "For liver, gallbladder, biliary tree and pancreas disorders",
+          "symptoms": "Liver disease, Liver cancer"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_infectiousDiseases.png",
+          "specialist": "Infectious Disease",
+          "specialistIn": "For diseases caused by microorganisms",
+          "symptoms": "Severe headache, Fever, Animal bite"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/e23814fe-e2e5-4ef3-9d18-65d2bb245440.jpg",
+          "specialist": "Infertility",
+          "specialistIn": "Specialists to help get pregnant",
+          "symptoms": "IVF, Miscarriages, Egg-freezing"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/6b9f6dcb-8c1b-4da6-b9bb-6fd1294c8aaf.jpg",
+          "specialist": "Lab Report Analysis",
+          "specialistIn": "Understand your reports and treatments",
+          "symptoms": "Blood Reports, Ultrasound Reports, MRI Scans"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_oncology.png",
+          "specialist": "Medical Oncology",
+          "specialistIn": "Cancer treatment using various techniques",
+          "symptoms": "Immunotherapy, Hormonal therapy, Chemotherapy"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_nephrology.png",
+          "specialist": "Nephrology",
+          "specialistIn": "Managing all kidney related issues",
+          "symptoms": "Kidney Failure, Acute Renal Failure, Dialysis"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_neurology.png",
+          "specialist": "Neurology",
+          "specialistIn": "Managing issues of the nervous system, brain",
+          "symptoms": "Stroke, Dementia, Epilepsy, Movement issues"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/362e133a-17cb-478f-a447-69bdf0bdddc0.jpg",
+          "specialist": "Neurosurgery",
+          "specialistIn": "For surgical treatment of nervous system disorders",
+          "symptoms": "Tumor, Seizures, Spine Surgery"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/c188f977-89d2-427c-8142-f67a47138462.jpg",
+          "specialist": "Nuclear Medicine Physician",
+          "specialistIn": "Using radioactive materials to treat issues",
+          "symptoms": "Scans- Breast, Brain, Bone, Thyroid, Kidney"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_obstetrics_and_gynaecology.png",
+          "specialist": "Obstetrics & Gynaecology",
+          "specialistIn": "For women health issues and surgeries",
+          "symptoms": "Irregular periods, Pregnancy, PCOD/PCOS"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_opthalmology.png",
+          "specialist": "Ophthalmology",
+          "specialistIn": "Ophthalmologist for eye care and surgeries",
+          "symptoms": "Cataract, Blurred vision, Glaucoma, Eye pain"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_OMSurgery.png",
+          "specialist": "Oral & Maxillofacial Surgery",
+          "specialistIn": "For reconstructive surgery of oral cavity, face, jaws",
+          "symptoms": "Teeth Removal, Cleft Lip, Cancer of neck, Jaw"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_orthopaedics.png",
+          "specialist": "Orthopaedics",
+          "specialistIn": "Managing issues of bones, joints, knees",
+          "symptoms": "Knee Pain, Shoulder Pain, Bone deformity"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_Pain_Management.png",
+          "specialist": "Pain Management",
+          "specialistIn": "For management of all types of pain",
+          "symptoms": "Acute pain, Chronic pain, Cancer pain"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/244b0282-e14c-42f0-af6e-613bd8af6934.jpg",
+          "specialist": "Physiotherapy and Rehabilitation",
+          "specialistIn": "For facilitating recovery from illness/injuries",
+          "symptoms": "Post-Covid, Recovery from surgeries"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_plastic_surgery.png",
+          "specialist": "Plastic Surgery",
+          "specialistIn": "For restoration, reconstruction, alteration of human body",
+          "symptoms": "Cosmetic surgery, Burns, Rhinoplasty"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_podiatry.png",
+          "specialist": "Podiatry",
+          "specialistIn": "For treating foot, ankle and leg disorders",
+          "symptoms": "Foot injury, Ankle injury, Diabetic foot"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_psychiatrist.png",
+          "specialist": "Psychiatry",
+          "specialistIn": "Specialists to help treat mental health",
+          "symptoms": "Anxiety, Depression, Stress, OCD, Bipolar"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/a7140a26-4955-4c50-bb6a-3299b8de886c.jpg",
+          "specialist": "Psychology",
+          "specialistIn": "Therapists for helping in mental health issue",
+          "symptoms": "Phobias, Family and Personal Counselling"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_pulmonology.png",
+          "specialist": "Pulmonology/ Respiratory Medicine",
+          "specialistIn": "Managing lung and respiratory disorders",
+          "symptoms": "Chest pain, Breathing difficulty, Asthma, TB"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/9807866d-b385-47b0-8d65-47b7bae3c3cb.jpg",
+          "specialist": "Radiation Oncology",
+          "specialistIn": "Treating radiation therapy to treat cancer",
+          "symptoms": "Cancer- Eye, Prostate, Breast, Cervix"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_radiology.png",
+          "specialist": "Radiology",
+          "specialistIn": "For medical imaging",
+          "symptoms": "Knee injury, Cancer, Tumor"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_rheumatology.png",
+          "specialist": "Rheumatology",
+          "specialistIn": "For treatment of rheumatic diseases",
+          "symptoms": "Rheumatoid arthritis, Osteoporosis, Gout"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/33100aa2-2b45-4671-b7d7-68c2e22cd049.jpg",
+          "specialist": "Sexual Health",
+          "specialistIn": "For treatment of Sexual Disorders",
+          "symptoms": "Painful intercourse, Loss of sexual desire"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/bb67daa7-5449-4987-b185-c907b19128c8.jpg",
+          "specialist": "Sleep Medicine",
+          "specialistIn": "Diagnosis & treatment of sleep disorders",
+          "symptoms": "Insomnia, Constant Fatigue, Snoring"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/f752370c-67cc-4c2b-9387-3529f3e34ac5.jpg",
+          "specialist": "Speech Therapy",
+          "specialistIn": "Treatment of speech disorders",
+          "symptoms": "Stuttering, Repeating sound, Elongating words"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/bfac9eaf-e1c1-4a64-b10a-e5b33ed1567c.jpg",
+          "specialist": "Spine Surgery",
+          "specialistIn": "For surgeries of the spine",
+          "symptoms": "Back pain, Neck pain"
+        },
+        {
+          "imgUrl": "",
+          "specialist": "Super GP",
+          "specialistIn": "free consults package with specialist doctors",
+          "symptoms": "Health-Risk Assessments, All general health"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/b4be465c-eb0e-4295-9460-ebb6b526fa05.jpg",
+          "specialist": "Surgical Gastroenterology",
+          "specialistIn": "For surgical treatment of the digestive system",
+          "symptoms": "Surgery- Stomach, Livers, Rectal bleeding"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/e835ec4b-cb17-47a8-91bb-c5cf207a1db2.jpg",
+          "specialist": "Surgical Oncology",
+          "specialistIn": "For diagnosis & surgical treatment of cancer",
+          "symptoms": "Prevent cancer, Removal of cancerous tumor"
+        },
+        {
+          "imgUrl": "https://prodaphstorage.blob.core.windows.net/specialties/86b4284f-3358-44e4-a85c-2ce3de5b8c4f.jpg",
+          "specialist": "Transplant Surgery",
+          "specialistIn": "Managing organ replacement/transplant",
+          "symptoms": "Kidney failure, Lung disease, Heart disease"
+        },
+        {
+          "imgUrl": "",
+          "specialist": "Uro Oncology",
+          "specialistIn": "Diagnosing and treating cancers of the male a",
+          "symptoms": "Prostate cancer, Renal cancer, Penile cancer,"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_urology.png",
+          "specialist": "Urology",
+          "specialistIn": "For disorders of urinary tract and male reproductive organs",
+          "symptoms": "Urinary infection, Kidney stones, Traumatic injury"
+        },
+        {
+          "imgUrl": "https://newassets.apollo247.com/specialties/ic_vascularsurgery.png",
+          "specialist": "Vascular & Endovascular Surgery",
+          "specialistIn": "For minimally invasive surgical treatment of blood vessel disorders",
+          "symptoms": "Blood clots, Ulcers, Leg swelling"
+        }
+      ]
+}

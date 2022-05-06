@@ -98,19 +98,59 @@
                                         </div>
                                         <i id="payArrow" class="fa-solid fa-angle-up"></i>
                                     </div>
-                                    <div class="payWithNewCard paymentAccordion">
-                                        <div class="payWithNewCard3">
-                                            <div class="payWithNewCardLeft">
-                                                <span class="plusIcon"><i class="fa-solid fa-plus"></i></span>
-                                                <span class="payWithName">Pay with a New Card</span> 
-                                            </div>
-                                            <div class="payWithNewCardRight">
-                                                <i class="fa-solid fa-circle-check"></i>
+                                    <div>
+                                        <div class="payWithNewCard paymentAccordion">
+                                            <div class="payWithNewCard3">
+                                                <div class="payWithNewCardLeft">
+                                                    <span class="plusIcon"><i class="fa-solid fa-plus"></i></span>
+                                                    <span class="payWithName">Pay with a New Card</span> 
+                                                </div>
+                                                <div class="payWithNewCardRight">
+                                                    <i class="fa-solid fa-circle-check"></i>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="PaymentOpenClose">
-                                        
+                                        <div class="PaymentOpenClose">
+                                            <div class="cardPay">
+                                                <div class="cardPay1">
+                                                    <form id="cardData">
+                                                        <div class="cardNumber">
+                                                            <label for="cardNumber">Card Number</label>
+                                                            <input type="tel" id="CardNumberBox" placeholder="Card Numebr" autocomplete="off" maxlength="19" required>
+                                                            <div id="invalidCardNum"  style="display:none;">Invalid card number</div>
+                                                        </div>
+                                                        <div class="cardHolderFullName">
+                                                            <label for="full Name">Full Name</label>
+                                                            <input type="text" id="cardHolderFullNameBox" placeholder="Name on card" name="name" maxlength="64" required>
+                                                        </div>
+                                                        <div class="dateCcvBtn">
+                                                            <div class="dataCcv">
+                                                                <div class="validTill">
+                                                                    <label for="card Validity">Valid Through</label>
+                                                                    <div>
+                                                                        <input type="tel" id="validTillMonthBox" placeholder="MM" autocomplete="off" maxlength="2" required>
+                                                                        <label for="slash">/</label>
+                                                                        <input type="tel" id="validTillYearBox" class="validTillYearBox" placeholder="YY" autocomplete="off" maxlength="2" required>
+                                                                    </div>
+                                                                    <div style="display: none;" id="invalidMonthYear">Invalid card month/year</div>
+                                                                </div>
+                                                                <div class="userCCV">
+                                                                    <label for="CCV">CCV</label>
+                                                                    <input type="password" id="userCcvBox" placeholder="***" autocomplete="off" maxlength="4" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cardPayBtn">
+                                                                <input type="submit" class="cardPayBtnBoxOff" id="cardPayBtnBox" value="PAY Rs. 115">
+                                                            </div>
+                                                        </div>
+                                                        <div class="saveThiCard">
+                                                            <input type="checkbox" checked="on">
+                                                            <label for="To Save Card">Save this card for faster checkout</label>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="paymentAccordionSec">
@@ -122,7 +162,33 @@
                                     </div>
                                    
                                     <div class="PaymentOpenClose">
+                                        <div class="upiPayment">
+                                            <div class="upiPayment11">
+                                                <label for="upi">ENTER YOUR UPI ID</label>
+                                                <div class="upiInput">
+                                                   <form id="upiVerifyBtn" >
+                                                       
+                                                        <input id="upiInputBox" oninput="checkValidUpi()" type="text" placeholder="username@bank" autocomplete="off" required>
+                        
+                                                        <input class="upiVerifyBtn upiVerifyBtnOff" id="upiVerify1" type="submit" value="Verify and Pay">
+                                                        <!-- <button class="upiVerifyBtn" id="upiVerifyBtn" >Verify and Pay</button> -->
 
+                                                        <p class="upiNotValid" id="upiNotValid" style="display: none;">UPI ID not valid.</p>
+                                                   </form>
+                                                </div>
+                                                <ul>
+                                                    <li class="upiLast">@okhdfcbank</li>
+                                                    <li class="upiLast">@okicici</li>
+                                                    <li class="upiLast">@ybl</li>
+                                                    <li class="upiLast">@paytm</li>
+                                                    <li class="upiLast">@upi</li>
+                                                    <li class="upiLast">@apl</li>
+                                                    <li class="upiLast">@icici</li>
+                                                    <li class="upiLast">@oksbi</li>
+                                                    <li class="upiLast">@okaxis</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="paymentAccordionSec">
@@ -133,8 +199,25 @@
                                         <i id="payArrow" class="fa-solid fa-angle-up"></i>
                                     </div>
                                    
-                                    <div class="PaymentOpenClose">
-
+                                    <div class="PaymentOpenClose" style="display: none;">
+                                        <div>
+                                            <ul class="walletList">
+                                                <li>
+                                                    <div>
+                                                        <img src="https://assets.apollo247.com/images/payments/paytm.png" alt="">
+                                                        <div>Paytm Wallet & Postpaid</div>
+                                                    </div>
+                                                    <a href="#">PAY NOW</a>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <img src="https://prodaphstorage.blob.core.windows.net/paymentlogos/amazonpay.png" alt="">
+                                                        <div>Amazon Pay</div>
+                                                    </div>
+                                                    <a href="#">PAY NOW</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="paymentAccordionSec">
@@ -146,7 +229,16 @@
                                     </div>
                                    
                                     <div class="PaymentOpenClose">
-
+                                        <div class="payOnDelivery">
+                                            <div class="payOnDeliveryLeft">
+                                                <img src="https://newassets.apollo247.com/images/ic_cod.svg" alt="">
+                                                <div class="payOnText">
+                                                    <div>Pay by cash</div>
+                                                    <p>Choose prepaid and reduce contact on delivery.</p>
+                                                </div>
+                                            </div>
+                                            <a href="#">Place Order</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="paymentAccordionSec">
@@ -157,8 +249,47 @@
                                         <i id="payArrow" class="fa-solid fa-angle-up"></i>
                                     </div>
                                    
-                                    <div class="PaymentOpenClose">
-
+                                    <div class="PaymentOpenClose" style="display: none;">
+                                        <div class="netBankingDiv">
+                                            <ul class="netBankingList">
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-hdfc.png" alt="">
+                                                        <div>HDFC</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-sbi.png" alt="">
+                                                        <div>SBI</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-icici.png" alt="">
+                                                        <div>ICICI</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-axis.png" alt="">
+                                                        <div>AXIS</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-kotak.png" alt="">
+                                                        <div>Kotak</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="	https://assets.apollo247.com/images/bankicons/nb-yesb.png" alt="">
+                                                        <div>Yes</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="paymentMethods">
@@ -230,3 +361,4 @@
 <!-- <script src="./scripts/index.js" type="module"></script> -->
 <!-- <script src="./scripts/header.js"></script> -->
 <script src="./scripts/payment.js"></script>
+

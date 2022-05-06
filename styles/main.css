@@ -1,0 +1,283 @@
+#main{
+    width: 75%;
+    margin: auto;
+    border: 1px solid;
+    padding: 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+*{
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+   
+  .headings{
+    color:#0d4f62 ;
+    font-size: 14px;
+    font-weight: bold;
+  }
+#navbar{
+    /* border: 1px solid red; */
+    margin-bottom: 20px;
+}
+#insideNavbar{
+    display: flex;
+    width: 90%;
+    display: flex;
+    /* border: 1px solid blue; */
+  justify-content: space-evenly;
+    padding: 10px;
+    box-sizing: border-box;
+    /* font-weight: bold; */
+    color: gray;
+    margin: auto;
+}
+#insideNavbar>div{
+    /* border: 1px solid; */
+    padding: 10px;
+    box-sizing: border-box;
+    width: 15%;
+    font-size: 12px;
+    color: #0d4f62;
+   
+}
+#insideNavbar>div:hover{
+   text-decoration: underline;
+   cursor: pointer;
+}
+#inputdiv{
+    border: 1px solid;
+    height: 80px;
+    margin-bottom: 20px;
+}
+#input{
+      height: 80%;
+      width: 60%;
+      margin-top: 1%;
+      margin-left: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #f7f8f5;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+}
+#banner{
+  display: flex; 
+   justify-content: space-between;
+   border: 1px solid;
+} 
+#yourorder
+{
+
+    height: 180px;
+    width: 250px;
+    /* border: 1px solid; */
+}
+#yourorder>img{
+    height: 44px;
+    width: 60px;
+    /* border: 1px solid red; */
+}
+
+#placeyourorder{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color:  #f7f8f5 ;
+    
+}
+#yourorder2
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f7f8f5;
+    margin-top: 8px; 
+}
+#upload
+{
+    background-color: #fc9916;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+
+.Carouselcontainer
+{
+ width: 100%;
+
+}
+.viewalldiv
+{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+     /* gap: 30%;  */
+    /* border: 1px solid; */
+}
+#shopby,#shopby2
+  {
+  display: flex;
+  gap: 2%; 
+  text-align: center;
+  overflow: scroll;
+  overflow-y: hidden;
+  height: 60px;
+  }
+
+  #shopbyHC,#shopbyHC2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:2%;
+  /* border: 1px solid; */
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: auto;
+ 
+  /* border: 1px solid red; */
+}
+
+/* #productdiv>p{
+   color: #02475b;
+   font-weight:bolder;
+   font-size: 14px;
+   margin: 20px 0px 20px 10%;
+} */
+#innerproductsdiv, #summerdiv, #Health_Condition,#Hot_seller{
+    display: flex;
+  
+    /* justify-content: space-around; */
+    /* margin-left: 2%;
+    margin-right: 2%; */
+    text-align: center;
+     gap:4%;
+     width: 90%;
+    /* border: 1px solid; */
+    margin: auto;
+    overflow: scroll;
+  overflow-y: hidden;
+
+   
+    
+}
+#product{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px 10px 40px;
+     box-sizing: border-box; 
+    border-radius: 10px;
+  
+    width: 250px;
+  }
+  #product p{            
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+  }
+#product:hover
+{
+    -webkit-transform: scale(1.08);
+transform: scale(1.08);
+}
+#justimagediv{
+  display: flex;
+  gap:5%;
+  margin: 0px 12% 20px 5%;
+  /* margin-right: 12%;
+  margin-left: 5%;
+  margin-bottom: 20px; */
+}
+#justimagediv>img{
+
+  height: 100px;
+  width: 150px;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#whatsapp{
+  display: flex;
+  gap:5%;
+  margin: auto;
+  border: 1px solid;
+  background-color: #fff5de;
+  padding: 10px;
+  box-sizing: border-box;
+
+}
+
+
+#Apollo>img
+{
+    margin: 10px 0px 0px 10px; 
+   
+    height: 100px;
+    width: 200px;
+    /* border: 1px solid; */
+}
+
+#whatsapptoorder
+{
+/* border: 1px solid; */
+width: 200px;
+text-align: center;
+}
+#whatappbtndiv
+{
+ /* border: 1px solid; */
+ text-align: center;
+}
+#whatsappbtn{
+  padding: 20px;
+  background-color: #fc9916;
+  color: white;
+  border-radius: 7px;
+  border: none;
+}
+
+#doctor>img{
+  height: 100px;
+  width: 200px;
+}
+
+#btn
+{
+    /* border: 1px solid; */
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fc9916 ;
+    padding: 10px;
+    box-sizing: border-box;
+    color:white;
+    font-weight: bold;
+    border:none
+   
+}
+
+
+/* #btn:hover{
+   background-color:gainsboro;
+} */
+
+#paragraph
+{
+  /* display: flex; */
+  padding: 20px;
+  box-sizing: border-box;
+}
+#paragraph>p{
+  color: #5b8895;
+  font-size: 12px;
+}

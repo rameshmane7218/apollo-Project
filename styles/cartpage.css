@@ -1,0 +1,512 @@
+#cart_background {
+    background-color: #dcdfce;
+    z-index: -1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#cart_container {
+    width: 1064px;
+    margin: auto;
+    height: 1530px;
+    border-radius: 0 0 10px 10px;
+    background-color: #f7f8f5;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+}
+
+#cart_content_box {
+    /* border: 1px solid rgb(141, 41, 41); */
+    height: 844.66px;
+    width: 984px;
+    margin: auto;
+    margin-top: 0px;
+    padding: 20px 0px;
+
+}
+
+#cart_title_div {
+    height: 49.5px;
+    width: 1064;
+
+
+
+}
+
+#cart_title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #0c546c;
+
+}
+
+#cart_left_right {
+    display: flex;
+
+}
+
+#cart_left {
+    width: 716px;
+
+    /* border: 1px solid blue;  */
+    padding: 10px;
+}
+
+#cart_right {
+    width: 328px;
+    height: 900px;
+    /* border: 1px solid red; */
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #fefefe;
+}
+
+#no_of_items_div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d4dedd;
+
+}
+
+#cart_limit {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #fcb878;
+    text-decoration: underline;
+    padding-right: 10px;
+
+}
+
+#no_of_items {
+    color: #3a6ea3;
+    font-size: 14px;
+}
+
+#display_added_items {
+    padding: 10px 20px 10px 10px;
+    margin: 20px 15px 10px 10px;
+    position: relative;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    margin-top: 25px;
+}
+
+#for_free_delivery {
+    margin: 20px 15px 10px 10px;
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+    background: #F7F8F5;
+    box-shadow: 0px 5px 20px rgb(128 128 128 / 30%);
+    font-weight: 500;
+    border-radius: 5px
+}
+
+#add_to_free_delivery {
+    color: #3a6ea3;
+}
+
+#total_saving {
+    padding: 20px 20px 20px 10px;
+    margin: 20px 15px 10px 10px;
+    position: relative;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+#circle_membership_img {
+    width: 98%;
+    height: auto;
+    border: 2px solid #3a6ea3;
+    border-style: dashed;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+
+}
+
+#circle_membership_title {
+    color: #3a6ea3;
+    font-size: 14px;
+    border-bottom: 0.1px solid #d4dedd;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.end_circle_membership {
+    width: 90%;
+    color: grey;
+
+
+}
+
+#address_what {
+    color: #3a6ea3;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+
+}
+
+.horizontal_line {
+    border-bottom: 0.1px solid #d4dedd;
+    margin-top: 20px;
+
+}
+
+.horizontal_line2 {
+    border-bottom: 0.1px solid #d4dedd;
+}
+
+#Add_to_delivery_div {
+    width: 90%;
+    background-color: #f7f8f5;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 15px;
+
+}
+
+#Add_to_delivery_btn,
+#submit_address,
+#saved_final_add {
+    background-color: #fc9916;
+    color: white;
+    border: none;
+    width: 95%;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+#submit_address {
+    margin-top: 15px;
+}
+
+#circle_plan_div {
+    color: #0c546c;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-size: 11px;
+
+    margin-top: 15px;
+    box-shadow: 0px 5px 20px rgb(128 128 128 / 30%);
+    font-weight: 600;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    background-color: #fff
+}
+
+#coupen_div {
+    cursor: pointer;
+    display: flex;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    background: #fff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+    align-items: flex-start;
+    border-radius: 5px;
+    width: 288px;
+    height: 38px;
+    color: #02475b;
+    width: 90%;
+}
+
+
+#coupen_div_right {
+    display: flex;
+    width: 80%;
+    font-size: 12px;
+    font-weight: lighter;
+    justify-content: space-evenly;
+}
+
+#coupen_1 {
+    margin-right: 20px;
+    margin-top: -5px;
+    font-size: 20px;
+
+}
+
+#coupen_2 {
+    font-size: 14px;
+}
+
+#coupen_3 {
+    margin-top: -1px;
+}
+
+#total_charges_div {
+    width: 240px;
+    margin-top: 15px;
+    font-size: 14px;
+
+}
+
+#total_amount {
+    margin-top: 15px;
+    width: 350px;
+    height: 118px;
+    color: #01475b;
+    font-size: 15px;
+    box-shadow: 0 5px 20px 0 rgb(128 128 128 / 30%);
+    border-radius: 10px;
+    margin-bottom: 14px;
+    background-color: #fff;
+    padding: 10px;
+
+}
+
+#total_1,
+#total_2,
+#total_3 {
+    display: flex;
+    font-size: 14px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+#item_to_Deliver {
+    box-shadow: 0 5px 20px 0 rgb(128 128 128 / 30%);
+    padding-top: 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    width: 250px;
+    padding-left: 5px;
+    height: 35px;
+}
+
+/* < --------------------------------------------/* appended data css */
+#box {
+    height: 100.2px;
+    width: 600px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 20px 0 rgb(128 128 128 / 30%);
+    /* border: 1px solid black; */
+    display: flex;
+
+}
+
+#cart_product_img {
+    height: 45px;
+    width: 45px;
+    padding: 5px;
+    /* border: 1px solid red; */
+    margin: 5px 15px 5px 5px;
+}
+
+#box_left {
+    display: flex;
+    height: 85%;
+    width: 65%;
+    /* border: 2px solid blue; */
+    margin: 5px 5px 5px 5px;
+    font-size: 14px;
+
+}
+
+#box__right {
+    height: 85%;
+    width: 40%;
+    /* border: 2px solid blue; */
+    margin: 5px 5px 5px 5px;
+}
+
+/* #box_left_extra{
+             border: 1px solid gold; 
+        }  */
+#pack_of {
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+#name_of_product {
+    margin-bottom: 3px;
+    margin-top: 1px;
+}
+
+#box__right>.fa-solid {
+    text-align: right;
+    margin-left: 85%;
+    color: #02475b;
+    font-size: 15px;
+}
+
+#PriceDiv>p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 45%;
+}
+
+#PriceDiv {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+#Discount_Price {
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+#Saving_Price {
+    font-size: 10px;
+
+}
+
+#Delivery_Charges {
+    margin-left: 45px;
+}
+
+#to_pay1,
+#to_pay2 {
+    margin-left: 90px;
+    font-size: 15px;
+}
+
+.qtys {
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    /* background-color: #fc9916; */
+}
+
+#qtys {
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    /* background-color: #fc9916; */
+}
+
+#lable {
+    font-size: 11px;
+}
+
+/* map css**************************************************** */
+
+
+#modal-content {
+    border: 1px solid black;
+    width: 360px;
+    height: 600px;
+}
+
+#map_btn1,
+#map_btn2 {
+    margin-left: 92%;
+    margin-top: 2%;
+    padding: 5px 10px 0px 0px;
+}
+
+#map_city {
+    margin-top: 20px;
+}
+
+.gmap_canvas {
+    margin-top: 25px;
+}
+
+/* address page css *********************************/
+
+#add_title {
+    font-size: 14px;
+    padding: 10px 0px 0px 18px;
+    width: 50%;
+
+}
+
+#add_0,
+#add_2,
+#add_3 {
+
+    margin: 0px 5px 5px 15px;
+    padding: 10px 10px 5px 10px;
+    border-radius: 10px;
+    width: 90%;
+    justify-content: center;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+#add_11,
+#add_12,
+#add_13,
+#add_a4,
+#add_2,
+#add_3 {
+    border-bottom: 1px solid #02475b;
+    margin-bottom: 5px;
+}
+
+#add_0>p,
+.add_bottom {
+    font-size: 14px;
+
+}
+
+.add_btn {
+    border-radius: 10px;
+    counter-reset: #00b38e;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+}
+
+#add_2>p,
+#add_3>p {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+#add_house,
+#add_area,
+#add_pincode,
+#add_city,
+#add_state,
+#add_bill,
+#add_mobile {
+    border: none;
+    width: 90%;
+    outline: none;
+}
+
+#add_house:focus,
+#add_area:focus,
+#add_pincode:focus,
+#add_city:focus,
+#add_state:focus,
+#add_bill:focus,
+#add_mobile:focus {
+    outline: none;
+}
+
+.add_btn {
+    margin-left: 25px;
+    padding: 7px 17px 7px 13px;
+    color: #00b38e;
+    background-color: #F7F8F5;
+    border: none;
+}
+
+.add_btn:hover {
+    background-color: #00b38e;
+    color: #F7F8F5;
+
+}
+
+#add_15 {
+    margin-bottom: 5px;
+}
+
+#Address_after_mapping {
+    font-size: 14px;
+    font-weight: lighter;
+}
