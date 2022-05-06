@@ -200,4 +200,20 @@ userYear.onkeydown = function(){
 
 
 
+let checkCard = document.getElementById("userCcvBox");
+
+checkCard.onkeydown = function(){
+    console.log("hello there")
+    let cardNum = localStorage.getItem("validCard");
+    let expiryMonth = localStorage.getItem("cardMonth");
+    let expiryYear = localStorage.getItem("cardYear");
+    
+    
+    if(cardNum == "true" && expiryMonth == "true" && expiryYear == "true"){
+        console.log("hey there")
+        document.getElementById("cardPayBtnBox").classList.remove("cardPayBtnBoxOff");
+    }else{
+        document.getElementById("cardPayBtnBox").classList.add("cardPayBtnBoxOff");
+    }
+};
 
