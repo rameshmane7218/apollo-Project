@@ -14,6 +14,7 @@ document.getElementById("fixedHeader").innerHTML = navbar();
 const CartData=JSON.parse(localStorage.getItem("cart"))||[];
 
 var total_money=0;
+var Delivery_Charges
 var total_saving=0;
 var Cartarr=[];
 //let  Big_box=document.getElementById("display_added_items").innerHTML=null;
@@ -51,7 +52,7 @@ CartData.map(function(elem,i){
     let options=document.createElement("p");
     options.setAttribute("id","options");
     options.innerHTML = `<label for="" id="lable">QTY: </label>
-    <select  class="qtys" >
+    <select  class="qtys"  disabled>
         <option value="1" id="one"  >1</option>
         <option value="2"  >2</option>
         <option value="3"  >3</option>
@@ -78,23 +79,27 @@ CartData.map(function(elem,i){
         removeItem(elem,i)
     });
 
+     //CHANGING STRING TO Number
+    
+
+
     var PriceDiv=document.createElement("div");
     PriceDiv.setAttribute("id","PriceDiv")
     var price=document.createElement("p");
-    var off=(elem.price-elem.strikedoffprice)/100;
+    var off=(Number(elem.price)-Number(elem.strikedoffprice))/100;
     var of1=off.toFixed(2);
     // var Rupees_icon=document.createElement("i");
     // Rupees_icon.setAttribute("class","fa-solid fa-indian-rupee-sign");
-    price.innerText=`${of1}% off MRP+${elem.price}`;
+    price.innerText=`${of1}% off MRP+${Number(elem.price)}`;
 
 
 // ..........................money calculations...............
 
 
     
-    total_money=total_money+elem.price;
+    total_money=total_money+Number(elem.price);
     
-    var Delivery_Charges=(total_money/10).toFixed(2);
+     Delivery_Charges=(total_money/10).toFixed(2);
     if(Delivery_Charges>200)
     {
         document.getElementById("Delivery_Charges").innerText="FREE";
@@ -105,16 +110,16 @@ CartData.map(function(elem,i){
 
     var Discount_Price=document.createElement("p");
     Discount_Price.setAttribute("id","Discount_Price");
-    Discount_Price.innerText=`${elem.strikedoffprice}`;
+    Discount_Price.innerText=`${Number(elem.strikedoffprice)}`;
 
     var Saving_Price=document.createElement("p");
     Saving_Price.setAttribute("id","Saving_Price")
-    Saving_Price.innerText=`Savings ${(elem.price-elem.strikedoffprice).toFixed(2)}`;
+    Saving_Price.innerText=`Savings ${(Number(elem.price)-Number(elem.strikedoffprice)).toFixed(2)}`;
     
 
     
     //TOTAL SAVING CALCULATIONS
-    total_saving=total_saving+(elem.price-elem.strikedoffprice);
+    total_saving=total_saving+(Number(elem.price)-Number(elem.strikedoffprice));
 
 
    //Appending part
@@ -136,19 +141,50 @@ CartData.map(function(elem,i){
 });
 
 
+///work after increasing quentites.............................................................
+let qty = document.getElementsByClassName("qtys");
+console.log("qty:",qty);
+let Discount_Price = document.getElementsByClassName("Discount_Price");
+console.log("Discount_Price:",Discount_Price);
+let Saving_Price = document.getElementsByClassName("Saving_Price");
+console.log("Saving_Price:",Saving_Price);
 
-// //method1
-// function calculate(elem,i){
-//   // how_many=1
-//   var how=document.getElementById("qtys").value;
-//   console.log(how);
-//   Discount_Price.innerText=elem.strikedoffprice*(+how).toFixed(0);
+for(let i=0; i<qty.length; i++){
+    qty[i].onchange = function(){
+        let newQty = Number(qty[i].value);
+        let newPrice = Number(Discount_Price[i].innerText);
+        let newSaving=Number(Saving_Price[i].innerText)
 
-// }
+        console.log("update:",newQty*newPrice);
+        console.log("updated_saving:",newQty*newSaving)
+        Discount_Price[i].innerText = (newQty*newPrice).toFixed(2);
+        Saving_Price[i].innerText = (newQty*newSaving).toFixed(2);
 
+       let previous_total_saving=total_saving;
+       let new_total_saving=Number(previous_total_saving)+Number((newQty*newSaving).toFixed(2));
 
+       let previous_total_money=total_money;
+       let new_total_money=Number(previous_total_money)+Number(((newQty-1)*newPrice).toFixed(2))
+       //console.log("new",previous_total_saving,new_total_saving)
+        
+        //document.getElementById("Saving_Price").innerText=Saving_Price[i].innerText=
+        document.getElementById("total_saving").innerText=`Total Saving:${new_total_saving}`;
+        document.querySelector("#to_pay1").innerText=new_total_money.toFixed(2);
 
+        //updated delivery charges
+         Delivery_Charges=(new_total_money/10).toFixed(2);
+        if(Delivery_Charges>200)
+        {
+            document.getElementById("Delivery_Charges").innerText="FREE";
+        }
+        else{
+            document.getElementById("Delivery_Charges").innerText=Delivery_Charges;
+        }
+          document.querySelector("#to_pay2").innerText=(new_total_money-(new_total_money/10)).toFixed(2)
+            }
 
+          
+}
 
 function removeItem(elem,i){
  console.log(elem,i)
@@ -193,6 +229,15 @@ Add_append.append(city,"  ",state,"  ",pincode,".  ",country)
 
 
 
+
+
+
+//taking data from local storage and appending it
+var new_saving_from_localStorage=JSON.parse(localStorage.getItem("Total_Saving"));
+document.getElementById("total_saving").innerText=`Total Saving:${new_saving_from_localStorage}`;
+document.querySelector("#to_pay1").innerText=JSON.parse(localStorage.getItem("Total_money_before"));
+document.getElementById("Delivery_Charges").innerText=JSON.parse(localStorage("Delivery_Charges"));
+document.querySelector("#to_pay2").innerText=JSON.parse(localStorage.getItem("Total_money_after"));
 
 
  
