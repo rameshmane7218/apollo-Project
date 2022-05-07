@@ -76,7 +76,7 @@ let html = `
                 <img src="https://cdn-icons-png.flaticon.com/512/748/748122.png" class="log1" id="closs1">
             </div>
             <div>
-                <h1 style="font-size: 40; font-weight: bold;">great</h1> 
+                <h1>great</h1>
                 <p>Now type in the OTP sent to you for authentication</p>
                 <div style="display: flex;">
                     <div class="one">
@@ -179,6 +179,7 @@ if(login == false){
         document.getElementById("bar").innerHTML=html
         document.getElementById("back").style.display="block"
         document.getElementById("login").style.display="block"
+        document.getElementById("back").addEventListener("click", black)
         document.getElementById("closs").onclick = function closs(){
             document.getElementById("login").style.display="none"
             document.getElementById("back").style.display="none"
@@ -191,7 +192,6 @@ if(login == false){
             let input = document.querySelector("#number").value;
             let c = 0
             if(input != "" && input.length == 10 ){
-                
                 c++
                 let number = JSON.parse(localStorage.getItem("snigup")) || [];
                 number.forEach(el => {
@@ -200,16 +200,24 @@ if(login == false){
                         c++;
                         document.getElementById("otp").style.display="block"
                         document.getElementById("login").style.display="none"
+                        document.getElementById("back").addEventListener("click", black)
+                        let OTP;
+                        setTimeout(() => {
+                            OTP = Math.floor(1000 + Math.random() * 9000);
+                            alert(`Your one time OTP is ${OTP}`)
+                          }, "2000")
                         document.getElementById("closs1").onclick = function closs1(){
                             document.getElementById("otp").style.display="none"
                             document.getElementById("back").style.display="none"
                         }
                         document.getElementById("otpclick").onclick = function otp(){
-                            console.log("tadfbdsuy");
                             let otp = document.getElementById("otpnumber").value;
-                            if(otp == "1234"){
+                            if(otp == OTP){
                                 localStorage.setItem("login",true)
                                 window.location.href="index.html"
+                            }
+                            else{
+                                alert("wrong otp")
                             }
                         }
                         
@@ -218,16 +226,22 @@ if(login == false){
                 if(c==1){
                     document.getElementById("otp").style.display="block"
                     document.getElementById("login").style.display="none"
+                    document.getElementById("back").addEventListener("click", black)
+                    let OTP;
+                        setTimeout(() => {
+                            OTP = Math.floor(1000 + Math.random() * 9000);
+                            alert(`Your one time OTP is ${OTP}`)
+                          }, "2000")
                     document.getElementById("closs1").onclick = function closs2(){
                         document.getElementById("otp").style.display="none"
                         document.getElementById("back").style.display="none"
                     }
                     document.getElementById("otpclick").onclick = function otp(){
-                        console.log("tadfbdsuy");
                         let otp = document.getElementById("otpnumber").value;
-                        if(otp == "1234"){
+                        if(otp == OTP){
                             document.getElementById("snigup1").style.display="block"
                             document.getElementById("otp").style.display="none"
+                            document.getElementById("back").addEventListener("click", black)
                             let m = document.getElementById("male")
                             let f = document.getElementById("female")
                             let gender;
@@ -250,7 +264,6 @@ if(login == false){
                                 let a = document.getElementById("fname").value;
                                 let b = document.getElementById("sname").value;
                                 let c= document.getElementById("dob").value;
-                                console.log(a,b,c);
                                 if(a != "" && b != "" && c != "" && gender != null){
                                     let obj = {
                                         number : input,
@@ -272,6 +285,9 @@ if(login == false){
                                 }
                                 
                             }
+                        }
+                        else{
+                            alert("wrong otp")
                         }
                     }
                     
@@ -302,7 +318,6 @@ else{
             document.querySelector("#progenter").innerText=`${loginid.Gender} | ${age}`;
             document.querySelector("#pronumber").innerText=`+91${loginid.number}`;
             let asd = document.getElementById("logout").innerText
-            console.log(asd);
             document.getElementById("logout").onclick = function logout(){
                 localStorage.setItem("login",false);
                 localStorage.removeItem('loginid');
@@ -315,4 +330,9 @@ else{
         }
     }
 }
-
+let black = () =>{
+    document.getElementById("snigup1").style.display="none"
+    document.getElementById("back").style.display="none"
+    document.getElementById("otp").style.display="none"
+    document.getElementById("login").style.display="none"
+}
