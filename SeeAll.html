@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta chapriceet="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -17,6 +17,7 @@
             margin: auto;
             gap:5%;
             overflow: scroll;
+            overflow-x: hidden;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
         #proddiv{
@@ -24,6 +25,7 @@
            margin-left: 20px 0px 0px 20px;
             padding: 10px;
             box-sizing: border-box;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         
             
         
@@ -54,7 +56,7 @@
         {
             /* border: 1px solid; */
             width: 100%;
-            border-radius: 10px;
+            border-radius: 0px 0px 10px 10px;
             background-color: #fc9916 ;
             padding: 10px;
             box-sizing: border-box;
@@ -63,17 +65,18 @@
             border:none
            
         }
-        #btn:hover{
-          cursor: pointer;
+        #btn:hover{ 
+          cupriceor: pointer;
         }
         #sidebar{
             /* border: 1px solid; */
-            width: 250px;
+            width: 450px;
             padding: 20px;
             box-sizing: border-box;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             border-radius: 5px ;
             margin-top: 30px;
+            height: 650px;
             
         }
         #filterby{
@@ -89,7 +92,7 @@
             
         }
         #sort{
-          margin-left: 75%;
+          margin-left: 63%;
           padding: 10px;
           border-radius: 5px;
         }
@@ -145,12 +148,41 @@
     border: none;
 
 }
+.cashbackdiv{
+  display: flex;
+  margin: 0px 0px 10px 0px;
+  /* border: 1px solid; */
+  width: 100%;
+ 
+  
+}
+.cashbackdiv p{
+  
+  color:#0da5e4 ;
+ /* margin-top: 40px; */
+ margin-right: 10px;
+ margin-left: 10px;
+ 
+}
+#circleimg{
+  height: 35px;
+  width: 40px;
+  margin-top: 10px;
+  margin-left: 5px;
+  /* margin: auto; */
+}
+#appendprod p{            
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+  }
+
     </style>
 </head>
 <body>
    <div id="box">
        
-    <div id="inputdiv">
+ <div id="inputdiv">
      <div>
         <input type="text" name="" id="input" placeholder="Search,meds,brands and more">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -159,8 +191,9 @@
             <div id="upload">
                 <button >UPLOAD</button>
             </div>
+            <div></div>
          <div>
-            <p>Special Offer</p>
+            <!-- <p>Special Offer</p> -->
         </div>
     
     </div>
@@ -168,7 +201,7 @@
 
   
    
-    </div>
+  </div>
 <div id="main">
    
     <div id="sidebar">
@@ -179,19 +212,38 @@
         <hr>
         <div id="category">
             <div>CATEGORY</div>
-            <div>+</div>
+            <div><i class="fa-solid fa-minus"></i></div>
+           
         </div>
+       
+       
+        
+        <p style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value=""> Summer Essentials</p>
+        <p  style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value=""> Hot Seller</p> 
+        <p  style="color:#02475b; font-weight: bold;"> <input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value="">Health Devices</p>  
+         <p  style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value="">Winter Care</p>  
+         <p  style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value="">Diabetes Care</p>  
+          
+         
         <hr>
         <div id="brand">
             <div>BRAND</div>
-            <div>+</div>
+            <div><i class="fa-solid fa-minus"></i></div>
         </div>
         <hr>
+  
+        <p style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value=""> APOLLO LIFE</p>
+        <p  style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value=""> Baby</p> 
+        <p  style="color:#02475b; font-weight: bold;"> <input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value="">Body</p>  
+         <p  style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value="">Colgate</p>  
+         <p  style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value="">Covid</p>  
+       
+    
     </div>
     
     <div id="proddiv">
 
-        <p style="font-size: 14px; ">Sebamed Up to 50 Percent Off | 75 Products</p>
+      <p style="font-size: 14px; " id="totalResult"></p>
          <hr>
         <select  id="sort" onchange="sortit()">
           <option value="">SORT BY : Relevalnce</option>
@@ -210,106 +262,131 @@
     var productsdata = [
 
 {
-    image_url:
+     imgUrl:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
-    Product_name: "xebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-    MRP: "(Rs 2599)",
-    Rs: 1170,
+    name: "Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+   strikePrice: "(Rs. 2599)",
+    price: 1170,
     off: "20% OFF",
+    cashback: "41.96 extra cashback",
+        circle: "https://newassets.apollo247.com/images/ic_circle_logo.png",
   },
   {
-    image_url:
+     imgUrl:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0017.jpg",
-    Product_name: "zebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-    MRP:"(Rs 2599)",
-    Rs: 1171,
+    name: " Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+   strikePrice:"(Rs. 2599)",
+    price: 1171,
     off: "20% OFF",
+    cashback: "41.96 extra cashback",
+        circle: "https://newassets.apollo247.com/images/ic_circle_logo.png",
   },
   {
-    image_url:
+     imgUrl:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0115.jpg",
-    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-    MRP:"(Rs 2599)",
-    Rs: 1100,
+    name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+   strikePrice:"(Rs. 2599)",
+    price: 1100,
     off: "20% OFF",
+    cashback: "41.96 extra cashback",
+        circle: "https://newassets.apollo247.com/images/ic_circle_logo.png",
   },
   {
-    image_url:
+     imgUrl:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0100.jpg",
-    Product_name: "aebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-    MRP:"(Rs 2599)",
-    Rs: 1200,
+    name: "aebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+   strikePrice:"(Rs. 2599)",
+    price: 1200,
     off: "20% OFF",
+    cashback: "41.96 extra cashback",
+        circle: "https://newassets.apollo247.com/images/ic_circle_logo.png",
   },
   {
-    image_url:
+     imgUrl:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
-    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-    MRP:"(Rs. 2599)",
-    Rs: 1110,
+    name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+   strikePrice:"(Rs. 2599)",
+    price: 1110,
     off: "20% OFF",
+    cashback: "41.96 extra cashback",
+        circle: "https://newassets.apollo247.com/images/ic_circle_logo.png",
   },
   {
-    image_url:
+     imgUrl:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
-    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-    MRP: "(Rs 2599)",
-    Rs: 1070,
+    name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+   strikePrice: "(Rs. 2599)",
+    price: 1070,
     off: "20% OFF",
+    cashback: "41.96 extra cashback",
+        circle: "https://newassets.apollo247.com/images/ic_circle_logo.png",
   },
   {
-    image_url:
+     imgUrl:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0017.jpg",
-    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-    MRP:"(Rs 2599)",
-    Rs: 1270,
+    name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+   strikePrice:"(Rs. 2599)",
+    price: 1270,
     off: "20% OFF",
+    cashback: "41.96 extra cashback",
+        circle: "https://newassets.apollo247.com/images/ic_circle_logo.png",
   },
   {
-    image_url:
+     imgUrl:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0115.jpg",
-    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-    MRP:"(Rs 2599)",
-    Rs: 1370,
+    name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+   strikePrice:"(Rs. 2599)",
+    price: 1370,
     off: "20% OFF",
+    cashback: "41.96 extra cashback",
+        circle: "https://newassets.apollo247.com/images/ic_circle_logo.png",
   },
   {
-    image_url:
+     imgUrl:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0100.jpg",
-    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-    MRP:"(Rs 2599)",
-    Rs: 1970,
+    name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+   strikePrice:"(Rs. 2599)",
+    price: 1970,
     off: "20% OFF",
+    cashback: "41.96 extra cashback",
+        circle: "https://newassets.apollo247.com/images/ic_circle_logo.png",
   },
   {
-    image_url:
+     imgUrl:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
-    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-    MRP:"(Rs. 2599)",
-    Rs: 1140,
+    name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+   strikePrice:"(Rs. 2599)",
+    price: 1140,
     off: "20% OFF",
+    cashback: "41.96 extra cashback",
+        circle: "https://newassets.apollo247.com/images/ic_circle_logo.png",
   },
   {
-    image_url:
+     imgUrl:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0100.jpg",
-    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-    MRP:"(Rs 2599)",
-    Rs: 1160,
+    name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+   strikePrice:"(Rs. 2599)",
+    price: 1160,
     off: "20% OFF",
+    cashback: "41.96 extra cashback",
+        circle: "https://newassets.apollo247.com/images/ic_circle_logo.png",
   },
   {
-    image_url:
+     imgUrl:
     "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
-    Product_name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-    MRP:"(Rs. 2599)",
-    Rs: 1180,
+    name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
+   strikePrice:"(Rs. 2599)",
+    price: 1180,
     off: "20% OFF",
+    cashback: "41.96 extra cashback",
+        circle: "https://newassets.apollo247.com/images/ic_circle_logo.png",
   },
 
 ]
 
 window.addEventListener("load",function(){
     display(productsdata)
+    document.getElementById("totalResult").innerText = `${productsdata.length} search results`;
 })
 function sortit() {
       var selected = document.querySelector("#sort").value;
@@ -317,7 +394,7 @@ function sortit() {
       
        if (selected == "htl") {
         productsdata.sort(function (a, b) {
-          return b.Rs - a.Rs;
+          return b.price - a.price;
         });
         document.querySelector("#appendprod").innerHTML = null;
          display(productsdata);
@@ -325,7 +402,7 @@ function sortit() {
       }
       if (selected == "lth") {
         productsdata.sort(function (a, b) {
-          return a.Rs - b.Rs;
+          return a.price - b.price;
         });
         document.querySelector("#appendprod").innerHTML=null;
          display(productsdata)
@@ -333,8 +410,8 @@ function sortit() {
       }
       if (selected == "ase") {
             let asc =productsdata.sort(function (a, b) {
-                if (a.Product_name > b.Product_name) return 1;
-                if (a.Product_name < b.Product_name) return -1;
+                if (a.name > b.name) return 1;
+                if (a.name < b.name) return -1;
                 return 0;
             });
             document.querySelector("#appendprod").innerHTML = null;
@@ -345,8 +422,8 @@ function sortit() {
         //sort by names descending
         if (selected == "des") {
             let des = productsdata.sort(function (a, b) {
-                if (a.Product_name < b.Product_name) return 1;
-                if (a.Product_name > b.Product_name) return -1;
+                if (a.name < b.name) return 1;
+                if (a.name > b.name) return -1;
                 return 0;
             });
             document.querySelector("#appendprod").innerHTML = null;
@@ -368,27 +445,37 @@ function display(productsdata)
       container.setAttribute("id","prod")
       
       let image = document.createElement("img")
-      image.src = el.image_url;
+      image.src = el. imgUrl;
       image.style.height= "100px";
       image.style.width = "100px"
 
       let ptag = document.createElement("p")
-      ptag.innerText = el.Product_name;
+      ptag.innerText = el.name;
       ptag.style.fontSize = "14px"
 
-      let hrtag = document.createElement("hr")
+      // let hrtag = document.createElement("hr")
 
 
-      let MRP = document.createElement("s")
-      MRP.innerText = "MRP "+ el.MRP;
-      MRP.style.fontWeight = "bold"
+      let strikePrice = document.createElement("s")
+     strikePrice.innerText = "MRP "+ el.MRP;
+     strikePrice.style.fontWeight = "bold"
 
-      let Rs = document.createElement("h4")
-      Rs.innerText = "Rs. " +el.Rs;
+      let price = document.createElement("h4")
+      price.innerText = "Rs. " +el.price;
 
     //   let btndiv = document.createElement("div")
     //   btndiv.setAttribute("id","btndiv")
 
+    let cashbackdiv = document.createElement("div")
+              cashbackdiv.setAttribute("class","cashbackdiv")
+          let circle = document.createElement("img")
+          circle.src = el.circle
+          circle.setAttribute("id","circleimg")
+
+          let cashback = document.createElement("p")
+          cashback.innerText = el.cashback
+          
+          cashbackdiv.append(circle,cashback)
       let btn = document.createElement("button")
       btn.innerText = "ADD TO CART"
     //   btndiv.append(btn)
@@ -399,7 +486,7 @@ function display(productsdata)
           addtocart(el)
       })
 
-      container.append(image,ptag,MRP,Rs,btn)
+      container.append(image,ptag,strikePrice,price,cashbackdiv,btn)
 
     
 

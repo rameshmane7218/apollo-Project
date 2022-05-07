@@ -18,6 +18,7 @@
             margin: auto;
             gap: 5%;
             overflow: scroll;
+            /* overflow-x: hidden; */
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
 
@@ -77,38 +78,35 @@
             cursor: pointer;
         }
 
-        #sidebar {
+        #sidebar{
             /* border: 1px solid; */
-            width: 250px;
+            width: 450px;
             padding: 20px;
             box-sizing: border-box;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            border-radius: 5px;
+            border-radius: 5px ;
             margin-top: 30px;
-
+            height: 650px;
+            
         }
-
-        #filterby {
+        #filterby{
             display: flex;
             justify-content: space-between;
             width: 100%;
         }
-
-        #category,
-        #brand {
+        #category,#brand{
             display: flex;
             justify-content: space-between;
             margin-bottom: 5%;
             margin-left: 7%;
-
+            
         }
-
-        #sort {
-            margin-left: 75%;
-            padding: 10px;
-            border-radius: 5px;
+        #sort{
+          margin-left: 63%;
+          padding: 10px;
+          border-radius: 5px;
         }
-
+       
         #inputdiv {
             display: flex;
             justify-content: space-between;
@@ -177,7 +175,7 @@
                     <button>UPLOAD</button>
                 </div>
                 <div>
-                    <p>Special Offer</p>
+                    <!-- <p>Special Offer</p> -->
                 </div>
 
             </div>
@@ -196,19 +194,29 @@
                 <hr>
                 <div id="category">
                     <div>CATEGORY</div>
-                    <div>+</div>
+                    <div><i class="fa-solid fa-minus"></i></div>
                 </div>
                 <hr>
+                <p style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value=""> Summer Essentials</p>
+                <p  style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value=""> Hot Seller</p> 
+                <p  style="color:#02475b; font-weight: bold;"> <input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value="">Health Devices</p>  
+                 <p  style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value="">Winter Care</p>  
+                 <p  style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value="">Diabetes Care</p>  
                 <div id="brand">
                     <div>BRAND</div>
-                    <div>+</div>
+                    <div><i class="fa-solid fa-minus"></i></div>
                 </div>
                 <hr>
+                <p style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value=""> APOLLO LIFE</p>
+        <p  style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value=""> Baby</p> 
+        <p  style="color:#02475b; font-weight: bold;"> <input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value="">Body</p>  
+         <p  style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value="">Colgate</p>  
+         <p  style="color:#02475b; font-weight: bold;"><input class="jss23" name="onlineconsults" type="checkbox" data-indeterminate="false" value="">Covid</p>  
             </div>
 
             <div id="proddiv">
 
-                <p style="font-size: 14px; " id="totalResult">Sebamed Up to 50 Percent Off | 75 Products</p>
+                <p style="font-size: 14px; " id="totalResult"></p>
                 <hr>
                 <select id="sort" onchange="sortit()">
                     <option value="">SORT BY : Relevalnce</option>
@@ -253,8 +261,7 @@
             data = await res.json();
             console.log(data.length);
             console.log(data);
-            document.getElementById("totalResult").innerText = `${data.length} search results for '${query}';
-`;
+            document.getElementById("totalResult").innerText = `${data.length} search results for '${query}`;
             
             display(data);
         } catch (err) {
@@ -358,7 +365,7 @@
                 addtocart(el)
             })
 
-            container.append(image, ptag, hrtag, MRP, Rs, btn)
+            container.append(image, ptag, MRP, Rs, btn)
 
 
 

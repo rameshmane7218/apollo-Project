@@ -1,7 +1,7 @@
 #main{
     width: 75%;
     margin: auto;
-    border: 1px solid;
+    /* border: 1px solid; */
     padding: 10px;
     overflow: hidden;
     overflow-y: scroll;
@@ -49,6 +49,7 @@
     border: 1px solid;
     height: 80px;
     margin-bottom: 20px;
+    display: flex;
 }
 #input{
       height: 80%;
@@ -174,7 +175,7 @@
 }
 #product{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px 10px 40px;
+    padding: 10px 10px 10px;
      box-sizing: border-box; 
     border-radius: 10px;
   
@@ -189,6 +190,25 @@
 {
     -webkit-transform: scale(1.08);
 transform: scale(1.08);
+}
+.cashbackdiv{
+  display: flex;
+  margin: 20px 0px 20px 0px;
+  /* border: 1px solid; */
+  width: 100%;
+  
+}
+.cashbackdiv p{
+  line-height: 1.5em;
+  height: 3em;
+  overflow: hidden;
+  color:#0da5e4 ;
+ margin-top: 20px;
+}
+#circleimg{
+  height: 25px;
+  width: 25px;
+  margin: auto;
 }
 #justimagediv{
   display: flex;
