@@ -76,7 +76,7 @@ let html = `
                 <img src="https://cdn-icons-png.flaticon.com/512/748/748122.png" class="log1" id="closs1">
             </div>
             <div>
-                <h1>great</h1>
+                <h1 style="font-size: 40; font-weight: bold;">great</h1> 
                 <p>Now type in the OTP sent to you for authentication</p>
                 <div style="display: flex;">
                     <div class="one">
