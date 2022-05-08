@@ -5,6 +5,7 @@ document.getElementById("fixedHeader").innerHTML = navbar();
 
 // header part end here 
 
+
 // // Page Content expand buttom for mobile device 
 
 let expandData = () => {

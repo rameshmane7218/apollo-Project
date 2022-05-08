@@ -82,27 +82,51 @@ if(loginStatus == "true"){
 };
 
 
-//Footer part content collapse 
-let footerCollapse = document.getElementsByClassName("footerLinks-PanelHeader");
+// //Footer part content collapse 
+// let footerCollapse = document.getElementsByClassName("footerLinks-PanelHeader");
 // console.log(footerCollapse);
 
-var i;
+// var i;
 
-for(i=0; i<footerCollapse.length; i++){
-    footerCollapse[i].addEventListener("click",function(i){
-        var footerContent = this.nextElementSibling;
-        // console.log(footerContent);
+// for(i=0; i<footerCollapse.length; i++){
+
+//     console.log("hii")
+//     footerCollapse[i].onclick = function(){
+//         console.log("hii")
+//         var footerContent = this.nextElementSibling;
+//         // console.log(footerContent);
        
-        if(footerContent.style.display == "block"){
-            footerContent.style.display = "none";
-        }else{
-            footerContent.style.display = "block"
-        }
+//         if(footerContent.style.display == "block"){
+//             footerContent.style.display = "none";
+//         }else{
+//             footerContent.style.display = "block"
+//         }
         
-    })
-}
+//     }
+// }
+// //Footer part content collapse 
+// let footerCollapse = document.getElementsByClassName("footerLinks-PanelHeader");
+// // console.log(footerCollapse);
+
+// var i;
+
+// for(i=0; i<footerCollapse.length; i++){
+//     footerCollapse[i].addEventListener("click",function(){
+//         // console.log("hii")
+//         var footerContent = this.nextElementSibling;
+//         // console.log(footerContent);
+       
+//         if(footerContent.style.display == "block"){
+//             footerContent.style.display = "none";
+//         }else{
+//             footerContent.style.display = "block"
+//         }
+        
+//     })
+// }
 
 
+// console.log("payment");
 
 
 
