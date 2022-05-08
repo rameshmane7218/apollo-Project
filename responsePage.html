@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response page</title>
+</head>
+<body>
+    <button id="yes" onclick="returnValue1()">yes</button>
+    <button id="no" onclick="returnValue2()" >no</button>
+    
+</body>
+</html>
+<script>
+    function returnValue1(){
+        localStorage.setItem("paymentStatus","true");
+        window.close();
+    }
+    function returnValue2(){
+        localStorage.setItem("paymentStatus","false");
+        window.close();
+    }
+</script>

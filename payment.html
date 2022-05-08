@@ -11,6 +11,7 @@
     <!-- stylesheet  -->
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/payment.css">
+    <!-- <link rel="stylesheet" href="./styles/payNew.scss"> -->
 
 
     <!-- google font  -->
@@ -28,8 +29,16 @@
     <!-- fontawesome  -->
     <script src="https://kit.fontawesome.com/b0071033d8.js" crossorigin="anonymous"></script>
 
+    <!-- bootstrap Css file is disturbing original page content-->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> -->
 
-   
+
+    <!-- w3school  -->
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+
 
 </head>
 
@@ -39,13 +48,13 @@
             <div id="fixedHeader">
                 <div class="headerPart">
                     <header class="header">
-                        <div class="logo" >
+                        <div class="logo">
                             <a href="index.html" class="logoImg" title="Home">
                                 <img src="https://newassets.apollo247.com/images/pharmacy_logo.svg"
                                     alt="Online Doctor Consultation & Medicines"
                                     title="Online Doctor Consultation & Medicines">
                             </a>
-                            
+
                         </div>
 
                         <div class="moboleNav" style="display: none;">
@@ -57,7 +66,7 @@
                                 Rs. 155
                             </div>
                         </div>
-                       
+
                         <!-- <div class="locationPartMain">
                             <div class="locationPart">
                                 <div id="locationId">
@@ -71,16 +80,23 @@
                                 </div>
                             </div>
                         </div> -->
-                        
+
 
                     </header>
-                    
-                </div> 
+
+                </div>
 
 
             </div>
 
-            <div class="paymentContainer">
+            <div class="ProcessingModal" id="ProcessingModal">
+                <div class="afterSubmit">
+                    <img src="./images/yourRequestIseBeingProcessed.gif" alt="">
+                    <p>Your request is being processed. Please do not click your browser's Back or Refresh button</p>
+                </div>
+            </div>
+
+            <div class="paymentContainer" id="paymentContainer">
                 <div class="paymentContainerMain">
                     <div class="paymetnHeaderMob" style="display: none;"></div>
                     <div class="paymetnHeaderLap">
@@ -103,7 +119,7 @@
                                             <div class="payWithNewCard3">
                                                 <div class="payWithNewCardLeft">
                                                     <span class="plusIcon"><i class="fa-solid fa-plus"></i></span>
-                                                    <span class="payWithName">Pay with a New Card</span> 
+                                                    <span class="payWithName">Pay with a New Card</span>
                                                 </div>
                                                 <div class="payWithNewCardRight">
                                                     <i class="fa-solid fa-circle-check"></i>
@@ -116,36 +132,50 @@
                                                     <form id="cardData">
                                                         <div class="cardNumber">
                                                             <label for="cardNumber">Card Number</label>
-                                                            <input type="tel" id="CardNumberBox" placeholder="Card Numebr" autocomplete="off" maxlength="19" required>
-                                                            <div id="invalidCardNum"  style="display:none;">Invalid card number</div>
+                                                            <input type="tel" id="CardNumberBox"
+                                                                placeholder="Card Numebr" autocomplete="off"
+                                                                maxlength="19" required>
+                                                            <div id="invalidCardNum" style="display:none;">Invalid card
+                                                                number</div>
                                                         </div>
                                                         <div class="cardHolderFullName">
                                                             <label for="full Name">Full Name</label>
-                                                            <input type="text" id="cardHolderFullNameBox" placeholder="Name on card" autocomplete="off" maxlength="64" required>
+                                                            <input type="text" id="cardHolderFullNameBox"
+                                                                placeholder="Name on card" name="name" maxlength="64"
+                                                                required>
                                                         </div>
                                                         <div class="dateCcvBtn">
                                                             <div class="dataCcv">
                                                                 <div class="validTill">
                                                                     <label for="card Validity">Valid Through</label>
                                                                     <div>
-                                                                        <input type="tel" id="validTillMonthBox" placeholder="MM" autocomplete="off" maxlength="2" required>
+                                                                        <input type="tel" id="validTillMonthBox"
+                                                                            placeholder="MM" autocomplete="off"
+                                                                            maxlength="2" required>
                                                                         <label for="slash">/</label>
-                                                                        <input type="tel" id="validTillYearBox" class="validTillYearBox" placeholder="YY" autocomplete="off" maxlength="2" required>
+                                                                        <input type="tel" id="validTillYearBox"
+                                                                            class="validTillYearBox" placeholder="YY"
+                                                                            autocomplete="off" maxlength="2" required>
                                                                     </div>
-                                                                    <div style="display: none;" id="invalidMonthYear">Invalid card month/year</div>
+                                                                    <div style="display: none;" id="invalidMonthYear">
+                                                                        Invalid card month/year</div>
                                                                 </div>
                                                                 <div class="userCCV">
                                                                     <label for="CCV">CCV</label>
-                                                                    <input type="password" id="userCcvBox" placeholder="***" autocomplete="off" maxlength="4" required>
+                                                                    <input type="password" id="userCcvBox"
+                                                                        placeholder="***" autocomplete="off"
+                                                                        maxlength="4" required>
                                                                 </div>
                                                             </div>
                                                             <div class="cardPayBtn">
-                                                                <input type="submit" class="cardPayBtnBox" id="cardPayBtnBoxOff" value="PAY Rs. 115">
+                                                                <input type="submit" class="cardPayBtnBoxOff"
+                                                                    id="cardPayBtnBox" value="PAY Rs. 115">
                                                             </div>
                                                         </div>
                                                         <div class="saveThiCard">
                                                             <input type="checkbox" checked="on">
-                                                            <label for="To Save Card">Save this card for faster checkout</label>
+                                                            <label for="To Save Card">Save this card for faster
+                                                                checkout</label>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -160,21 +190,25 @@
                                         </div>
                                         <i id="payArrow" class="fa-solid fa-angle-up"></i>
                                     </div>
-                                   
+
                                     <div class="PaymentOpenClose">
                                         <div class="upiPayment">
                                             <div class="upiPayment11">
                                                 <label for="upi">ENTER YOUR UPI ID</label>
                                                 <div class="upiInput">
-                                                   <form id="upiVerifyBtn" >
-                                                       
-                                                        <input id="upiInputBox" oninput="checkValidUpi()" type="text" placeholder="username@bank" autocomplete="off" required>
-                        
-                                                        <input class="upiVerifyBtn upiVerifyBtnOff" id="upiVerify1" type="submit" value="Verify and Pay">
+                                                    <form id="upiVerifyBtn">
+
+                                                        <input id="upiInputBox" oninput="checkValidUpi()" type="text"
+                                                            placeholder="username@bank" autocomplete="off" required>
+
+                                                        <input class="upiVerifyBtn upiVerifyBtnOff" id="upiVerify1"
+                                                             type="submit"
+                                                            value="Verify and Pay">
                                                         <!-- <button class="upiVerifyBtn" id="upiVerifyBtn" >Verify and Pay</button> -->
 
-                                                        <p class="upiNotValid" id="upiNotValid" style="display: none;">UPI ID not valid.</p>
-                                                   </form>
+                                                        <p class="upiNotValid" id="upiNotValid" style="display: none;">
+                                                            UPI ID not valid.</p>
+                                                    </form>
                                                 </div>
                                                 <ul>
                                                     <li class="upiLast">@okhdfcbank</li>
@@ -198,20 +232,22 @@
                                         </div>
                                         <i id="payArrow" class="fa-solid fa-angle-up"></i>
                                     </div>
-                                   
+
                                     <div class="PaymentOpenClose" style="display: none;">
                                         <div>
                                             <ul class="walletList">
                                                 <li>
                                                     <div>
-                                                        <img src="https://assets.apollo247.com/images/payments/paytm.png" alt="">
+                                                        <img src="https://assets.apollo247.com/images/payments/paytm.png"
+                                                            alt="">
                                                         <div>Paytm Wallet & Postpaid</div>
                                                     </div>
                                                     <a href="#">PAY NOW</a>
                                                 </li>
                                                 <li>
                                                     <div>
-                                                        <img src="https://prodaphstorage.blob.core.windows.net/paymentlogos/amazonpay.png" alt="">
+                                                        <img src="https://prodaphstorage.blob.core.windows.net/paymentlogos/amazonpay.png"
+                                                            alt="">
                                                         <div>Amazon Pay</div>
                                                     </div>
                                                     <a href="#">PAY NOW</a>
@@ -227,7 +263,7 @@
                                         </div>
                                         <i id="payArrow" class="fa-solid fa-angle-up"></i>
                                     </div>
-                                   
+
                                     <div class="PaymentOpenClose">
                                         <div class="payOnDelivery">
                                             <div class="payOnDeliveryLeft">
@@ -248,43 +284,49 @@
                                         </div>
                                         <i id="payArrow" class="fa-solid fa-angle-up"></i>
                                     </div>
-                                   
+
                                     <div class="PaymentOpenClose" style="display: none;">
                                         <div class="netBankingDiv">
                                             <ul class="netBankingList">
                                                 <li>
                                                     <a href="#">
-                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-hdfc.png" alt="">
+                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-hdfc.png"
+                                                            alt="">
                                                         <div>HDFC</div>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-sbi.png" alt="">
+                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-sbi.png"
+                                                            alt="">
                                                         <div>SBI</div>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-icici.png" alt="">
+                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-icici.png"
+                                                            alt="">
                                                         <div>ICICI</div>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-axis.png" alt="">
+                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-axis.png"
+                                                            alt="">
                                                         <div>AXIS</div>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-kotak.png" alt="">
+                                                        <img src="https://assets.apollo247.com/images/bankicons/nb-kotak.png"
+                                                            alt="">
                                                         <div>Kotak</div>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#">
-                                                        <img src="	https://assets.apollo247.com/images/bankicons/nb-yesb.png" alt="">
+                                                        <img src="	https://assets.apollo247.com/images/bankicons/nb-yesb.png"
+                                                            alt="">
                                                         <div>Yes</div>
                                                     </a>
                                                 </li>
@@ -296,8 +338,10 @@
                                     <p>100% Secured Payments</p>
                                     <p>
                                         Powered By
-                                        <img src="https://newassets.apollo247.com/images/payments/paytm.png" alt="paytm icon">
-                                        <img src="	https://newassets.apollo247.com/images/payments/ic-payU.svg" alt="payU icon">
+                                        <img src="https://newassets.apollo247.com/images/payments/paytm.png"
+                                            alt="paytm icon">
+                                        <img src="	https://newassets.apollo247.com/images/payments/ic-payU.svg"
+                                            alt="payU icon">
                                     </p>
                                 </div>
                             </div>
@@ -325,33 +369,65 @@
                                     <ul>
                                         <li class="offerInfo">
                                             <div class="offerCompany">
-                                                <img src="https://newassets.apollo247.com/images/payment_offer_icons/PAYTM.png" alt="">
+                                                <img src="https://newassets.apollo247.com/images/payment_offer_icons/PAYTM.png"
+                                                    alt="">
                                                 <div>Assured cashback of ₹30 to ₹300 on Paytm wallet & postpaid</div>
                                             </div>
-                                            <div>Get assured cashback of  ₹30 to ₹300 on transaction above ₹899 </div>
+                                            <div>Get assured cashback of ₹30 to ₹300 on transaction above ₹899 </div>
                                             <div class="TCApply">T&C Apply</div>
                                         </li>
                                         <li class="offerInfo">
                                             <div class="offerCompany">
-                                                <img src="https://newassets.apollo247.com/images/payment_offer_icons/MERCHANT.png" alt="">
+                                                <img src="https://newassets.apollo247.com/images/payment_offer_icons/MERCHANT.png"
+                                                    alt="">
                                                 <div>15% instant off on using Postpe Card </div>
                                             </div>
-                                            <div>15% instant off upto ₹200 on txn above  ₹999</div>
+                                            <div>15% instant off upto ₹200 on txn above ₹999</div>
                                             <div class="TCApply">T&C Apply</div>
                                         </li>
-                        
+
                                     </ul>
-                            
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-            </div>
-           
 
-            
+            </div>
+
+            <!-- UPI Payment Model Box  -->
+            <!-- The Modal -->
+            <div class="modal" id="openUpiModal">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+
+                        <div class="modal-topContent">
+                            Open your UPI app to approve the payment request from Apollo 24|7
+                        </div>
+                        <div class="TimerModal" id="app">
+
+                        </div>
+                        <div class="approveReqDiv">
+                            Please Approve the payment request before the time runs out !
+                        </div>
+                        <div class="DotPressBack">
+                            Don't press back until the transaction is complete
+                        </div>
+                        <div class="cancelPayment">
+                            <button id="cancel-payment">
+                                CANCEL PAYMENT
+                            </button>
+                        </div>
+                        <div class="cancelPolicy">
+                            On cancelling the payment, the payment request will get cancelled only if you have not
+                            completed the payment on UPI Bank app.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
 
         </div>
     </div>

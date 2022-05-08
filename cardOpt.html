@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Bank Page</title>
+    <style>
+        :root {
+            --body-background-color: #dcdfce;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+        }
+
+
+
+        body {
+
+            margin: 0;
+            font-size: 14px;
+            /* font-family: 'IBM Plex Sans', sans-serif; */
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 500;
+            line-height: 1.43;
+
+        }
+
+        .otpPage {
+            /* height: 200px; */
+            width: 485px;
+            /* border: 1px solid red; */
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            margin: auto;
+            background-color: #f9f8f8;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 30px;
+            border-radius: 4px;
+            padding-bottom: 20px;
+        }
+
+        @media(max-width:500px) {
+            .otpPage {
+                width: 80%;
+                margin: auto;
+                min-width: 300px;
+            }
+        }
+
+        #paytmPG {
+            background-color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .otpPage p {
+            margin: 0;
+        }
+
+        .optInstru {
+            padding: 20px;
+            font-size: 15px;
+
+        }
+
+        .custumerCare {
+            background-color: #ecf5ea;
+            color: #238a64;
+            border: 1px solid #61d1a8;
+            padding: 5px 0;
+            font-size: 13px;
+            border-radius: 3px;
+
+        }
+
+        .detailsField {
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        .detailsField>div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detailsField>div:first-child {
+            align-items: flex-end;
+            color: gray;
+        }
+
+        .detailsField>div:last-child {
+            align-items: flex-start;
+            margin-left: 5px;
+        }
+
+        .detailsField p {
+            margin: 5px 0;
+        }
+
+        .optPart {
+            width: 78%;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            /* border: 1px solid red; */
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .otpPartTop {
+            color: white;
+            background-color: orangered;
+            padding: 10px 0;
+        }
+
+        #otp {
+            outline: none;
+            padding: 5px;
+            padding-left: 10px;
+            margin: 10px;
+        }
+
+        #otp:focus {
+            outline: none;
+        }
+
+        .otpPartBottom button {
+            border: none;
+            padding: 10px;
+            margin: 5px 5px 20px 5px;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        #submit {
+            background-color: rgb(41, 21, 138);
+            color: white;
+
+        }
+
+        #cancel {
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        #timeout {
+            color: gray;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        #wrongOtp {
+            margin-left: 100px;
+            font-size: 12px;
+            color: #cf8f6a;
+            text-align: left;
+            font-weight: bold;
+            margin-top: -5px;
+        }
+
+        #screen {
+            width: 100%;
+        }
+
+        .hideOtpPage {
+            display: none;
+            pointer-events: none;
+        }
+
+        .ProcessingModal,.ProcessingModal2 {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            background-color: #6565657b;
+            pointer-events: none;
+            z-index: 999;
+            transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        }
+        .ProcessingModal:target,.ProcessingModal2:target{
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .afterSubmit, .afterSubmit2 {
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 380px;
+            text-align: center;
+            padding: 40px 30px;
+            opacity: 1;
+            color: #02475b;
+            font-size: 16px;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;
+        }
+
+        .afterSubmit img{
+            height: 80px;
+            width: 80px;
+        }
+
+        .afterSubmit img, .afterSubmit2 img{
+            height: 80px;
+            /* width: 80px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="otpPage" class="otpPage">
+        <div class="otpPageDiv">
+            <div id="paytmPG">
+                <img src="https://business.paytm.com/s3assets/images/pg929/pg-overview/svg/Group122070-pwe1307.svg"
+                    alt="">
+
+            </div>
+            <div class="optInstru">
+                The One Time Password has been sent to the below Mobile Number. Please use the OTP and authenticate the
+                transaction.
+            </div>
+            <div class="custumerCare">
+                <p>Not Your Contact Number? <a href="#">Contact Customer Care</a></p>
+                <p>Recently changed your Mobile Number? <a href="#">Click here to refresh</a></p>
+            </div>
+            <div class="detailsField">
+                <div class="detailsFieldLeft">
+                    <p>Date :</p>
+                    <p>Card Number :</p>
+                    <p>Mobile Number :</p>
+                </div>
+                <div class="detailsFieldRigh">
+                    <p>07-May-2022</p>
+                    <p> 6521xxxxxxxxxxxx4000</p>
+                    <p> X2XXXX6XX6</p>
+                </div>
+            </div>
+            <div class="optPart">
+                <div class="otpPartTop">
+                    <p>OTP (One Time Password)</p>
+                    <p id="timeoutDisplay"></p>
+
+                </div>
+                <div class="otpPartBottom">
+                    <a href="" id="resendOtp">
+                        <p> Resend OTP</p>
+                    </a>
+                    <input type="text" id="otp" placeholder="Enter OTP" maxlength="6">
+                    <br>
+                    <p id="wrongOtp"></p>
+                    <button id="submit" onclick="verifyOtp()">SUBMIT</button>
+                    <button id="cancel">CANCEL</button>
+                </div>
+            </div>
+            <p id="timeout">The page will automatically timeout after 180 seconds</p>
+        </div>
+    </div>
+    <!-- <img id="screen" src="./images/Screenshot (1479).png" alt=""> -->
+    <div class="ProcessingModal" id="ProcessingModal">
+        <div class="afterSubmit">
+            <img src="./images/yourRequestIseBeingProcessed.gif" alt="">
+            <p>Your request is being processed. Please do not click your browser's Back or Refresh button</p>
+        </div>
+    </div>
+    <div class="ProcessingModal2" id="ProcessingModal2">
+        <div class="afterSubmit2">
+            <img src="./images/dotsLoading.gif" alt="">
+            <p>Please do not press 'Back' or 'Refresh' button</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+
+
+    function generateOTP() {
+        let digits = '0123456789';
+        let otpLength = 6;
+        let otp = '';
+        for (let i = 1; i <= otpLength; i++) {
+            let index = Math.floor(Math.random() * (digits.length));
+            otp = otp + digits[index];
+        }
+        localStorage.setItem("otp", otp);
+        return otp;
+    }
+    function sendOtp(delay) {
+        setTimeout(function () {
+            alert(` Dear Apollo Customer, Your one time password is '${generateOTP()}' and valid for 2 mins.`);
+            document.getElementById("wrongOtp").innerText = "";
+
+        }, delay);
+    }
+
+    let ans = document.getElementById("otpPage").classList;
+    console.log('ans:', ans);
+    if (!ans.value.includes("hideOtpPage")) {
+        console.log("yes");
+        sendOtp(2000);
+
+    }
+
+
+    // resend otp 
+    document.getElementById("resendOtp").onclick = function () {
+        // sendOtp(0);
+    }
+
+    function expireOtp(delay) {
+        let id = setInterval(function () {
+            delay = delay - 1000;
+            let mins = Math.floor((delay / 1000) / 60);
+            let sec = Math.floor((delay / 1000) % 60);
+            // console.log('sec:', sec)
+            // console.log("min:",mins)
+            // console.log(`${mins}:${sec}`)
+            // console.log(delay / 1000);
+            document.getElementById("timeoutDisplay").innerText = `Your OTP will expire in (${mins}:${sec})`;
+            if ((delay / 1000) == 0) {
+                clearInterval(id);
+                document.getElementById("timeoutDisplay").innerText = `Your OTP has been expired click on Resend OTP to send new OTP`;
+            }
+        }, 1000)
+    }
+    expireOtp(30000)
+
+
+
+    function verifyOtp() {
+        let currectOtp = localStorage.getItem("otp");
+        let userOtp = document.getElementById("otp").value;
+
+        if (currectOtp == userOtp) {
+            document.getElementById("otp").value = "";
+            moveToProcessPage();
+
+        } else {
+            document.getElementById("wrongOtp").innerText = "Enter valid OTP";
+        }
+    }
+
+
+    function moveToProcessPage() {
+        document.getElementById("otpPage").classList.add("hideOtpPage");
+        window.location.href = "#ProcessingModal";
+        setTimeout(function () {
+            window.location.href = "#";
+            window.location.href = "#ProcessingModal2";
+        }, 2000);
+        setTimeout(function () {
+            window.location.href = "#";
+            window.location.href = "orderSuccess.html";
+        }, 7000);
+      
+        // window.location.href = "#ProcessingModal2";
+       
+
+        // setTimeout(function () {
+        //     window.location.href = "#ProcessingModal2";
+        // }, 7000);
+        // window.location.href = "#ProcessingModal2";
+       
+
+       
+    }
+
+
+
+    document.getElementById("cancel").onclick = function () {
+        window.location.href = "#ProcessingModal";
+        setTimeout(function () {
+            window.location.href = "#";
+            window.location.href = "orderDecline.html";
+        }, 2000);
+        
+    }
+
+    setTimeout(function () {
+        window.location.href = "payment.html";
+    }, 180000);
+
+
+    window.history.pushState(null, null, window.location.href);
+    window.onpopstate = function () {
+        window.history.go(1);
+    };
+</script>

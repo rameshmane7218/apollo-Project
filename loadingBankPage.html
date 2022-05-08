@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Bank Page</title>
+    <style>
+        :root {
+            --body-background-color: #dcdfce;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+        }
+
+
+
+        body {
+
+            margin: 0;
+            font-size: 14px;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: 500;
+            line-height: 1.43;
+
+        }
+
+        .LoadingDiv {
+            width: 700px;
+
+            /* border: 1px solid red; */
+            border-radius: 30px;
+            margin: auto;
+            padding: 10px;
+            background-image: linear-gradient(to right, #0087fd, #00c0f1);
+            margin-top: 100px;
+        }
+
+        @media (max-width:899.95px) {
+            .LoadingDiv {
+                width: 90%;
+                margin-top: 20px;
+            }
+        }
+
+        .LoadingTop {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 30px;
+            color: #fff;
+        }
+
+        .LoadingTop>div {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            justify-content: flex-end;
+            padding: 0 10px;
+
+        }
+
+        .LoadingTop>div p,
+        h1 {
+            margin: 0;
+
+        }
+
+        .LoadingTop>div h1 {
+            font-size: 34px;
+
+
+        }
+
+        .LoadingTop>div p {
+            font-size: 20px;
+
+        }
+
+        .phar {
+            font-weight: 600;
+        }
+
+        .LoadingBottom {
+            background-color: #fff;
+            border-radius: 10px 10px 30px 30px;
+            padding: 40px 30px 30px 30px;
+            margin-top: 20px;
+        }
+
+        .LoadingBottom h2 {
+            font-size: 32px;
+            margin: 0
+        }
+
+        .donotClick {
+            font-size: 18px;
+            font-weight: 500;
+            color: gray;
+        }
+
+        .donotClick span {
+            font-size: 20px;
+            font-weight: 600;
+
+            color: rgb(87, 87, 87);
+        }
+
+        .powered {
+            margin: 0;
+            color: gray;
+        }
+
+        .paytmPG {
+            height: 25px;
+            margin-top: 10px;
+        }
+
+        #loadingBar{
+            width: 95%;
+            background-color: #0087fd1b;
+            height: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            
+        }
+        #loadingInnner{
+            height: 10px;
+            border-radius: 5px;
+            background-color: #00c0f1;
+            width: 30px;
+           
+            
+        }
+
+        /* .smallBar{
+            background-color: red;
+            height: 2px;
+        } */
+
+
+        #screen {
+            display: block;
+            margin: auto;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="LoadingDiv">
+        <div class="LoadingInnerDiv">
+            <div class="LoadingTop">
+                <div class="rsDiv">
+                    <p>Paying</p>
+                    <h1>Rs. 220</h1>
+                </div>
+                <div class="phar">
+                    <p>ApplloPharmacy</p>
+                </div>
+            </div>
+            <div class="LoadingBottom">
+                <h2>Loading Bank Page...</h2>
+                <div id="loadingBar">
+                    <div id="loadingInnner">
+                        <div class="smallBar">
+
+                        </div>
+                    </div>
+                </div>
+                <p class="donotClick">Please do not click <span>'Back'</span> or <span>'Refresh'</span></p>
+
+                <p class="powered">Powered by</p>
+                <img class="paytmPG"
+                    src="https://business.paytm.com/s3assets/images/pg929/pg-overview/svg/Group122070-pwe1307.svg"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <!-- <img id="screen" src="./images/pay.png" alt=""> -->
+</body>
+
+</html>
+
+<script>
+    var i = 0;
+    function move() {
+        if (i == 0) {
+            i = 1;
+            var elem = document.getElementById("loadingInnner");
+           
+            var width = 1;
+            var id = setInterval(frame, 15);
+            function frame() {
+                
+                if (width >= 100) {
+                    clearInterval(id);
+                    i = 0;
+                    window.location.href = "cardOpt.html";
+                } else {
+                    width++;
+                    elem.style.width = width + "%" ;
+                }
+            }
+        }
+    }
+    move();
+</script>
