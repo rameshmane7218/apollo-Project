@@ -1,6 +1,6 @@
-localStorage.setItem("login","false");
-// localStorage.setItem("login","true");
-let loginStatus = localStorage.getItem("login");
+// localStorage.setItem("loginnav","false");
+// localStorage.setItem("loginnav","true");
+let loginStatus = localStorage.getItem("login") || "false";
 // console.log(loginStatus);
 let navigation;
 if(loginStatus == "true"){
@@ -21,9 +21,13 @@ if(loginStatus == "true"){
         Covid-19
     </a>
     <div id="cartId">
-        <div><span class="material-symbols-rounded">
-                shopping_cart
-            </span></div>
+        <div>
+            <a href="cart1.html" id="moveCart"> 
+                <span class="material-symbols-rounded">
+                    shopping_cart
+                </span>
+            </a>
+        </div>
     </div>`
 }else{
     navigation = ` 
@@ -44,9 +48,13 @@ if(loginStatus == "true"){
         <span class="subTabName">Latest<br> updates</span>
     </a>
     <div id="cartId">
-        <div><span class="material-symbols-rounded">
-                shopping_cart
-            </span></div>
+        <div>
+            <a href="cart1.html" id="moveCart"> 
+                <span class="material-symbols-rounded">
+                    shopping_cart
+                </span>
+            </a>
+        </div>
     </div>`
 }
 
@@ -86,7 +94,9 @@ let navbar = () => {
                                 <span class="material-symbols-rounded">
                                     person
                                 </span>
+                               
                             </div>
+                            <div id="bar"></div>
                         </div>
                     </div>
                 </div>
