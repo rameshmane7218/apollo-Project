@@ -19,7 +19,7 @@ let html = `
             </div>
             <div id="two">
                 <div id="img">
-                <span>&#8594;</span>
+                <span id="qwerty">&#8594;</span>
                 </div>
             </div>
         </div>
