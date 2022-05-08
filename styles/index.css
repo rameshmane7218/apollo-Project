@@ -9,6 +9,7 @@
 }
 #mainContainer {
     padding-top: 90px;
+    position: relative;
 }
 
 @media (min-width:768px) {

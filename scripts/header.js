@@ -5,9 +5,9 @@
 
 // mobile Navigation part 
 
-localStorage.setItem("login","false");
-// localStorage.setItem("login","true");
-let loginStatus = localStorage.getItem("login");
+// localStorage.setItem("loginnav","false");
+// localStorage.setItem("loginnav","true");
+let loginStatus = localStorage.getItem("login") || "false";
 // console.log(loginStatus);
 
 if(loginStatus == "true"){

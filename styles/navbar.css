@@ -160,6 +160,10 @@ body::backdrop {
     /* border: 1px solid black; */
 }
 
+#moveCart{
+    min-width: 15px !important;
+}
+
 @media (max-width:899.95px) {
     .navigation a {
         display: none;

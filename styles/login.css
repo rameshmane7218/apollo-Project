@@ -1,0 +1,266 @@
+.loginDiv{
+    position: relative;
+}
+
+/* #bar{
+    position: fixed;
+    border: 1px solid red;
+    top: 88px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 300;
+    max-width: 1064px;
+    margin: auto;
+} */
+
+
+#log{
+    height: 30px;
+    
+}
+.log1{
+    height: 20px;
+}
+.under{
+    padding-bottom: 0px;
+    border-bottom: 2px solid green;
+}
+#otherimg{
+    height: 20px;
+    margin-right: 10px;
+}
+#nav{
+    display: grid;
+    justify-content: right;
+    width: 80%;
+    margin: auto;
+}
+#back{
+    background-color: black;
+    opacity: 0.6 ;
+    z-index: 100;
+    position: fixed;
+    /* width: 100vw;
+    height: 100vh; */
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#back > div{
+    opacity: 1;
+}
+#login{
+    display: none;
+    background-color: rgb(255, 255, 255);
+    z-index: 1002;
+    position: absolute;
+    /* right: 20%; */
+    /* right: calc(100%-1068px); */
+    /* left: calc(60% + 100px); */
+    left: calc((100% - 1064px)/4.4);
+    top: 21px;
+    /* right: 709px; */
+    /* calc(100% - 430px); */
+    height: 320px;
+    width: 270px;
+    /* margin-left: 70%; */
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 1 !important;
+}
+#qwert {
+  content: "\2192";
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+}
+#login > p{
+    color: lightblue;
+    font-size: large;
+    margin-bottom: 10px;
+}
+#login  p{
+    line-height: 1.5;
+}
+#logincheck{
+    height: 15px;
+    width: 15px;
+}
+#number{
+    margin-right: 10%;
+}
+.one{
+    width: 80%;
+}
+.two{
+    width: 20%;
+    height: 50px;
+}
+#img{
+    background-color: orange;
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+.textarea {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    height: 30px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+#snigup1{
+    border-radius: 10px;
+    width: 340px;
+    display: none;
+    z-index: 1002;
+    position: absolute;
+    padding: 10px;
+    /* transform: translateX(1140px); */
+    left: calc((100% - 1064px)/3.4);
+    top: 21px;
+    background-color: white;
+}
+#snigup{
+    height: 500px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 1002;
+    overflow: scroll;
+    padding: 20px;
+}
+#snigup > input{
+    margin-bottom: 10px;
+}
+#genter{
+    display: flex;
+}
+#genter > div{
+    margin-right: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 40px;
+    width: 70px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    font-size: larger;
+
+}
+#code{
+    background-color: rgb(34, 34, 153);
+    height: 100px;
+    display: flex;
+    padding: 10px;
+}
+#code1{
+    width: 40px;
+    height: 90px;
+
+}
+#code2{
+    height: 90px;
+
+}
+#submit{
+    width: 340px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: orange;
+    border: none;
+}
+
+#otp{
+    display: none;
+    background-color: white;
+    z-index: 1002;
+    position: absolute;
+    height: 370px;
+    width: 300px;
+    border: 1px solid;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    left: calc((100% - 1064px)/4.2);
+    top: 21px;
+}
+#otp1{
+    display: flex;
+    justify-content: space-between;
+}
+#resent{
+    color: orange;
+    cursor: pointer;
+}
+#call{
+    background-color: orange;
+    border: none;
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+#profile{
+    display: none;
+    background-color: white;
+    z-index: 10020;
+    position: absolute;
+    /* position: fixed; */
+    right: 0;
+    width: 300px;
+    height: 530px;
+    border-radius: 10px;
+    /* margin-left: 70%; */
+    /* margin-top: 30px; */
+    box-sizing: border-box;
+}
+#other > a > div{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid green;
+    box-sizing: border-box;
+    padding: 8px 20px;
+}
+#other > a{
+    text-decoration: none;
+    color: black;
+}
+#app > img{
+    margin-left: 20px;
+}
+#app > button{
+    margin-left: 20px;
+    border: none;
+    background-color: orange;
+    border-radius: 5px;
+    height: 30px;
+    color: white;
+}
+#info{
+    padding: 20PX;
+}
+#info2{
+    margin-top: 10px;
+}
+#info3{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.infounder{
+    border-bottom: 1px solid green;
+    padding-bottom: 5px;
+}
