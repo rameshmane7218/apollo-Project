@@ -17,6 +17,7 @@ var total_money=0;
 var Delivery_Charges;
 var total_saving=0;
 var Cartarr=[];
+let new_total_money=0;
 //let  Big_box=document.getElementById("display_added_items").innerHTML=null;
  console.log(CartData);
 
@@ -137,6 +138,7 @@ CartData.map(function(elem,i){
 
 
 ///work after increasing quentites.............................................................
+   
     let qty = document.getElementsByClassName("qtys");
     console.log("qty:",qty);
     let Discount_Price = document.getElementsByClassName("Discount_Price");
@@ -159,7 +161,7 @@ CartData.map(function(elem,i){
            let new_total_saving=Number(previous_total_saving)+Number((newQty*newSaving).toFixed(2));
 
            let previous_total_money=total_money;
-           let new_total_money=Number(previous_total_money)+Number(((newQty-1)*newPrice).toFixed(2))
+            new_total_money+=Number(previous_total_money)+Number(((newQty-1)*newPrice).toFixed(2))
            //console.log("new",previous_total_saving,new_total_saving)
             
             //document.getElementById("Saving_Price").innerText=Saving_Price[i].innerText=
@@ -177,7 +179,7 @@ CartData.map(function(elem,i){
                 document.getElementById("Delivery_Charges").innerText=Delivery_Charges;
             }
             var Total_money_after=(new_total_money-(new_total_money/10)).toFixed(2);
-              document.querySelector("#to_pay2").innerText=(new_total_money-(new_total_money/10)).toFixed(2)
+              document.querySelector("#to_pay2").innerText=(new_total_money)
            
             //updated local storage
            //storing all details in local storage
@@ -204,15 +206,16 @@ window.location.reload()
 
 }
 document.querySelector("#to_pay1").innerText=total_money;
-if(Delivery_Charges==="FREE")
+if(document.getElementById("Delivery_Charges").innerText==="FREE")
 {
   document.querySelector("#to_pay2").innerText=total_money;
+  console.log(total_money,"no")
 }
-else{
-  document.querySelector("#to_pay2").innerText=(total_money-(total_money/10)).toFixed(2);
+else {
+  document.querySelector("#to_pay2").innerText=(total_money+(total_money/10)).toFixed(2);
 }
 
-console.log(total_money);
+//console.log(total_money);
 
 total_saving=total_saving.toFixed(2)
 
