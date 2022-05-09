@@ -250,9 +250,9 @@
                     <p>Mobile Number :</p>
                 </div>
                 <div class="detailsFieldRigh">
-                    <p>07-May-2022</p>
-                    <p> 6521xxxxxxxxxxxx4000</p>
-                    <p> X2XXXX6XX6</p>
+                    <p id="payDate">07-May-2022</p>
+                    <p id="secureCardNum"> 6521xxxxxxxxxxxx4000</p>
+                    <p id="secureNum"> X2XXXX6XX6</p>
                 </div>
             </div>
             <div class="optPart">
@@ -372,8 +372,15 @@
         }, 2000);
         setTimeout(function () {
             window.location.href = "#";
-            window.location.href = "orderSuccess.html";
-        }, 7000);
+            
+            localStorage.removeItem("cart");
+            localStorage.setItem("cardPayStatus", "true");
+            window.open("orderSuccess.html","")
+            window.close();
+            // window.location.href = "orderSuccess.html";
+            // window.location.origin = "orderSuccess.html"
+        }, 4000);
+       
       
         // window.location.href = "#ProcessingModal2";
        
@@ -393,7 +400,10 @@
         window.location.href = "#ProcessingModal";
         setTimeout(function () {
             window.location.href = "#";
-            window.location.href = "orderDecline.html";
+            localStorage.setItem("cardPayStatus", "false");
+            window.open("orderDecline.html","")
+            window.close();
+            // window.location.href = "orderDecline.html";
         }, 2000);
         
     }
@@ -401,6 +411,50 @@
     setTimeout(function () {
         window.location.href = "payment.html";
     }, 180000);
+
+
+
+    let loginDetails = JSON.parse(localStorage.getItem("loginid"));
+    console.log('loginDetails:',loginDetails.number);
+    let secureNum = "";
+    for(let i=0; i<loginDetails.number.length; i++){
+        if(i==1 || i==6 || i==9){
+            secureNum += loginDetails.number[i];
+        }else{
+            secureNum += "X";
+        }
+    }
+    console.log(secureNum);
+    document.getElementById("secureNum").innerText = secureNum;
+
+    let cardNumLocal = localStorage.getItem("secureCardNum");
+    console.log('cardNumLocal:',cardNumLocal);
+    let secureCardNum = "";
+    for(let i=0; i<cardNumLocal.length; i++){
+        if(i==0 || i==1 || i==2 || i==3 || i==15 || i==16 || i==17 || i==18){
+            secureCardNum += cardNumLocal[i];
+        }else{
+            secureCardNum += "x";
+        }
+    }
+    console.log(secureCardNum);
+    document.getElementById("secureCardNum").innerText = secureCardNum;
+
+    let d = new Date();
+    // console.log(d.toLocaleString())
+    console.log(d.toLocaleDateString())
+    // let currD = d.toLocaleDateString();
+    let currD = d.toLocaleString();
+
+    document.getElementById("payDate").innerText = currD;
+
+
+
+
+    
+
+
+
 
 
     window.history.pushState(null, null, window.location.href);

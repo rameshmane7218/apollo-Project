@@ -46,7 +46,7 @@
                         <div>
                             <img src="https://newassets.apollo247.com/images/ic_payment_success.svg" alt="success Icon">
                             <h5 class="paymentSuccessText">Payment Successful</h5>
-                            <p class="PayAmt">Your order of ₹170 is placed</p>
+                            <p class="PayAmt" id="PayAmt">Your order of ₹170 is placed</p>
                         </div>
                     </div>
                     <div class="gotoOrder">
@@ -471,7 +471,11 @@ document.getElementById("DateTime").innerText = currDate;
         }
         return otp;
     }
-    let totalItems = 2;
+
+    let totalItems = JSON.parse(localStorage.getItem("cart")).length;
+    // console.log('totalItems:', totalItems)
+    
+    // let totalItems = 2;
     let OrderIds = []
     for (let i = 0; i < totalItems; i++){
         OrderIds.push(generateRandomNum(9));
@@ -499,12 +503,32 @@ if(day.length == 1){
 }
 // console.log(day);
 let refNum = `${year}${month}${day}${generateRandomNum(10)}`;
-console.log(refNum);
+// console.log(refNum);
 document.getElementById("refId").innerText = refNum;
+
+
+
+
+let toPay = localStorage.getItem("Total_money_after").split('"').join("");
+console.log(toPay);
+
+
+document.getElementById("PayAmt").innerText = `Your order of ₹${toPay} is placed`;
+
+
+
+
+
+
+
+
 
 window.history.pushState(null, null, window.location.href);
 window.onpopstate = function () {
     window.history.go(1);
 };
+
+
+
 
 </script>

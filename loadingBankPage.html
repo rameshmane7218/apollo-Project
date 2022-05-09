@@ -163,7 +163,7 @@
             <div class="LoadingTop">
                 <div class="rsDiv">
                     <p>Paying</p>
-                    <h1>Rs. 220</h1>
+                    <h1 id="loadingAmt">Rs. 220</h1>
                 </div>
                 <div class="phar">
                     <p>ApplloPharmacy</p>
@@ -215,4 +215,14 @@
         }
     }
     move();
+
+    
+    let toPay = localStorage.getItem("Total_money_after").split('"').join("");
+    console.log(toPay);
+
+    document.getElementById("loadingAmt").innerText = `Rs. ${toPay}`;
+
+
+
+
 </script>

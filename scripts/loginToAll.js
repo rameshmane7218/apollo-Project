@@ -274,6 +274,7 @@ if (login == false) {
                                 let a = document.getElementById("fname").value;
                                 let b = document.getElementById("sname").value;
                                 let c = document.getElementById("dob").value;
+                                
                                 if (a != "" && b != "" && c != "" && gender != null) {
                                     let obj = {
                                         number: input,
@@ -315,16 +316,21 @@ else {
             count++
             document.getElementById("profile").style.display = "block"
             document.querySelector("#info1").innerText = loginid.First_name;
-            let x = loginid.DOB.trim().split("/");
+            let x = loginid.DOB.trim().split("-");
             let a = x[0];
             x[0] = x[1];
             x[1] = a;
-            x = x.join("/");
+            x = x.join("-");
             let dob = new Date(x);
             let month_diff = Date.now() - dob.getTime();
             let age_dt = new Date(month_diff);
             let year = age_dt.getUTCFullYear();
+            
+
+            // console.log(year);
+            
             let age = Math.abs(year - 1970);
+            // let age = Math.abs(2022 - Number(year));
             document.querySelector("#progenter").innerText = `${loginid.Gender} | ${age}`;
             document.querySelector("#pronumber").innerText = `+91${loginid.number}`;
             let asd = document.getElementById("logout").innerText
@@ -346,3 +352,10 @@ let black = () => {
     document.getElementById("otp").style.display = "none"
     document.getElementById("login").style.display = "none"
 }
+
+
+
+let d4 = new Date();
+
+console.log('d4:', d4.getFullYear())
+console.log(d4.getFullYear() - 1999);

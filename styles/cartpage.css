@@ -176,7 +176,8 @@
 
 #Add_to_delivery_btn,
 #submit_address,
-#saved_final_add {
+#saved_final_add,
+#proceedToPay {
     background-color: #fc9916;
     color: white;
     border: none;
@@ -186,7 +187,9 @@
     margin-left: 10px;
     font-size: 14px;
 }
-
+#proceedToPay{
+    margin-top: 20px;
+}
 #submit_address {
     margin-top: 15px;
 }
@@ -294,7 +297,8 @@
 
 /* < --------------------------------------------/* appended data css */
 #box {
-    height: 100.2px;
+    /* height: 100.2px; */
+    box-sizing: border-box;
     width: 600px;
     margin-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -530,7 +534,7 @@
 
 /* // for navbar adjustment  */
 .logo{
-    padding: 20px;
+    padding: 10px 20px;
 }
 .navigation a {
     min-width: 97px;

@@ -42,9 +42,10 @@
 
 
   <!-- <title>Bootstrap Product List Carousel for Ecommerce Website</title> -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -72,6 +73,17 @@
       padding: 20px;
     }
 
+    .logo {
+      padding: 10px 20px;
+    }
+
+    .navigation a {
+      min-width: 97px;
+      text-decoration: none;
+    }
+    a{
+      text-decoration: none;
+    }
     /* img{
   height: 250px;
 } */
@@ -88,7 +100,7 @@
     <div id="mainContainer">
       <div id="fixedHeader"></div>
 
-      
+
       <!-- main Div -->
       <div id="main">
 
@@ -112,9 +124,11 @@
         <!-- input div------ //    searchbar -->
         <div id="inputdiv">
 
-          <input type="search" name="" id="input" placeholder="Search medicines, brands and more">
-          <!-- <i  class="fa-solid fa-magnifying-glass"></i> -->
+          <div>
+            <input type="search" name="" id="input" placeholder="Search medicines, brands and more">
+            <i class="fa-solid fa-magnifying-glass"></i>
 
+          </div>
 
 
 
@@ -195,10 +209,11 @@
             <!-- upload button and side div inside banner -->
             <div id="yourorder2">
               <div>
-                <p style="font-size: 14px;"><b style="color: #02475b ;"> Yours Orders</b></p>
+                <i class="fa-solid fa-pills"></i>
+                <p style="font-size: 14px; margin: 0;"><b style="color: #02475b ;"> Yours Orders</b></p>
               </div>
               <div>
-                <i class="fa-solid fa-greater-than"></i>
+                <i class="fa-solid fa-chevron-right"></i>
               </div>
             </div>
 
@@ -213,7 +228,7 @@
         <!-- product page starting -->
         <!-- Shop by health conditions -->
 
-        <br><br><br>
+
         <div>
           <h2 class="headings">SHOP BY HEALTH CONDITIONS</h2>
         </div>
@@ -221,7 +236,7 @@
         <div id="shopby"></div>
 
         <!-- sebamed up to 50 percent off outer div -->
-        <br><br><br>
+
         <div id="productdiv">
 
           <div class="viewalldiv">
@@ -240,7 +255,7 @@
           <div id="innerproductsdiv"> </div>
 
 
-          <br><br><br>
+
           <!--  summer product div -->
           <div id="summerproductdiv">
             <div class="viewalldiv">
@@ -259,7 +274,7 @@
             <div id="summerdiv"> </div>
           </div>
 
-          <br><br><br>
+
 
           <div id="healthdiv">
             <div class="viewalldiv">
@@ -277,7 +292,7 @@
             <div id="Health_Condition"></div>
           </div>
 
-          <br><br><br>
+
           <div id="hotsellerdiv">
             <div class="viewalldiv">
               <div>
@@ -308,16 +323,17 @@
           </div>
 
         </div>
-        <br><br><br>
+
         <h2 class="headings">SHOP BY HEALTH CONDITIONS</h2>
-        <hr><br><br>
+        <hr>
         <div id="shopby2"></div>
 
 
         <div id="shopbybrand">
-          <br><br><br>
+
+
           <h2 class="headings">SHOP BY BRAND</h2>
-          <br>
+          <hr>
           <div id="brand">
             <div id="justimagediv">
               <img src="https://newassets.apollo247.com/pub/media/ves/brand/GNCn.jpg">
@@ -366,16 +382,20 @@
             Add products to your cart and complete the payment. Voila!
             Your order will be on its way to you.
             Apollo Pharmacy is your go-to <b> pharmacy store </b> for all your medicine needs – be it your regular
-            medications, or over-the-counter (OTC) medicines. We also have a range of products in the <b>personal care, baby
-              care, health and nutrition, </b> wellness, and lifestyle categories. Come explore ‘everything under the sun’
+            medications, or over-the-counter (OTC) medicines. We also have a range of products in the <b>personal care,
+              baby
+              care, health and nutrition, </b> wellness, and lifestyle categories. Come explore ‘everything under the
+            sun’
             related to healthcare at Apollo Pharmacy.
           </p>
           <h3 class="headings">Reasons To Buy Medicine From Apollo Pharmacy</h3>
           <p>
             For over 32 years, Apollo Pharmacy has been providing you with genuine medicines round-the-clock, through
             24-hour pharmacies. And now through Apollo Pharmacy, we intend to make your lives easier – by getting your
-            medicines delivered to you. Yes, no more stepping out to get your medicines, no more standing in long queues, no
-            more worrying about the genuineness of medicines, no more sweat! Here are more reasons why you should buy your
+            medicines delivered to you. Yes, no more stepping out to get your medicines, no more standing in long
+            queues, no
+            more worrying about the genuineness of medicines, no more sweat! Here are more reasons why you should buy
+            your
             medicines from Apollo Pharmacy:
 
             Super-fast deliveries. In select cities, deliveries are done in as less as 1 day
@@ -389,33 +409,42 @@
           </p>
           <h3 class="headings">Apollo Pharmacy - Largest Online Pharmacy In India</h3>
           <p>
-            With more than 4,500 stores in India, Apollo Pharmacy is not just the largest online pharmacy store in India but
-            in Asia as well. Our pharmacy chain has been operational and been providing genuine quality healthcare products
-            for more than 32 years. Our wide range of products ensures that everything you need related to healthcare, you
+            With more than 4,500 stores in India, Apollo Pharmacy is not just the largest online pharmacy store in India
+            but
+            in Asia as well. Our pharmacy chain has been operational and been providing genuine quality healthcare
+            products
+            for more than 32 years. Our wide range of products ensures that everything you need related to healthcare,
+            you
             will find it on our platform.
           </p>
 
           <h3 class="headings">Most Trusted Online Medical Store Of India</h3>
           <p>
-            As pioneers in the healthcare segment, we understand the importance of trust. And that is why, over the years,
+            As pioneers in the healthcare segment, we understand the importance of trust. And that is why, over the
+            years,
             we worked on building that trust. We ensure that every product sold through our offline/online stores are
-            checked for their authenticity, quality, and compliance with the Central Drugs Standard Control Organization,
+            checked for their authenticity, quality, and compliance with the Central Drugs Standard Control
+            Organization,
             the national regulatory body for Indian pharmaceuticals and medical devices.
           </p>
 
           <h3 class="headings">100% Genuine Medicine From Apollo Pharmacy</h3>
           <p>
             All medicines/healthcare products sold on Apollo Pharmacy are procured from our sister company - Apollo
-            Pharmacy, with a reputation of selling only 100% genuine products. The products sold through Apollo Pharmacy are
-            inspected thoroughly to ensure only genuine products make the cut. We believe that when it comes to medicines,
+            Pharmacy, with a reputation of selling only 100% genuine products. The products sold through Apollo Pharmacy
+            are
+            inspected thoroughly to ensure only genuine products make the cut. We believe that when it comes to
+            medicines,
             quality and authenticity should never be compromised.
           </p>
 
           <h3 class="headings">100% Genuine Medicine From Apollo Pharmacy</h3>
           <p>
-            Besides purchasing medicines, the additional services you can avail on our platform are doctor consultations,
+            Besides purchasing medicines, the additional services you can avail on our platform are doctor
+            consultations,
             symptom checker, ordering diagnostic tests, and digitization of your health records. These services let you
-            consult with doctors from over 70 specialities, check and understand your symptoms, book diagnostics tests, and
+            consult with doctors from over 70 specialities, check and understand your symptoms, book diagnostics tests,
+            and
             converts your physical health records into digital records.With so many services under our umbrella, you
             wouldn’t need to go anywhere else.
           </p>
@@ -427,15 +456,17 @@
 
 
 
-      
-      <div id="faqContainer" class="faqContainer">
-        <h2>Frequently asked questions</h2>
-        <!-- The faq data will be added here through dom  -->
 
+      <div class="faqMainCon">
+        <div id="faqContainer" class="faqContainer">
+          <h2>Frequently asked questions</h2>
+          <!-- The faq data will be added here through dom  -->
+
+        </div>
       </div>
 
       <div class="footerRoot" id="footerRoot">
-          <!-- <div class="footerContainer">
+        <!-- <div class="footerContainer">
               <div class="footerLinks">
                   <ul>
                       <li class="footerLinks-logoMd">
@@ -734,7 +765,7 @@
 
 
       <div class="mobNavigation" id="mobNavigation">
-          <!-- <a class="mobNavigationBtn mobNavigationBtn-action mobNavigationBtn-base"  href="index.html">
+        <!-- <a class="mobNavigationBtn mobNavigationBtn-action mobNavigationBtn-base"  href="index.html">
               <span class="mobNavigationIcon">
                   <i class="fa-solid fa-house"></i>
                 
@@ -785,10 +816,10 @@
              <div id="Healthdiv"> 
               
              </div> -->
-    </div>
-    </div>
+  </div>
+  </div>
 
-    </div>
+  </div>
 
 </body>
 
@@ -815,7 +846,7 @@
       let query = document.getElementById("input").value;
       // console.log(query);
       localStorage.setItem("query", query);
-      window.location.href = "AllProducts.html";
+      window.location.href = "newAllProducts.html";
 
 
     }

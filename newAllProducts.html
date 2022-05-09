@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>Bootstrap Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/b0071033d8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- google icon  -->
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+    <script src="https://kit.fontawesome.com/b0071033d8.js" crossorigin="anonymous"></script>
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+
+
+    <style>
+        body {
+            font-family: IBM Plex Sans;
+        }
+
+        .logo {
+            padding: 10px 20px;
+        }
+
+        .navigation a {
+            min-width: 97px;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #searchNav {
+            background-color: white;
+            padding: 0 30px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+
+        #inputdiv {
+
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            justify-content: space-evenly;
+        }
+
+        #mainContainer {
+            background-color: #f1f1f1;
+        }
+
+        #inputdiv>div:first-child {
+            width: 65%;
+        }
+
+        #inputdiv>div:last-child {
+            width: 28%;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #inputdiv>div:last-child img {
+            height: 35px;
+            width: 35px;
+
+        }
+
+        #inputdiv button {
+            background: #fc9916;
+            color: #fff;
+            transition: all .5s ease;
+            border: none;
+            padding: 10px 16px;
+            font-size: 13px;
+            line-height: 16px;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+            min-width: 100px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .ProductsContainer {
+            padding: 20px 30px;
+            box-sizing: border-box;
+
+        }
+
+        .totalResult {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.356);
+        }
+
+        #appendprod{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            padding-top: 30px;
+        }
+        
+        #product {
+            width: auto;
+            text-align: center;
+            position: relative;
+            padding-bottom: 50px;
+            background-color: white ;
+            height: 300px;
+            
+        }
+      
+       
+        #btn{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            margin: 0;
+            background-color: #fc9816c9;
+            color: white;
+            
+        }
+        #btn:hover{
+            background-color: #fc9916;
+        }
+        #sort{
+          margin-left: 77%;
+          padding: 10px;
+          border-radius: 5px;
+          background-color: #f1f1f1;
+          margin-top: 20px;
+        }
+
+        #sort {
+            /* margin-left: 75%; */
+            display: flex;
+            justify-content: flex-end !important;
+            padding: 10px;
+            border-radius: 5px;
+            /* position: absolute;
+            right: 25px;
+            top: 70px; */
+
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+    <div id="_next">
+        <div id="mainContainer">
+            <div id="fixedHeader"></div>
+            <!-- main Div -->
+            <div id="searchNav">
+
+                <!-- navbar -->
+                <div id="navbar">
+
+                    <div id="insideNavbar">
+                        <div>Baby Care</div>
+                        <div>Health & Nutrition</div>
+                        <div>Personal Care</div>
+                        <div>Ayurveda</div>
+                        <div>Health Devices</div>
+                        <div>Home Essentials</div>
+                        <div>Apollo Life</div>
+                        <div>Health condition</div>
+                        <div>Covid Essentials</div>
+                    </div>
+
+                </div>
+
+                <!-- input div------ //    searchbar -->
+                <div id="inputdiv">
+
+                    <div>
+                        <input type="search" name="" id="input" placeholder="Search medicines, brands and more">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </div>
+                    <div>
+                        <button>UPLOAD</button>
+                        <img src="https://img.icons8.com/external-icongeek26-outline-icongeek26/2x/external-offer-business-and-finance-icongeek26-outline-icongeek26.png"
+                            alt="">
+                        <p>Special Offers</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="ProductsContainer">
+                <div class="totalResult" id="totalResult">
+                    Health & Nutrition - Total Items (2629)
+                </div>
+
+                <select id="sort" onchange="sortit()">
+                    <option value="">SORT BY : Relevalnce</option>
+                    <option value="ase">SORT BY : Names Ascending</option>
+                    <option value="des">SORT BY : Names descending</option>
+                    <option value="htl">SORT BY : High to low</option>
+                    <option value="lth">SORT BY : Low to high</option>
+                </select>
+
+                <div class="ProductAppend" id="appendprod">
+
+                </div>
+               
+            </div>
+
+
+
+
+
+            <div class="footerRoot" id="footerRoot"></div>
+
+
+            <div class="mobNavigation" id="mobNavigation"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+
+<script src="./scripts/header.js" type="module"></script>
+<script src="./scripts/headerFooter.js" type="module"></script>
+<script src="./scripts/loginToAll.js" type="module"></script>
+
+
+<script>
+
+    // search functionality 
+    let search = (event) => {
+        if (event.key == "Enter") {
+            // console.log("entered");
+            let query = document.getElementById("input").value;
+            // console.log(query);
+            localStorage.setItem("query", query);
+            window.location.reload();
+            //   window.location.href = "AllProducts.html";
+            fetchData();
+
+        }
+    }
+
+    document.getElementById("input").addEventListener("keydown", search);
+
+    let data;
+
+    // http://localhost:4000/someProduct
+    // http://localhost:4000/allproducts
+    let fetchData = async () => {
+        try {
+            let query = localStorage.getItem("query");
+            console.log("query:", query);
+            let res = await fetch(`http://localhost:4000/${query}`);
+            data = await res.json();
+            // console.log(data.length);
+            // console.log(data);
+            document.getElementById("totalResult").innerText = `${data.length} search results for '${query}`;
+
+            display(data);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+    fetchData();
+
+  
+    function sortit() {
+        var selected = document.querySelector("#sort").value;
+        // console.log(selected);
+
+        if (selected == "htl") {
+            data.sort(function (a, b) {
+                return Number(b.price) - Number(a.price);
+            });
+            document.querySelector("#appendprod").innerHTML = null;
+            display(data);
+
+        }
+        if (selected == "lth") {
+            data.sort(function (a, b) {
+                return Number(a.price) - Number(b.price);
+            });
+            document.querySelector("#appendprod").innerHTML = null;
+            display(data)
+
+        }
+        //sort by names ascending
+        if (selected == "ase") {
+            let asc = data.sort(function (a, b) {
+                if (a.name > b.name) return 1;
+                if (a.name < b.name) return -1;
+                return 0;
+            });
+            document.querySelector("#appendprod").innerHTML = null;
+            display(asc);
+
+        }
+
+        //sort by names descending
+        if (selected == "des") {
+            let des = data.sort(function (a, b) {
+                if (a.name < b.name) return 1;
+                if (a.name > b.name) return -1;
+                return 0;
+            });
+            document.querySelector("#appendprod").innerHTML = null;
+            display(des);
+        }
+
+
+    }
+    function display(data) {
+        // console.log(data);
+        var cartdata = JSON.parse(localStorage.getItem("cart")) || []
+
+        data.map(function (el) {
+            let container = document.createElement("div");
+            container.setAttribute("id", "product")
+            let image = document.createElement("img")
+            image.src = el.imgUrl;
+            image.style.height = "100px";
+            image.style.width = "100px"
+
+            let ptag = document.createElement("p")
+            ptag.innerText = el.name;
+
+            let hrtag = document.createElement("hr")
+
+            let MRP = document.createElement("s")
+            let newMrp;
+            if (el.strikePrice.trim() == "") {
+                newMrp = "NA";
+            } else {
+                newMrp = "MRP " + el.strikePrice;
+            }
+            MRP.innerText = newMrp;
+            MRP.style.fontWeight = "bold"
+
+            let price = document.createElement("h4")
+            price.innerText = "Rs. " + el.price;
+
+
+            let cashbackdiv = document.createElement("div")
+            cashbackdiv.setAttribute("class", "cashbackdiv")
+            let circle = document.createElement("img")
+            // circle.src = el.circle
+            circle.src = "https://newassets.apollo247.com/images/ic_circle_logo.png";
+            circle.setAttribute("id", "circleimg")
+
+            let cashback = document.createElement("p")
+            if(el.cashback.trim() == ""){
+                cashback.innerText = "No cashback";
+                cashbackdiv.append(cashback)
+            }else{
+                cashback.innerText = el.cashback
+                cashbackdiv.append(circle, cashback)
+            }
+          
+           
+
+            let btn = document.createElement("button")
+            btn.innerText = "ADD TO CART"
+            btn.setAttribute("id", "btn")
+
+            btn.addEventListener("click", function () {
+                addtocart(el)
+            })
+
+          
+            container.append(image, ptag,hrtag,cashbackdiv, MRP, price,  btn)
+    
+
+            document.getElementById("appendprod").append(container)
+
+
+
+        })
+        function addtocart(el) {
+            cartdata.push(el)
+            localStorage.setItem("cart", JSON.stringify(cartdata))
+            alert("item added to cart")
+        }
+    }
+
+</script>
