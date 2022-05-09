@@ -35,7 +35,7 @@ CartData.map(function (elem, i) {
 
     var img = document.createElement("img");
     img.setAttribute("id", "cart_product_img")
-    img.src = elem.image_url;
+    img.src = elem.imgUrl;
 
 
     var box_left_extra = document.createElement("div");
@@ -86,7 +86,7 @@ CartData.map(function (elem, i) {
     var PriceDiv = document.createElement("div");
     PriceDiv.setAttribute("id", "PriceDiv")
     var price = document.createElement("p");
-    var off = (Number(elem.price) - Number(elem.strikedoffprice)) / 100;
+    var off = (Number(elem.price) - Number(elem.strikePrice)) / 100;
     var of1 = off.toFixed(2);
     // var Rupees_icon=document.createElement("i");
     // Rupees_icon.setAttribute("class","fa-solid fa-indian-rupee-sign");
@@ -109,16 +109,16 @@ CartData.map(function (elem, i) {
 
     var Discount_Price = document.createElement("p");
     Discount_Price.setAttribute("id", "Discount_Price");
-    Discount_Price.innerText = `${Number(elem.strikedoffprice)}`;
+    Discount_Price.innerText = `${Number(elem.strikePrice)}`;
 
     var Saving_Price = document.createElement("p");
     Saving_Price.setAttribute("id", "Saving_Price")
-    Saving_Price.innerText = `Savings ${(Number(elem.price) - Number(elem.strikedoffprice)).toFixed(2)}`;
+    Saving_Price.innerText = `Savings ${(Number(elem.price) - Number(elem.strikePrice)).toFixed(2)}`;
 
 
 
     //TOTAL SAVING CALCULATIONS
-    total_saving = total_saving + (Number(elem.price) - Number(elem.strikedoffprice));
+    total_saving = total_saving + (Number(elem.price) - Number(elem.strikePrice));
 
 
     //Appending part

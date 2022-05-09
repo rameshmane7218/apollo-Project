@@ -485,7 +485,9 @@
         }
         return otp;
     }
-    let totalItems = 4;
+    let totalItems = JSON.parse(localStorage.getItem("cart")).length;
+    console.log('totalItems:', totalItems)
+    // let totalItems = 4;
     let OrderIds = []
     for (let i = 0; i < totalItems; i++){
         OrderIds.push(generateRandomNum(9));
@@ -515,6 +517,16 @@ if(day.length == 1){
 let refNum = `${year}${month}${day}${generateRandomNum(10)}`;
 console.log(refNum);
 document.getElementById("refId").innerText = refNum;
+
+
+
+let toPay = localStorage.getItem("Total_money_after").split('"').join("");
+console.log(toPay);
+
+
+document.getElementById("PayAmt").innerText = `Your order of ₹${toPay} is placed`;
+
+
 
 
 

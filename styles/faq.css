@@ -1,4 +1,4 @@
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
 }
@@ -16,15 +16,18 @@ body {
     font-weight: 400;
     line-height: 1.43;
     background-color: #dcdfce;
-}
+} */
 #mainContainer {
-    max-width: 1064px;
+     /* max-width: 1064px;
     height: 500px; 
-     /* border: 1px solid teal; */
+     border: 1px solid teal; */
     background-color: white;
-    margin: auto;
-    box-sizing: border-box;
-    padding: 30px 30px;
+    /* margin: auto; */
+    /* box-sizing: border-box;  */
+    /* padding: 30px 30px; */
+}
+.faqMainCon{
+    padding: 20px 30px;
 }
   
 .faqContainer {

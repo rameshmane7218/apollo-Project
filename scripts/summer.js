@@ -74,7 +74,7 @@ var summerdata = [
   
           let ptag = document.createElement("p")
           ptag.innerText = el.name;
-          ptag.style.fontSize = "14px"
+        
   
           let hrtag = document.createElement("hr")
   

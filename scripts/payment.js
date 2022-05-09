@@ -27,10 +27,10 @@ for (i = 0; i < payCollapse.length; i++) {
     })
 
 }
-document.getElementsByClassName("payWithNewCard").onclick = function(){
+document.getElementsByClassName("payWithNewCard").onclick = function () {
     let content = this.nextElementSibling;
     // console.log("hii");
-    
+
     console.log(content);
 }
 
@@ -45,7 +45,7 @@ document.getElementsByClassName("payWithNewCard").onclick = function(){
 
 
 //Card payment
-let validCardNum = ["1234 1234 1234 1234", "1234 5678 1234 5678", "1357 2468 1357 2468"];
+let validCardNum = ["1234 1234 1234 1234", "1234 5678 1234 5678", "1357 2468 1357 2468", "1111 1111 1111 1111"];
 localStorage.setItem("validCardNum", JSON.stringify(validCardNum));
 localStorage.setItem("validCard", "false");
 localStorage.setItem("cardMonth", "false");
@@ -79,7 +79,7 @@ inputFild.onkeydown = function () {
 let userMonth = document.getElementById("validTillMonthBox");
 userMonth.onkeydown = function () {
 
-    if (userMonth.value.length > 1 && ((userMonth.value[0] < 2) || (userMonth.value[1] < 10))) {
+    if ((userMonth.value.length > 1 && ((userMonth.value[0] <= 1) && (userMonth.value[1] <= 2))) || (userMonth.value.length > 1 && ((userMonth.value[0] == 0) && (userMonth.value[1] <= 9)))) {
         console.log("valid Card month/year");
         document.getElementById("validTillYearBox").classList.remove("validTillYearBox");
         // console.log('classlist:', classlist)
@@ -127,23 +127,27 @@ checkCard.onkeydown = function () {
     if (cardNum == "true" && expiryMonth == "true" && expiryYear == "true") {
         // console.log("hey there")
         document.getElementById("cardPayBtnBox").classList.remove("cardPayBtnBoxOff");
-        
+
     } else {
         document.getElementById("cardPayBtnBox").classList.add("cardPayBtnBoxOff");
     }
 };
 
 // open opt page 
-document.getElementById("cardData").addEventListener("submit",function(){
+document.getElementById("cardData").addEventListener("submit", function () {
     event.preventDefault();
     console.log("Hii");
-    setTimeout(function(){
+    let cardNumber = document.getElementById("CardNumberBox").value;
+    console.log('cardNumber:', cardNumber)
+    localStorage.setItem("secureCardNum", cardNumber);
+
+    setTimeout(function () {
         // window.location.href = "loadingBankPage.html";
         window.close();
-        window.open("loadingBankPage.html" , "width=500px, height=400px");
-    },2000);
-   
-    
+        window.open("loadingBankPage.html", "", "width=900px, height=700px");
+    }, 1000);
+  
+
 })
 
 
@@ -305,8 +309,8 @@ function startUPITimer() {
             </g>
         </svg> 
                 <span id="base-timer-label" class="base-timer__label">${formatTime(
-                timeLeft
-            )} 
+        timeLeft
+    )} 
             </span>
             <span class="min-text">mins</span>
 
@@ -335,17 +339,17 @@ function startUPITimer() {
 
             if (paymentStatus == "true") {
                 console.log("Payment Successfull");
-                
+
                 document.getElementById("base-timer__svg").style.opacity = "0";
                 clearInterval(timerInterval);
 
                 document.getElementById("paymentContainer").classList.add("hidePaymentContainer");
                 window.location.href = "#ProcessingModal";
 
-                setTimeout(function(){
+                setTimeout(function () {
                     window.location.href = "orderSuccess.html";
-                },2000);
-                
+                }, 2000);
+
                 // window.location.reload();
             } else if (paymentStatus == "false") {
                 console.log("Payment declined by user");
@@ -353,16 +357,16 @@ function startUPITimer() {
                 clearInterval(timerInterval);
                 document.getElementById("paymentContainer").classList.add("hidePaymentContainer");
                 window.location.href = "#ProcessingModal";
-                setTimeout(function(){
+                setTimeout(function () {
                     window.location.href = "orderDecline.html";
-                },2000);
+                }, 2000);
 
                 // window.location.reload();
 
             }
 
             if (timePassed === 3) {
-                window.open("responsePage.html", "", "width=300, height=400")
+                window.open("responsePage.html", "", "")
             }
             timeLeft = TIME_LIMIT - timePassed;
             document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
@@ -430,3 +434,28 @@ function startUPITimer() {
 
 
 }
+
+
+
+
+let toPay = localStorage.getItem("Total_money_after").split('"').join("");
+// console.log(toPay);
+
+
+document.getElementById("cardPayBtnBox").value = `PAY Rs. ${toPay}`;
+document.getElementById("subTotalAmount").innerText = `Rs. ${toPay}`;
+document.getElementById("toPayAmount").innerText = `Rs. ${toPay}`;
+
+
+
+// // let i = true;
+// let cardPayStatus = localStorage.getItem("cardPayStatus") || undefined;
+
+//     if (cardPayStatus === "true") {
+//         window.location.href = "orderSuccess.html";
+      
+//     } else if (cardPayStatus === "false") {
+//         window.location.href = "orderDecline.html";
+       
+//     }
+

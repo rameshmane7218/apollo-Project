@@ -11,7 +11,7 @@ if(loginStatus == "true"){
     <a href="#" title="Health Records" class="health">
         Health Records
     </a>
-    <a href="#" title="Medicines" class="medicines">
+    <a href="product.html" title="Medicines" class="medicines">
         Medicines
     </a>
     <a href="#" title="Lab Tests" class="labTest">
@@ -35,7 +35,7 @@ if(loginStatus == "true"){
         <span class="tabName">Doctors</span>
         <span class="subTabName">Consult<br> Online</span>
     </a>
-    <a href="#" title="Pharmacy" class="pharmacy">
+    <a href="product.html" title="Pharmacy" class="pharmacy">
         <span class="tabName">Pharmacy</span>
         <span class="subTabName">Medicines &<br> other products</span>
     </a>

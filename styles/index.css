@@ -270,25 +270,28 @@
     
 }
 .slideDiv{
-    /* width: 100%; */
+    
     padding: 20px;
-    display: flex;
+    /* display: flex; */
     overflow-x: scroll;
     /* overflow: hidden; */
     justify-content: center;
     align-items: center;
     gap: 30px; 
+   
 }
 .slideDivPic{
     /* height: 100px; */
     width: 100%;
+    transition: 0.3s;
     
 }
 .slideDivPic img{
     height: 100%;
-    width: 945px;
+    /* width: 945px; */
+    width: 100%;
     
-    /* width: calc(100% - 955px); */
+    /* width: calc(100% - 1068); */
     
     border-radius: 10px;
     cursor: pointer;
@@ -328,10 +331,16 @@
     align-items: center;
     background-color: #fff;
     box-shadow: 0px 5px 20px rgb(128 128 128 / 30%);
+    transition: 0.3s;
 }
 .SlideArrow11 i{
     font-size: 20px;
     
+}
+.SlideArrow11:active{
+    transform:scale(0.8);
+    background-color:rgba(192, 123, 123, 0.527);
+   
 }
 
 
@@ -794,3 +803,6 @@
 /* Manage Profile logo  ^^^^^^^^^^^^^^^^^^^^^^^^*/
 
 
+#helloTitle{
+    text-transform: capitalize;
+}

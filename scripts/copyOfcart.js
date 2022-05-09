@@ -447,9 +447,9 @@ CartData.map(function (elem, i) {
 
   // ..........................money calculations...............
 
-  total_money = total_money + Number(elem.price);
-  console.log("total_money:11", total_money);
 
+
+  total_money = total_money + Number(elem.strikePrice);
 
   Delivery_Charges = (total_money / 10).toFixed(2);
   if (Delivery_Charges > 200) {
@@ -462,29 +462,19 @@ CartData.map(function (elem, i) {
   var Discount_Price = document.createElement("p");
   Discount_Price.setAttribute("id", "Discount_Price");
   Discount_Price.setAttribute("class", "Discount_Price");
-  Discount_Price.dataset.id = elem.price;
-  Discount_Price.innerText = `${Number(elem.price)}`;
+  Discount_Price.innerText = `${Number(elem.strikePrice)}`;
 
   var Saving_Price = document.createElement("p");
   Saving_Price.setAttribute("id", "Saving_Price")
   Saving_Price.setAttribute("class", "Saving_Price")
-  if (elem.strikePrice.trim() == "") {
-    Saving_Price.innerText = 0;
-    Saving_Price.dataset.id = 0;
-
-  } else {
-    Saving_Price.innerText = (Number(elem.price) - Number(elem.strikePrice)).toFixed(2);
-    Saving_Price.dataset.id = (Number(elem.price) - Number(elem.strikePrice)).toFixed(2);
-  }
-
-
+  Saving_Price.innerText = (Number(elem.price) - Number(elem.strikePrice)).toFixed(2);
 
 
 
   //TOTAL SAVING CALCULATIONS
-  if (elem.strikePrice.trim() == "") {
-    total_saving = total_saving + 0;
-  } else {
+  if(elem.strikePrice.trim() == ""){
+      total_saving = total_saving + 0;
+  }else{
     total_saving = total_saving + (Number(elem.price) - Number(elem.strikePrice));
   }
 
@@ -495,14 +485,11 @@ CartData.map(function (elem, i) {
   box.append(box_left);
   document.querySelector("#display_added_items").append(box);
 
-
   PriceDiv.append(price, Discount_Price, Saving_Price);
   box__right.append(btn, PriceDiv)
   box.append(box__right)
   document.querySelector("#display_added_items").append(box);
 });
-
-console.log("total_money;", total_money);
 
 
 
@@ -510,21 +497,10 @@ console.log("total_money;", total_money);
 
 let qty = document.getElementsByClassName("qtys");
 console.log("qty:", qty);
-
 let Discount_Price = document.getElementsByClassName("Discount_Price");
 console.log("Discount_Price:", Discount_Price);
-// console.log(Discount_Price[0].dataset.id);
-
-
 let Saving_Price = document.getElementsByClassName("Saving_Price");
 console.log("Saving_Price:", Saving_Price);
-// console.log("Saving_Price:",Saving_Price[1].dataset.id);
-// document.querySelector("#to_pay1").innerText = total_money;
-// let TotBeforeCharges = 0;
-// let TotAfterCharges = 0;
-// let Charges = 0;
-let previous_total_money = total_money;
-let previous_total_saving = total_saving;
 
 for (let i = 0; i < qty.length; i++) {
   qty[i].onchange = function () {
@@ -532,118 +508,56 @@ for (let i = 0; i < qty.length; i++) {
     let newPrice = Number(Discount_Price[i].innerText);
     let newSaving = Number(Saving_Price[i].innerText)
 
-    console.log("update:", newQty * Number(Discount_Price[i].dataset.id));
-    console.log("updated_saving:", newQty * Number(Saving_Price[i].dataset.id))
-    Discount_Price[i].innerText = (newQty * Number(Discount_Price[i].dataset.id)).toFixed(2);
-    Saving_Price[i].innerText = (newQty * Number(Saving_Price[i].dataset.id)).toFixed(2);
+    console.log("update:", newQty * newPrice);
+    console.log("updated_saving:", newQty * newSaving)
+    Discount_Price[i].innerText = (newQty * newPrice).toFixed(2);
+    Saving_Price[i].innerText = (newQty * newSaving).toFixed(2);
 
-    // let previous_total_saving = total_saving;
-    let new_total_saving = Number(previous_total_saving) + Number((newQty * Number(Saving_Price[i].dataset.id)).toFixed(2));
+    let previous_total_saving = total_saving;
+    let new_total_saving = Number(previous_total_saving) + Number((newQty * newSaving).toFixed(2));
 
-    // let previous_total_money = total_money;
+    let previous_total_money = total_money;
 
     // new_total_money += Number(previous_total_money) + Number(((newQty - 1) * newPrice).toFixed(2))
 
-    let new_total_money = Number(previous_total_money) + Number(((newQty - 1) * Number(Discount_Price[i].dataset.id)).toFixed(2))
-    console.log('new_total_money:', new_total_money)
+    let new_total_money = Number(previous_total_money) + Number(((newQty - 1) * newPrice).toFixed(2))
 
-    // console.log("new",previous_total_saving,new_total_saving)
+    //console.log("new",previous_total_saving,new_total_saving)
 
     //document.getElementById("Saving_Price").innerText=Saving_Price[i].innerText=
-    // document.getElementById("total_saving").innerText = `Total Saving: ${(new_total_saving.toFixed(2))}`;
-    // document.querySelector("#to_pay1").innerText = new_total_money.toFixed(2);
+    document.getElementById("total_saving").innerText = `Total Saving: ${(new_total_saving.toFixed(2))}`;
+    document.querySelector("#to_pay1").innerText = new_total_money.toFixed(2);
 
     //updated delivery charges
-    // Delivery_Charges = (new_total_money / 10).toFixed(2);
-    // console.log("Delivery_Charges", Delivery_Charges)
-    // if (Delivery_Charges > 200) {
-    //   document.getElementById("Delivery_Charges").innerText = "FREE";
-    //   document.querySelector("#to_pay2").innerText = (new_total_money).toFixed(2)
-    // }
-    // else {
-    //   document.getElementById("Delivery_Charges").innerText = Delivery_Charges;
-    //   document.querySelector("#to_pay2").innerText = (new_total_money + (new_total_money / 10)).toFixed(2)
-    // }
-    // var Total_money_after = (new_total_money + (new_total_money / 10)).toFixed(2);
+    Delivery_Charges = (new_total_money / 10).toFixed(2);
+    console.log("Delivery_Charges", Delivery_Charges)
+    if (Delivery_Charges > 200) {
+      document.getElementById("Delivery_Charges").innerText = "FREE";
+    }
+    else {
+      document.getElementById("Delivery_Charges").innerText = Delivery_Charges;
+    }
+    var Total_money_after = (new_total_money - (new_total_money / 10)).toFixed(2);
 
 
+    document.querySelector("#to_pay2").innerText = (new_total_money - (new_total_money / 10)).toFixed(2)
 
 
     //updated local storage
     //storing all details in local storage
-    // localStorage.setItem("Total_Saving", JSON.stringify(new_total_saving));
-    // localStorage.setItem("Total_money_before", JSON.stringify(new_total_money.toFixed(2)))
-    // localStorage.setItem("Delivery_Charges", JSON.stringify(Delivery_Charges))
-    // localStorage.setItem("Total_money_after", JSON.stringify(Total_money_after))
-    appendData();
+    localStorage.setItem("Total_Saving", JSON.stringify(new_total_saving));
+    localStorage.setItem("Total_money_before", JSON.stringify(new_total_money.toFixed(2)))
+    localStorage.setItem("Delivery_Charges", JSON.stringify(Delivery_Charges))
+    localStorage.setItem("Total_money_after", JSON.stringify(Total_money_after))
+
+
+
   }
 
-  // TotBeforeCharges += Number(Discount_Price[i].innerText);
-  // console.log('TotBeforeCharges:',typeof TotBeforeCharges)
-  // document.querySelector("#to_pay1").innerText = (TotBeforeCharges).toFixed(2)
 
-  // Charges = Number((TotBeforeCharges / 10).toFixed(2));
-  // console.log('Charges:',typeof Charges)
-
-  // if (Charges > 200) {
-  //   document.getElementById("Delivery_Charges").innerText = "FREE";
-  //   document.querySelector("#to_pay2").innerText = (TotBeforeCharges).toFixed(2)
-  //   localStorage.setItem("Delivery_Charges", "FREE")
-  // }
-  // else {
-  //   document.getElementById("Delivery_Charges").innerText = Charges;
-  //   localStorage.setItem("Delivery_Charges", Charges);
-  //   let typeOfCharges = (TotBeforeCharges + Charges);
-  //   document.querySelector("#to_pay2").innerText = typeOfCharges;
-  //   localStorage.setItem("Total_money_after", (TotBeforeCharges + Charges));
-  // }
-
-
-
-  // TotBeforeCharges += Number(Saving_Price[i].innerText);
 
 
 }
-
-function appendData(){
-  let TotBeforeCharges = 0;
-  let TotSavingPrice = 0;
-  let Charges = 0;
-  for(let i=0; i<qty.length; i++){
-    TotBeforeCharges += Number(Discount_Price[i].innerText);
-    console.log('TotBeforeCharges:',typeof TotBeforeCharges);
-    localStorage.setItem("Total_money_before", TotBeforeCharges.toFixed(2));
-    document.querySelector("#to_pay1").innerText = (TotBeforeCharges).toFixed(2);
-    
-    TotSavingPrice += Number(Saving_Price[i].innerText);
-    document.getElementById("total_saving").innerText = `Total Saving: ${TotSavingPrice.toFixed(2)}`;
-    localStorage.setItem("Total_Saving", JSON.stringify(TotSavingPrice.toFixed(2)));
-
-
-    Charges = Number((TotBeforeCharges / 10).toFixed(2));
-    console.log('Charges:',typeof Charges)
-  
-    if (Charges > 200) {
-      document.getElementById("Delivery_Charges").innerText = "FREE";
-      document.querySelector("#to_pay2").innerText = (TotBeforeCharges).toFixed(2)
-      localStorage.setItem("Delivery_Charges", "FREE")
-      localStorage.setItem("Total_money_after", (TotBeforeCharges).toFixed(2));
-    }
-    else {
-      document.getElementById("Delivery_Charges").innerText = Charges;
-      localStorage.setItem("Delivery_Charges", Charges);
-      let typeOfCharges = (TotBeforeCharges + Charges);
-      document.querySelector("#to_pay2").innerText = typeOfCharges;
-      localStorage.setItem("Total_money_after", (TotBeforeCharges + Charges).toFixed(2));
-    }
-  }
-}
-
-appendData();
-
-
-
-
 
 function removeItem(elem, i) {
   console.log(elem, i)
@@ -653,23 +567,22 @@ function removeItem(elem, i) {
   window.location.reload()
 
 }
+document.querySelector("#to_pay1").innerText = total_money;
+if (document.getElementById("Delivery_Charges").innerText === "FREE") {
+  document.querySelector("#to_pay2").innerText = total_money;
+  console.log(total_money, "no")
+}
 
-
-// document.querySelector("#to_pay1").innerText = total_money;
-// if (document.getElementById("Delivery_Charges").innerText === "FREE") {
-//   document.querySelector("#to_pay2").innerText = total_money;
-//   console.log(total_money, "no")
-// }
-// else {
-//   document.querySelector("#to_pay2").innerText = (total_money + (total_money / 10)).toFixed(2);
-// }
+else {
+  document.querySelector("#to_pay2").innerText = (total_money + (total_money / 10)).toFixed(2);
+}
 
 
 //console.log(total_money);
 
-// total_saving = total_saving.toFixed(2)
+total_saving = total_saving.toFixed(2)
 
-// document.getElementById("total_saving").innerText = `Total Saving: ${total_saving}`;
+document.getElementById("total_saving").innerText = `Total Saving: ${total_saving}`;
 
 document.getElementById("no_of_items").innerText = `ITEMS IN YOUR CART :${Cartarr.length}`
 
@@ -677,9 +590,9 @@ document.getElementById("no_of_items").innerText = `ITEMS IN YOUR CART :${Cartar
 
 //storing all details in local storage
 localStorage.setItem("Total_Saving", JSON.stringify(total_saving));
-// localStorage.setItem("Total_money_before", JSON.stringify(total_money))
-// localStorage.setItem("Delivery_Charges", JSON.stringify(Delivery_Charges))
-// localStorage.setItem("Total_money_after", JSON.stringify(document.querySelector("#to_pay2").innerText))
+localStorage.setItem("Total_money_before", JSON.stringify(total_money))
+localStorage.setItem("Delivery_Charges", JSON.stringify(Delivery_Charges))
+localStorage.setItem("Total_money_after", JSON.stringify(document.querySelector("#to_pay2").innerText))
 
 
 
@@ -799,7 +712,7 @@ function myfunction() {
       <p class="add_bottom">*MOBILE NUMBER</p>
       <input id="add_mobile" type="text" placeholder="MOBILE NO. ">
     </div>
-    <button id="saved_final_add" >SAVE AND USE</button>
+    <button id="saved_final_add"><a href="checkout.html">SAVE AND USE<a></button>
     `
 }
 
@@ -811,61 +724,19 @@ function myfunction() {
 //   document.getElementsByClassName("add_btn").style.color="#00b38e" ;
 // }
 
-// let prodData = JSON.parse(localStorage.getItem("cart"));
-// console.log('prodData:', prodData)
+let prodData = JSON.parse(localStorage.getItem("cart"));
+console.log('prodData:', prodData)
 
-// let disCountPrice = prodData[0].price;
-// console.log('disCountPrice:', disCountPrice)
-// let strike = prodData[0].strikePrice;
-// console.log('strike:', strike);
-// let saving = 0;
-// if (prodData[1].strikePrice.trim() == "") {
-//   saving = saving + 0;
+let disCountPrice = prodData[0].price;
+console.log('disCountPrice:', disCountPrice)
+let strike = prodData[0].strikePrice;
+console.log('strike:', strike);
+let saving = 0;
+if(prodData[1].strikePrice.trim() == ""){
+  saving = saving + 0;
 
-// } else {
+}else{
 
-//   saving = saving + (Number(prodData[1].price - prodData[1].strikePrice))
-// }
-// console.log('saving:', saving)
-
-
-
-
-
-
-var Address_data = JSON.parse(localStorage.getItem("Address_details"));
-
-let city = Address_data.features[0].properties.county;
-let country = Address_data.features[0].properties.country;
-let pincode = Address_data.features[0].properties.postcode;
-let state = Address_data.features[0].properties.state;
-
-
-  // document.getElementById("appendAdd").innerText = `${city}, ${state} - ${pincode}, ${country} `;
-
-// document.getElementById("saved_final_add").addEventListener("click",function(){
-//   console.log("hii")
-//   document.getElementById("appendAdd").innerText = `${city}, ${state} - ${pincode}, ${country} `;
-// })
-
-// function appendAddress(){
-  //   console.log("hii")
-  //   document.getElementById("appendAdd").innerText = `${city}, ${state} - ${pincode}, ${country} `;
-  // }
-  
-  
-  
-  
-  document.getElementById("proceedToPay").addEventListener("click",function(){
-    console.log("hii")
-    // document.getElementById("appendAdd").innerText = `${city}, ${state} - ${pincode}, ${country} `;
-  })
-
-
-  document.getElementById("Add_to_delivery_btn").onclick = function (){
-    console.log("inside address");
-
-    setTimeout(function(){
-      document.getElementById("appendAdd").innerText = `${city}, ${state} - ${pincode}, ${country} `;
-    },3000);
-  }
+  saving = saving +( Number(prodData[1].price - prodData[1].strikePrice))
+}
+console.log('saving:', saving)

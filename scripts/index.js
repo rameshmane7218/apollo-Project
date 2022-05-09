@@ -148,29 +148,61 @@ let carousalPic = [
     },
 ]
 
+// let leftClick = document.getElementById("leftSlideArrow");
+// leftClick.onclick = function(){
+//     console.log('leftClick:');
+//     carousalPic.push(carousalPic.shift());
+//     displayCarousal(carousalPic)
+// }
 
-let sliderPics = document.getElementById("slideDiv");
-carousalPic.forEach(({ index, img }) => {
-    let picDiv = document.createElement("div");
-    picDiv.setAttribute("class", "slideDivPic");
+// let rightClick = document.getElementById("rightSlideArrow");
+// rightClick.onclick = function(){
+//     console.log('rightClick:');
+//     carousalPic.unshift(carousalPic.pop());
+//     displayCarousal(carousalPic)
 
-    // picDiv.i = index;
-
-    let pic = document.createElement("img");
-    pic.src = img;
-    // pic.height = "100%"
-    // pic.width = "100%"
-    // pic.style.height = "100%";
-    // pic.style.width = "100%";
-
-    picDiv.append(pic);
-
-    sliderPics.append(picDiv);
-})
-
-console.log(window.innerWidth);
+// }
 
 
+
+function displayCarousal(carousalPic){
+
+    let sliderPics = document.getElementById("slideDiv");
+    carousalPic.forEach(({ index, img }) => {
+        let picDiv = document.createElement("div");
+        picDiv.setAttribute("class", "slideDivPic");
+
+        // picDiv.i = index;
+
+        let pic = document.createElement("img");
+        pic.src = img;
+        // pic.height = "100%"
+        // pic.width = "100%"
+        // pic.style.height = "100%";
+        // pic.style.width = "100%";
+
+        picDiv.append(pic);
+
+        sliderPics.append(picDiv);
+    })
+
+}
+// displayCarousal(carousalPic);
+// console.log(window.innerWidth);
+let sliderPics = document.getElementById("sliderImageHome");
+let a = 0;
+
+let TimerSlide = setInterval(function(){
+    // document.getElementById("slideDiv") = null;
+    // console.log(sliderPics.src);
+    
+    if(a==carousalPic.length){
+        a = 0;
+    }
+    sliderPics.src = carousalPic[a].img;
+    // console.log(carousalPic[a].img);
+    a++;     
+},2000)
 
 
 
@@ -533,3 +565,9 @@ console.log(window.innerWidth);
 //     console.log(event.target);
     
 // })
+
+
+let HelloThere = JSON.parse(localStorage.getItem("loginid")).First_name;
+console.log('HelloThere:', HelloThere)
+
+document.getElementById("helloTitle").innerText =`Hello ${HelloThere}`;
