@@ -20,7 +20,7 @@ if(loginStatus == "true"){
             <span class="mobNavigationLable">Appintment</span>
         </span>
     </a>
-    <a class="mobNavigationBtn mobNavigationBtn-action mobNavigationBtn-base"  href="#">
+    <a class="mobNavigationBtn mobNavigationBtn-action mobNavigationBtn-base"  href="product.html">
         <span class="mobNavigationIcon">
             <i class="fa-solid fa-pills"></i>
             <span class="mobNavigationLable">Pharmacy</span>
