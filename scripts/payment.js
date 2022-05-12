@@ -347,6 +347,7 @@ function startUPITimer() {
                 window.location.href = "#ProcessingModal";
 
                 setTimeout(function () {
+                    // window.open("orderSuccess.html","","")
                     window.location.href = "orderSuccess.html";
                 }, 2000);
 
@@ -358,6 +359,7 @@ function startUPITimer() {
                 document.getElementById("paymentContainer").classList.add("hidePaymentContainer");
                 window.location.href = "#ProcessingModal";
                 setTimeout(function () {
+                    // window.open("orderDecline.html","","")
                     window.location.href = "orderDecline.html";
                 }, 2000);
 
@@ -366,7 +368,7 @@ function startUPITimer() {
             }
 
             if (timePassed === 3) {
-                window.open("responsePage.html", "", "")
+                window.open("responsePage.html", "", "width=400, height=200")
             }
             timeLeft = TIME_LIMIT - timePassed;
             document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);

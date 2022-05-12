@@ -4,7 +4,7 @@ var summerdata = [
         imgUrl:
         "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
         name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-        MRP: "(Rs. 2599)",
+        strikePrice: "(Rs. 2599)",
         price: 1170,
         off: "20% OFF",
         cashback: "41.96 extra cashback",
@@ -14,7 +14,7 @@ var summerdata = [
         imgUrl:
         "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0017.jpg",
         name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-        MRP:"(Rs. 2599)",
+        strikePrice:"(Rs. 2599)",
         price: 1170,
         off: "20% OFF",
         cashback: "41.96 extra cashback",
@@ -24,7 +24,7 @@ var summerdata = [
         imgUrl:
         "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0115.jpg",
         name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-        MRP:"(Rs. 2599)",
+        strikePrice:"(Rs. 2599)",
         price: 1170,
         off: "20% OFF",
         cashback: "41.96 extra cashback",
@@ -34,7 +34,7 @@ var summerdata = [
         imgUrl:
         "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/s/e/seb0100.jpg",
         name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-        MRP:"(Rs. 2599)",
+        strikePrice:"(Rs. 2599)",
         price: 1170,
         off: "20% OFF",
         cashback: "41.96 extra cashback",
@@ -44,7 +44,7 @@ var summerdata = [
         imgUrl:
         "https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
         name: "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-        MRP:"(Rs. 2599)",
+        strikePrice:"(Rs. 2599)",
         price: 1170,
         off: "20% OFF",
         cashback: "41.96 extra cashback",
@@ -79,9 +79,9 @@ var summerdata = [
           let hrtag = document.createElement("hr")
   
   
-          let MRP = document.createElement("s")
-          MRP.innerText = "MRP "+ el.MRP;
-          MRP.style.fontWeight = "bold"
+          let strikePrice = document.createElement("s")
+          strikePrice.innerText = "strikePrice "+ el.strikePrice;
+          strikePrice.style.fontWeight = "bold"
   
           let price = document.createElement("h4")
           price.innerText = "Rs. " +el.price;
@@ -106,7 +106,7 @@ var summerdata = [
               addtocart(el)
           })
   
-          summercontainer.append(image,ptag,hrtag,MRP,price,cashbackdiv,btn)
+          summercontainer.append(image,ptag,hrtag,strikePrice,price,cashbackdiv,btn)
   
           document.getElementById("summerdiv").append(summercontainer)
   
