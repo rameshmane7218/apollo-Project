@@ -1,6 +1,6 @@
 # “apollo247.com” Website Clone
 
-![Homepage ](./Screenshots/apollo.png)
+![Homepage ](./ScreenShots/apollo.png)
 
 ### Apollo 24|7 is a single online platform where you have access to a wide range of services such as online pharmacy, online doctor consultations, and diagnostic lab tests at home.
 
@@ -8,7 +8,7 @@ Collaborative project developed along with three team members in 5 days.
 
 ## 🚀 Let us meet my team-
 
-![Team](./Screenshots/team.png)
+![Team](./ScreenShots/team.png)
 
 ### Ramesh Mane
 
@@ -32,7 +32,7 @@ Collaborative project developed along with three team members in 5 days.
 
 ## 🚀 Technologies we used
 
-![technologies](./Screenshots/tech-stack.png)
+![technologies](./ScreenShots/tech-stack.png)
 
 ## Roles and Responsibilities:
 
@@ -56,57 +56,57 @@ After the user breeze in the apollo website first landed on the home page. the p
 
 Once you fill in details now you can log in any time by just your mobile number, otp is sent to your registered mobile no. fill it and then you held to the product page.
 
-![Sign Up](./Screenshots/SignUp%20Page.png)
-![Sign in](./Screenshots/LoginPage.png)
+![Sign Up](./ScreenShots/SignUp%20Page.png)
+![Sign in](./ScreenShots/LoginPage.png)
 
 ## Landing page after Login
 
-![After login](./Screenshots/HomePage%20After%20Login.png)
+![After login](./ScreenShots/HomePage%20After%20Login.png)
 
 ## Product Page -
 
 After successful Login user can explore different options and the main functionality of the product page is to choose diff products and add them to the cart.
-![Product](<./Screenshots/Product%20Result%20Page(search).png>)
+![Product](<./ScreenShots/Product%20Result%20Page(search).png>)
 
 ## Cart Page -
 
 After adding items to the cart user is directed to the cart page you can increase the quantity as per requirements.
 
-![Cart](./Screenshots/Cart%20Page.png)
+![Cart](./ScreenShots/Cart%20Page.png)
 
 after finalizing the order items you have to click on the “Add to delivery” button and the map is there you have to complete the address process.
 
-![Location](./Screenshots/Location%20Page.png)
+![Location](./ScreenShots/Location%20Page.png)
 
 ## Payment Page -
 
 Now, most of the part is done only the payment part is pending, after clicking on the “PROCEED” button you landed on a payment page having different payment options the user is free to use any of these.
 
-![Payment Page](./Screenshots/Payment%20Page.png)
+![Payment Page](./ScreenShots/Payment%20Page.png)
 
 if you select the UPI ID option then a pop-up appears and you have to Approve the payment request before time runs out.
 
-![UPI Page](./Screenshots/UPI%20Payment%20Page.png)
+![UPI Page](./ScreenShots/UPI%20Payment%20Page.png)
 
 ## OTP Page -
 
 If the user select card payment then user will redirect to otp page
 
-![Loading Page](./Screenshots/Bank%20loading%20Page.png)
+![Loading Page](./ScreenShots/Bank%20loading%20Page.png)
 
-![OTP Page](./Screenshots/card%20Payment%20OTP%20page.png)
+![OTP Page](./ScreenShots/card%20Payment%20OTP%20page.png)
 
 ## Payment Successful -
 
 If the user entered correct otp and submited user will redirect to payment successful page.
 
-![Payment Page](./Screenshots/Order%20Successfull%20Page.png)
+![Payment Page](./ScreenShots/Order%20Successfull%20Page.png)
 
 ## Payment Unsuccessful -
 
 If the user cancelled payment, user will redirect to payment unsuccessful page.
 
-![Payment Page](./Screenshots/Order%20Failed%20Page.png)
+![Payment Page](./ScreenShots/Order%20Failed%20Page.png)
 
 ---
 
