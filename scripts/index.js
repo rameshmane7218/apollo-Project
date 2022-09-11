@@ -1,48 +1,45 @@
-// header part starts here 
+// header part starts here
 
 import { navbar } from "../components/navbar.js";
 document.getElementById("fixedHeader").innerHTML = navbar();
 
-// header part end here 
-// header part starts here 
+// header part end here
+// header part starts here
 import { footer } from "../components/footer.js";
 
 document.getElementById("footerRoot").innerHTML = footer();
 
-//Footer part content collapse 
+//Footer part content collapse
 let footerCollapse = document.getElementsByClassName("footerLinks-PanelHeader");
 // console.log(footerCollapse);
 
 var i;
 
 for (i = 0; i < footerCollapse.length; i++) {
-
+  // console.log("hii");
+  footerCollapse[i].onclick = function () {
     // console.log("hii");
-    footerCollapse[i].onclick = function () {
-        // console.log("hii");
-        var footerContent = this.nextElementSibling;
-        // console.log(footerContent);
+    var footerContent = this.nextElementSibling;
+    // console.log(footerContent);
 
-        if (footerContent.style.display == "block") {
-            footerContent.style.display = "none";
-        } else {
-            footerContent.style.display = "block"
-        }
-
+    if (footerContent.style.display == "block") {
+      footerContent.style.display = "none";
+    } else {
+      footerContent.style.display = "block";
     }
+  };
 }
 
-// // Page Content expand buttom for mobile device 
+// // Page Content expand buttom for mobile device
 
 let expandData = () => {
-    console.log("hello there....")
-    document.getElementById("secContent").style.maxHeight = "none";
-    document.getElementById("expandBtn").style.display = "none";
-}
+  console.log("hello there....");
+  document.getElementById("secContent").style.maxHeight = "none";
+  document.getElementById("expandBtn").style.display = "none";
+};
 document.getElementById("expandBtn").addEventListener("click", expandData);
 
-
-// navbar hovering effect 
+// navbar hovering effect
 let navtabs = document.getElementsByClassName("mobNavigationBtn");
 let navlable = document.getElementsByClassName("mobNavigationLable");
 
@@ -79,74 +76,70 @@ localStorage.setItem("navtab", 0);
 // let navtabIndex = localStorage.getItem("navtab");
 // console.log(navtabIndex);
 
-
-
-
-
 //carousal
 
 let carousalPic = [
-    {
-        index: "1",
-        img: "https://newassets.apollo247.com/images/banners/First3.jpg",
-    },
-    {
-        index: "2",
-        img: "https://newassets.apollo247.com/images/banners/Super_30.jpg",
-    },
-    {
-        index: "3",
-        img: "https://newassets.apollo247.com/images/banners/Sebamed05.jpg",
-    },
-    {
-        index: "4",
-        img: "https://newassets.apollo247.com/images/banners/Whey-Proteins_May5th.jpg",
-    },
-    {
-        index: "5",
-        img: "https://newassets.apollo247.com/images/banners/Web_Circle.jpg",
-    },
-    {
-        index: "6",
-        img: "https://newassets.apollo247.com/images/banners/CircleMembership.jpg",
-    },
-    {
-        index: "7",
-        img: "https://newassets.apollo247.com/images/banners/internationalConsult.png",
-    },
-    {
-        index: "8",
-        img: "https://newassets.apollo247.com/images/banners/ApolloHomeCare.jpg",
-    },
-    {
-        index: "9",
-        img: "https://newassets.apollo247.com/images/banners/vaccination.jpg",
-    },
-    {
-        index: "10",
-        img: "https://newassets.apollo247.com/images/banners/HealthQueries.png",
-    },
-    {
-        index: "11",
-        img: "https://newassets.apollo247.com/images/banners/post-covid.jpg",
-    },
-    {
-        index: "12",
-        img: "https://newassets.apollo247.com/images/banners/pharma_2Feb.png",
-    },
-    {
-        index: "13",
-        img: "https://newassets.apollo247.com/images/banners/pharma_2Feb.png",
-    },
-    {
-        index: "14",
-        img: "https://newassets.apollo247.com/images/banners/consult_2Feb.png",
-    },
-    {
-        index: "15",
-        img: "https://newassets.apollo247.com/images/circle/banners/consult.png",
-    },
-]
+  {
+    index: "1",
+    img: "https://newassets.apollo247.com/images/banners/First3.jpg",
+  },
+  {
+    index: "2",
+    img: "https://newassets.apollo247.com/images/banners/Super_30.jpg",
+  },
+  {
+    index: "3",
+    img: "https://newassets.apollo247.com/images/banners/Sebamed05.jpg",
+  },
+  {
+    index: "4",
+    img: "https://newassets.apollo247.com/images/banners/Whey-Proteins_May5th.jpg",
+  },
+  {
+    index: "5",
+    img: "https://newassets.apollo247.com/images/banners/Web_Circle.jpg",
+  },
+  {
+    index: "6",
+    img: "https://newassets.apollo247.com/images/banners/CircleMembership.jpg",
+  },
+  {
+    index: "7",
+    img: "https://newassets.apollo247.com/images/banners/internationalConsult.png",
+  },
+  {
+    index: "8",
+    img: "https://newassets.apollo247.com/images/banners/ApolloHomeCare.jpg",
+  },
+  {
+    index: "9",
+    img: "https://newassets.apollo247.com/images/banners/vaccination.jpg",
+  },
+  {
+    index: "10",
+    img: "https://newassets.apollo247.com/images/banners/HealthQueries.png",
+  },
+  {
+    index: "11",
+    img: "https://newassets.apollo247.com/images/banners/post-covid.jpg",
+  },
+  {
+    index: "12",
+    img: "https://newassets.apollo247.com/images/banners/pharma_2Feb.png",
+  },
+  {
+    index: "13",
+    img: "https://newassets.apollo247.com/images/banners/pharma_2Feb.png",
+  },
+  {
+    index: "14",
+    img: "https://newassets.apollo247.com/images/banners/consult_2Feb.png",
+  },
+  {
+    index: "15",
+    img: "https://newassets.apollo247.com/images/circle/banners/consult.png",
+  },
+];
 
 // let leftClick = document.getElementById("leftSlideArrow");
 // leftClick.onclick = function(){
@@ -163,59 +156,49 @@ let carousalPic = [
 
 // }
 
+function displayCarousal(carousalPic) {
+  let sliderPics = document.getElementById("slideDiv");
+  carousalPic.forEach(({ index, img }) => {
+    let picDiv = document.createElement("div");
+    picDiv.setAttribute("class", "slideDivPic");
 
+    // picDiv.i = index;
 
-function displayCarousal(carousalPic){
+    let pic = document.createElement("img");
+    pic.src = img;
+    // pic.height = "100%"
+    // pic.width = "100%"
+    // pic.style.height = "100%";
+    // pic.style.width = "100%";
 
-    let sliderPics = document.getElementById("slideDiv");
-    carousalPic.forEach(({ index, img }) => {
-        let picDiv = document.createElement("div");
-        picDiv.setAttribute("class", "slideDivPic");
+    picDiv.append(pic);
 
-        // picDiv.i = index;
-
-        let pic = document.createElement("img");
-        pic.src = img;
-        // pic.height = "100%"
-        // pic.width = "100%"
-        // pic.style.height = "100%";
-        // pic.style.width = "100%";
-
-        picDiv.append(pic);
-
-        sliderPics.append(picDiv);
-    })
-
+    sliderPics.append(picDiv);
+  });
 }
 // displayCarousal(carousalPic);
 // console.log(window.innerWidth);
 let sliderPics = document.getElementById("sliderImageHome");
 let a = 0;
 
-let TimerSlide = setInterval(function(){
-    // document.getElementById("slideDiv") = null;
-    // console.log(sliderPics.src);
-    
-    if(a==carousalPic.length){
-        a = 0;
-    }
-    sliderPics.src = carousalPic[a].img;
-    // console.log(carousalPic[a].img);
-    a++;     
-},2000)
+let TimerSlide = setInterval(function () {
+  // document.getElementById("slideDiv") = null;
+  // console.log(sliderPics.src);
 
-
-
-
-
-
+  if (a == carousalPic.length) {
+    a = 0;
+  }
+  sliderPics.src = carousalPic[a].img;
+  // console.log(carousalPic[a].img);
+  a++;
+}, 2000);
 
 // // ###################################Login Part Starts Here##################################################//
 // let html = `
 //         <div id="back"></div>
 //             <div id="login">
 //                 <div style="display: flex; justify-content: space-between; height: 45px;">
-//                     <h1 style="font-size: 40; font-weight: bold;">Hi</h1>  
+//                     <h1 style="font-size: 40; font-weight: bold;">Hi</h1>
 //                     <img src="https://cdn-icons-png.flaticon.com/512/748/748122.png" class="log1" id="closs">
 //                 </div>
 //                 <p>Please enter your mobile number to login</p>
@@ -237,7 +220,7 @@ let TimerSlide = setInterval(function(){
 //                     </div>
 //                 </div>
 //             </div>
-        
+
 //         <div id="snigup1">
 //             <div id="snigup">
 //                 <h1>Welcome to apollo 24|7</h1>
@@ -265,7 +248,7 @@ let TimerSlide = setInterval(function(){
 //                     <input type="email" placeholder="name@email.com" id="email" class="textarea" > <br>
 //                 </div>
 //                 <input type="checkbox" id="whatsapp" class="textarea" >
-//                 <label style="font-size: 12px;">send me personalised health tips & offers to 
+//                 <label style="font-size: 12px;">send me personalised health tips & offers to
 //                     <span><img src="https://img.icons8.com/color/344/whatsapp--v1.png" id="log"></span>
 //                 </label>
 //                 <div id="code">
@@ -276,7 +259,7 @@ let TimerSlide = setInterval(function(){
 //                         <label style="font-size: 12px;">Do you Have A Referral code? (Optional)</label><br>
 //                         <div class="under">
 //                             <input type="text" placeholder="Enter Referal Code" id="referralcode" class="textarea" >
-//                         </div>  
+//                         </div>
 //                     </div>
 //                 </div>
 //             </div>
@@ -295,7 +278,7 @@ let TimerSlide = setInterval(function(){
 //                     <div class="one">
 //                     <div class="under">
 //                         <input type="number" id="otpnumber" class="textarea">
-//                     </div>   
+//                     </div>
 //                     </div>
 //                     <div id="otpclick" >
 //                         <div id="img">
@@ -330,11 +313,11 @@ let TimerSlide = setInterval(function(){
 //             </div></a>
 //            <a href="#"><div>
 //                 <div>
-                    
+
 //                     <label>Address Book</label>
 //                 </div>
 //                 <div><img id="otherimg" src="https://newassets.apollo247.com/images/ic_arrow_right.svg"></div>
-//             </div></a> 
+//             </div></a>
 //             <a href="#"><div>
 //                 <div>
 //                     <img id="otherimg" src="https://newassets.apollo247.com/images/my_membership.svg">
@@ -385,11 +368,8 @@ let TimerSlide = setInterval(function(){
 //     </div>
 //     `;
 
-
-// // address icon 
+// // address icon
 // // <img id="otherimg" src="https://cdn-icons.flaticon.com/png/512/3082/premium/3082383.png?token=exp=1651735062~hmac=28e41b3c5f0f886905e8c17d46d112f6"></img>
-
-
 
 // let count = 0;
 // let login = JSON.parse(localStorage.getItem("login")) || false;
@@ -514,7 +494,6 @@ let TimerSlide = setInterval(function(){
 //                 }
 //             }
 
-
 //         }
 //     }
 // }
@@ -557,17 +536,15 @@ let TimerSlide = setInterval(function(){
 //     document.getElementById("login").style.display = "none"
 // }
 
-
-
 //Some login related events
 
 // window.addEventListener("click",function(event){
 //     console.log(event.target);
-    
+
 // })
 
-
-let HelloThere = JSON.parse(localStorage.getItem("loginid")).First_name;
-console.log('HelloThere:', HelloThere)
-
-document.getElementById("helloTitle").innerText =`Hello ${HelloThere}`;
+let HelloThere = JSON.parse(localStorage.getItem("loginid"));
+// console.log("HelloThere:", HelloThere);
+if (HelloThere?.First_name) {
+  document.getElementById("helloTitle").innerText = `Hello ${HelloThere}`;
+}
