@@ -73,7 +73,7 @@ function display(productsdata) {
     let hrtag = document.createElement("hr");
 
     let strikePrice = document.createElement("s");
-    strikePrice.innerText = "strikePrice " + el.strikePrice;
+    strikePrice.innerText = "MRP " + el.strikePrice;
     strikePrice.style.fontWeight = "bold";
 
     let price = document.createElement("h4");
